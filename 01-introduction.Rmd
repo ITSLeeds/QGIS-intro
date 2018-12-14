@@ -10,3 +10,11 @@
 
 ## Alternatives to QGIS
 
+Now unplug your Internet cable, and start doing some serious work.
+
+More chapters to come in `02-foo.Rmd`, `03-bar`.Rmd, ...
+
+```{r}
+# this is a code block that triggers 'shaded' environment
+```
+
