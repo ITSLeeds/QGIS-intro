@@ -9,7 +9,7 @@
 # git commit -a -m "First pages commit"
 # git push origin gh-pages
 
-# push book contents
+# push book contents:
 git commit -am 'pre-deploy commit'
 rm -rv /tmp/_book
 rm -rv /tmp/booksource
