@@ -10,17 +10,17 @@
 # git push origin gh-pages
 
 # push book contents:
-# git commit -am 'pre-deploy commit'
-# rm -rv /tmp/_book
-# rm -rv /tmp/booksource
-# mv _book /tmp/
-# ls /tmp/_book
-# git checkout gh-pages
-# mkdir /tmp/booksource
-# mv -v * /tmp/booksource/
-# mv -v /tmp/_book/* .
-# git add -A
-# git commit -am 'Update book'
-# git push origin gh-pages
-# git checkout master
-# mv -v /tmp/booksource/* .
+git commit -am 'pre-deploy commit'
+rm -rv /tmp/_book
+rm -rv /tmp/booksource
+mv _book /tmp/
+ls /tmp/_book
+git checkout gh-pages
+mkdir /tmp/booksource
+mv -v * /tmp/booksource/
+mv -v /tmp/_book/* .
+git add -A
+git commit -am 'Update book'
+git push origin gh-pages
+git checkout master
+mv -v /tmp/booksource/* .
