@@ -17,9 +17,10 @@ mv _book /tmp/
 ls /tmp/_book
 git checkout gh-pages
 mkdir /tmp/booksource
-mv -v * /tmp/boosource/
+mv -v * /tmp/booksource/
 mv -v /tmp/_book/* .
 git add -A
 git commit -am 'Update book'
 git push origin gh-pages
 git checkout master
+mv -v /tmp/booksource/* .
