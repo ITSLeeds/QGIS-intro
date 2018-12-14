@@ -1,0 +1,30 @@
+Removing .Rhistory
+Removing .Rproj.user/
+Removing .gitignore
+Removing 00-author.Rmd
+Removing 01-introduction.Rmd
+Removing 02-data.Rmd
+Removing 90-more.Rmd
+Removing 99-references.Rmd
+Removing LICENSE
+Removing Makefile
+Removing QGIS-intro.Rproj
+Removing QGIS-intro.qgz
+Removing QGISforSSPAdata.zip
+Removing QGISforSSPAdata/
+Removing README.md
+Removing _book/
+Removing _bookdown.yml
+Removing _output.yml
+Removing book.bib
+Removing css/
+Removing figures/
+Removing index.Rmd
+Removing krantz.cls
+Removing latex/
+Removing packages.bib
+Removing set-up.R
+Removing set-up.sh
+]0;robin@rlxps:~/ITSLeeds/QGIS-intro]7;file://rlxps/home/robin/ITSLeeds/QGIS-intro]0;robin@rlxps: ~/ITSLeeds/QGIS-intro[01;32mrobin@rlxps[00m:[01;34m~/ITSLeeds/QGIS-intro[00m$ echo "My GitHub Page" > index.html
+]0;robin@rlxps:~/ITSLeeds/QGIS-intro]7;file://rlxps/home/robin/ITSLeeds/QGIS-intro]0;robin@rlxps: ~/ITSLeeds/QGIS-intro[01;32mrobin@rlxps[00m:[01;34m~/ITSLeeds/QGIS-intro[00m$ git add .
+]0;robin@rlxps:~/ITSLeeds/QGIS-intro]7;file://rlxps/home/robin/ITSLeeds/QGIS-intro]0;robin@rlxps: ~/ITSLeeds/QGIS-intro[01;32mrobin@rlxps[00m:[01;34m~/ITSLeeds/QGIS-intro[00m$ git commit -a -m "First pages commit"
