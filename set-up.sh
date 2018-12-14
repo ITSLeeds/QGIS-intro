@@ -24,3 +24,5 @@ git commit -am 'Update book'
 git push origin gh-pages
 git checkout master
 mv -v /tmp/booksource/* .
+rm -rv *.html *.json libs
+
