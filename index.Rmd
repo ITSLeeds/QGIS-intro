@@ -1,14 +1,11 @@
 --- 
 title: "QGIS for Transport Research: an introduction"
-author: "Robin Lovelace and Malcolm Morgan"
+author: "Robin Lovelace"
 date: "`r Sys.Date()`"
-documentclass: krantz
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: yes
-colorlinks: yes
-lot: yes
-lof: yes
+output:
+  bookdown::pdf_book
+papersize: a5
+fontsize: 10pt
 site: bookdown::bookdown_site
 description: "A book on using open source Geographic Information System for transport planning."
 github-repo: ITSLeeds/QGIS-intro
@@ -16,24 +13,43 @@ graphics: yes
 #cover-image: images/cover.jpg
 ---
 
+<!-- For CRC Press format: -->
+<!-- documentclass: krantz -->
+<!-- bibliography: [book.bib, packages.bib] -->
+<!-- biblio-style: apalike -->
+<!-- link-citations: yes -->
+<!-- colorlinks: yes -->
+<!-- lot: yes -->
+<!-- lof: yes -->
+<!-- fontsize: 13pt -->
+
 ```{r setup, include=FALSE}
 options(
-  htmltools.dir.version = FALSE, formatR.indent = 2, width = 55, digits = 4
+  htmltools.dir.version = FALSE,
+  formatR.indent = 2,
+  width = 55,
+  digits = 4
 )
 
 # install the packages needed by this book; you fill out c(), e.g. c('ggplot2', 'dplyr')
 lapply(c('xfun'), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
 })
+
+# knitr options
+knitr::opts_chunk$set(
+  echo = FALSE
+)
 ```
 
 # Preface {-}
 
-This booklet was developed in response to the update from QGIS2 to QGIS3 on the University of Leeds' teaching cluster computers.
-That may sound like a minor change, but it meant that previous materials, developed by Ian Philips, were no longer up-to-date.
-More importantly, some of the instructions simply failed on the latest version of QGIS.
+This booklet was developed in response to the update from QGIS2 to QGIS3 on centrally managed computer across the University of Leeds'.
+That may sound like a minor change, but it meant that previous materials were no longer up-to-date.
+Vitally, it meant that some of the instructions simply failed on the latest version of QGIS running on the computers in the 'clusters' where many practical sessions in ITS are taught.
 
-Instead of incrementally updating those materials we decided to start from scratch.
+Instead of incrementally updating those materials we decided to start from from a blank slate, allowing the inclusion of new datasets and links to excellent on-line content that already exists for QGIS.
+
 The aim is to get you up-to-speed with *the most important concepts and techniques* in QGIS for *Transport Planning*.
 We refer to Transport Planning in the broad sense of providing evidence-based guidance to support sustainable transport behaviours.
 With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
@@ -41,11 +57,12 @@ For this reason the data used in this booklet focusses on these modes.
 
 ## Pre-requisites {-}
 
-What you need to have...
+This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
+We will explain how to download the data needed for the practicals in Chapter \@ref(downloading-and-loading-data).
 
-## Structure of the book {-}
+<!-- ## Structure of the book {-} -->
 
-Chapters \@ref(introduction) introduces GIS and the program QGIS...
+<!-- Chapters \@ref(introduction) introduces GIS and the program QGIS... -->
 
 <!-- ## Software information and conventions {-} -->
 

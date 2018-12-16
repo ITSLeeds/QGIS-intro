@@ -4,6 +4,27 @@
 
 ## What is GIS?
 
+GIS stands for Geographic Information Systems.
+The term was first used in the 1960s, and has since become a common way of referring to the analysis of geographic data.
+
+That raises another question: what do we mean by 'geographic data'?
+The defining feature of geographic data is that it has coordinates that allow the position of records in the dataset to be located on Earth.
+There are two main types of geographic data:
+
+1. Vector data, which typically represent points, lines and polygons. An example is a series of points representing a road.
+2. Raster data, which typically represent a continuously changing surface, such as height.
+An example is a satellite image of a road.
+
+The difference between vector and raster data types is illustrated in the figure below, which shows the same road (Woodhouse Lane in Leeds) represented in vector and raster geographic data forms.
+
+```{r}
+
+```
+
+Since graphical user interfaces (GUIs) for GIS became popular in the early 2000s, the word GIS has become almost synonymous with 'Dedicated GIS software'.
+Examples of dedicated GIS software include the open source GIS software QGIS (we will come onto what QGIS is in a subsequent section) and proprietary software such as ArcMap and TransCAD.
+It is also possible, and increasingly popular, to do GIS using a programming language with a command-line interface (CLI) such as Python or R (see \@ref(next-steps))
+
 ## Why use GIS for transport research?
 
 ## What is QGIS?

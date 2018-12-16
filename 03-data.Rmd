@@ -1,4 +1,4 @@
-# Downloading and loading data
+# Downloading and loading data {#data}
 
 A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.
 

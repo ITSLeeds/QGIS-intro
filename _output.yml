@@ -4,10 +4,10 @@ bookdown::gitbook:
     toc:
       collapse: none
       before: |
-        <li><a href="./">A Book Example</a></li>
+        <li><a href="./">QGIS for Transport</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
-    download: [pdf, epub]
+    download: []
     edit: https://github.com/yihui/bookdown-crc/edit/master/%s
     sharing:
       github: true
@@ -15,7 +15,6 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header: latex/preamble.tex
-    before_body: latex/before_body.tex
     after_body: latex/after_body.tex
   keep_tex: true
   dev: "cairo_pdf"
