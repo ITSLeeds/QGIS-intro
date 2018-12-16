@@ -5,3 +5,5 @@
 _book
 _bookdown*
 QGISforSSPAdata*
+bookdown.*
+bookdown_*
