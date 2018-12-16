@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>A More to Say | QGIS for Transport Research: an introduction</title>
+  <title>Chapter 7 Next steps | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="A More to Say | QGIS for Transport Research: an introduction />
+  <meta property="og:title" content="Chapter 7 Next steps | QGIS for Transport Research: an introduction />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A More to Say | QGIS for Transport Research: an introduction />
+  <meta name="twitter:title" content="Chapter 7 Next steps | QGIS for Transport Research: an introduction />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="next-steps.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="making-maps.html">
+<link rel="next" href="more-to-say.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -174,19 +174,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="more-to-say" class="section level1">
-<h1><span class="header-section-number">A</span> More to Say</h1>
-<p>Yeah! I have finished my book, but I have more to say about some topics. Let me explain them in this appendix.</p>
-<p>To know more about <strong>bookdown</strong>, see <a href="https://bookdown.org" class="uri">https://bookdown.org</a>.</p>
+<div id="next-steps" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Next steps</h1>
+<p>Examples of programming languages with CLIs include Python and R; some R
+<!-- and Python -->
+code for plotting geographic data is illustrated below.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sf)
+nc =<span class="st"> </span><span class="kw">read_sf</span>(<span class="kw">system.file</span>(<span class="st">&quot;shape/nc.shp&quot;</span>, <span class="dt">package=</span><span class="st">&quot;sf&quot;</span>))
+<span class="kw">plot</span>(nc)</code></pre>
+<p><img src="bookdown_files/figure-html/unnamed-chunk-5-1.png" width="100%" /></p>
+
 
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="next-steps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="making-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="more-to-say.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -216,7 +225,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/yihui/bookdown-crc/edit/master/90-more.Rmd",
+"link": "https://github.com/yihui/bookdown-crc/edit/master/07-next-steps.Rmd",
 "text": "Edit"
 },
 "history": {

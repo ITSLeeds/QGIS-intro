@@ -1,8 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
-\documentclass[]{krantz}
+\documentclass[10pt,a5paper,]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -28,16 +27,11 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 }
-\usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={QGIS for Transport Research: an introduction},
-            pdfauthor={Robin Lovelace and Malcolm Morgan},
-            colorlinks=true,
-            linkcolor=Maroon,
-            filecolor=Maroon,
-            citecolor=Blue,
-            urlcolor=Blue,
+            pdfauthor={Robin Lovelace},
+            pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{color}
@@ -164,48 +158,29 @@
 
 \frontmatter
 \usepackage[]{natbib}
-\bibliographystyle{apalike}
+\bibliographystyle{plainnat}
 
 \title{QGIS for Transport Research: an introduction}
-\author{Robin Lovelace and Malcolm Morgan}
-\date{2018-12-14}
+\author{Robin Lovelace}
+\date{2018-12-16}
 
 \begin{document}
 \maketitle
 
-% you may need to leave a few empty pages before the dedication page
-
-%\cleardoublepage\newpage\thispagestyle{empty}\null
-%\cleardoublepage\newpage\thispagestyle{empty}\null
-%\cleardoublepage\newpage
-\thispagestyle{empty}
-
-\begin{center}
-To my son,
-
-without whom I should have finished this book two years earlier
-%\includegraphics{images/dedication.pdf}
-\end{center}
-
-\setlength{\abovedisplayskip}{-5pt}
-\setlength{\abovedisplayshortskip}{-5pt}
-
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\listoftables
-\listoffigures
 \hypertarget{preface}{%
 \chapter*{Preface}\label{preface}}
 
 
-This booklet was developed in response to the update from QGIS2 to QGIS3 on the University of Leeds' teaching cluster computers.
-That may sound like a minor change, but it meant that previous materials, developed by Ian Philips, were no longer up-to-date.
-More importantly, some of the instructions simply failed on the latest version of QGIS.
+This booklet was developed in response to the update from QGIS2 to QGIS3 on centrally managed computer across the University of Leeds'.
+That may sound like a minor change, but it meant that previous materials were no longer up-to-date.
+Vitally, it meant that some of the instructions simply failed on the latest version of QGIS running on the computers in the `clusters' where many practical sessions in ITS are taught.
 
-Instead of incrementally updating those materials we decided to start from scratch.
+Instead of incrementally updating those materials we decided to start from from a blank slate, allowing the inclusion of new datasets and links to excellent on-line content that already exists for QGIS.
+
 The aim is to get you up-to-speed with \emph{the most important concepts and techniques} in QGIS for \emph{Transport Planning}.
 We refer to Transport Planning in the broad sense of providing evidence-based guidance to support sustainable transport behaviours.
 With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
@@ -215,19 +190,8 @@ For this reason the data used in this booklet focusses on these modes.
 \section*{Pre-requisites}\label{pre-requisites}}
 
 
-What you need to have\ldots{}
-
-\hypertarget{structure-of-the-book}{%
-\section*{Structure of the book}\label{structure-of-the-book}}
-
-
-Chapters \ref{introduction} introduces GIS and the program QGIS\ldots{}
-
-\hypertarget{about-the-author}{%
-\chapter*{About the Author}\label{about-the-author}}
-
-
-Frida Gomam is a famous lady. Police will always let her go.
+This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
+We will explain how to download the data needed for the practicals in Chapter \ref{downloading-and-loading-data}.
 
 \mainmatter
 
@@ -236,6 +200,29 @@ Frida Gomam is a famous lady. Police will always let her go.
 
 \hypertarget{what-is-gis}{%
 \section{What is GIS?}\label{what-is-gis}}
+
+GIS stands for Geographic Information Systems.
+The term was first used in the 1960s, and has since become a common way of referring to the analysis of geographic data.
+
+That raises another question: what do we mean by `geographic data'?
+The defining feature of geographic data is that it has coordinates that allow the position of records in the dataset to be located on Earth.
+There are two main types of geographic data:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Vector data, which typically represent points, lines and polygons. An example is a series of points representing a road.
+\item
+  Raster data, which typically represent a continuously changing surface, such as height.
+  An example is a satellite image of a road.
+\end{enumerate}
+
+The difference between vector and raster data types is illustrated in the figure below, which shows the same road (Woodhouse Lane in Leeds) represented in vector and raster geographic data forms.
+
+Since graphical user interfaces (GUIs) for GIS became popular in the early 2000s, the word GIS has become almost synonymous with `Dedicated GIS software'.
+Examples of dedicated GIS software include the open source GIS software QGIS (we will come onto what QGIS is in a subsequent section) and proprietary software such as ArcMap and TransCAD.
+It is also possible, and increasingly popular, to do GIS using a programming language with a command-line interface (CLI) such as Python or R (see \ref{next-steps})
 
 \hypertarget{why-use-gis-for-transport-research}{%
 \section{Why use GIS for transport research?}\label{why-use-gis-for-transport-research}}
@@ -250,14 +237,46 @@ Now unplug your Internet cable, and start doing some serious work.
 
 More chapters to come in \texttt{02-foo.Rmd}, \texttt{03-bar}.Rmd, \ldots{}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# this is a code block that triggers 'shaded' environment}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{working-with-qgis}{%
+\chapter{Working with QGIS}\label{working-with-qgis}}
 
-\hypertarget{downloading-and-loading-data}{%
-\chapter{Downloading and loading data}\label{downloading-and-loading-data}}
+Before importing data (covered in Chapter \ref{data}) it is worth getting to know QGIS, in terms of its main components, how to get help, and how it helps you organise your work into projects.
+
+\hypertarget{opening-qgis}{%
+\section{Opening QGIS}\label{opening-qgis}}
+
+Probably the quickest way to open QGIS on your computer press `Windows button' on your keyboard and type `qgis' (see Figure \ref{fig:qgis-start}).
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/qgis-start} \caption{Starting QGIS}\label{fig:qgis-start}
+\end{figure}
+
+Select `QGIS Desktop' from the list.
+If you have multiple versions, choose the latest version.
+You should see a new window appear that contains the main features of the QGIS program (see Figure \ref{fig:qgis-window}).
+These include the following main components, numbered from 1:5 in the figure and the bullet points below (source: the \href{https://docs.qgis.org/2.18/en/docs/user_manual/}{QGIS Manual}):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Menu Bar: like most GUI-based programs you can control key aspects of QGIS and execute key commands, like saving your project and loading new datasets, by clicking Project or Layer. Note: shortcuts to access these menus from the keyboard are \texttt{Alt+J} and \texttt{Alt+L}, respectively.
+\item
+  Toolbars: these are small icons located towards the top and left hand side of Figure \ref{fig:qgis-window}. In addition to options available from the Menu Bar, these icons provide tools for interacting with the map such as Pan (the hand symbol) and Zoom (the + and - signs).
+\item
+  Panels: Panels are interactive elements that show information on particular aspects of the project. A view of files in the Browser Panel and the Layers Panel are shown in Figure \ref{fig:qgis-window}.
+\item
+  Map View: this is where the geographic data is displayed in an interactive map for interactive visualisation.
+\item
+  Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case EPSG:2964 and scale.
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figures/startup} \caption{QGIS after opening it for the first time}\label{fig:qgis-window}
+\end{figure}
+
+\hypertarget{data}{%
+\chapter{Downloading and loading data}\label{data}}
 
 A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.
 
@@ -274,6 +293,22 @@ To load a geographic data file, click on the Data Source Manager button in the t
 \includegraphics[width=0.5\linewidth]{figures/open-data-source-manager} \caption{The Data Source Manager icon}\label{fig:data-source-manager}
 \end{figure}
 
+\hypertarget{next-steps}{%
+\chapter{Next steps}\label{next-steps}}
+
+Examples of programming languages with CLIs include Python and R; some R
+code for plotting geographic data is illustrated below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(sf)}
+\NormalTok{nc =}\StringTok{ }\KeywordTok{read_sf}\NormalTok{(}\KeywordTok{system.file}\NormalTok{(}\StringTok{"shape/nc.shp"}\NormalTok{, }\DataTypeTok{package=}\StringTok{"sf"}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(nc)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=1\linewidth]{bookdown_files/figure-latex/unnamed-chunk-5-1}
+
 \cleardoublepage
 
 \hypertarget{appendix-appendix}{%
@@ -286,8 +321,6 @@ To load a geographic data file, click on the Data Source Manager button in the t
 Yeah! I have finished my book, but I have more to say about some topics. Let me explain them in this appendix.
 
 To know more about \textbf{bookdown}, see \url{https://bookdown.org}.
-
-\bibliography{book.bib,packages.bib}
 
 \backmatter
 \printindex
