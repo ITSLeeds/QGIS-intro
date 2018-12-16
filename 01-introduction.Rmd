@@ -1,5 +1,10 @@
 \mainmatter
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(out.width = "100%")
+```
+
+
 # Introduction
 
 ## What is GIS?
@@ -28,6 +33,15 @@ It is also possible, and increasingly popular, to do GIS using a programming lan
 ## Why use GIS for transport research?
 
 ## What is QGIS?
+
+QGIS is an open source dedicated GIS software program.
+It has become the most commonly used open source program for working with geographic data.
+Search engine data from Google suggests that, worldwide, it may have become more popular than the proprietary market leader in GIS software, ESRI's ArcMap product (Figure \@ref(fig:qgis-vs-arcmap), see [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,esri) for further details).
+
+```{r qgis-vs-arcmap, fig.cap="Data on the popularity of different GIS-related search terms, worldwide, from 2004 to 2018. Source: trends.google.com."}
+knitr::include_graphics("figures/qgis-vs-arcmap.png")
+```
+
 
 ## Alternatives to QGIS
 
