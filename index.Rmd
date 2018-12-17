@@ -2,10 +2,8 @@
 title: "QGIS for Transport Research: an introduction"
 author: "Robin Lovelace"
 date: "`r Sys.Date()`"
-output:
-  bookdown::pdf_book
-papersize: a5
-fontsize: 10pt
+papersize: a4
+fontsize: 12pt
 site: bookdown::bookdown_site
 description: "A book on using open source Geographic Information System for transport planning."
 github-repo: ITSLeeds/QGIS-intro
@@ -55,10 +53,12 @@ We refer to Transport Planning in the broad sense of providing evidence-based gu
 With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
 For this reason the data used in this booklet focusses on these modes. 
 
+
+
 ## Pre-requisites {-}
 
 This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
-We will explain how to download the data needed for the practicals in Chapter \@ref(downloading-and-loading-data).
+We will explain how to download the data needed for the practicals in Chapter \@ref(data).
 
 <!-- ## Structure of the book {-} -->
 

@@ -16,7 +16,7 @@ Probably the quickest way to open QGIS on your computer press 'Windows button' o
 
 ```{r qgis-start, fig.cap="Starting QGIS", out.width="50%"}
 # Idea: wrapfigure: https://stackoverflow.com/questions/44845699/
-knitr::include_graphics("figures/qgis-start.png")
+knitr::include_graphics("figures/qgis-start.jpg")
 ```
 
 <!-- \end{center} -->
