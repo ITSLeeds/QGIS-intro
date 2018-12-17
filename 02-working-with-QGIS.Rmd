@@ -36,7 +36,7 @@ These include the following main components, numbered from 1:5 in the figure and
 1. Map View: this is where the geographic data is displayed in an interactive map for interactive visualisation.
 1. Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case EPSG:2964 and scale.
 
-```{r qgis-window, fig.cap="QGIS after opening it for the first time"}
+```{r qgis-window, fig.cap="QGIS after opening it for the first time. Source: the QGIS Manual."}
 knitr::include_graphics("figures/startup.png")
 ```
 
