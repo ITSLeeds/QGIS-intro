@@ -39,6 +39,8 @@ knitr::include_graphics("figures/import_shp.jpg")
 
 ## Importing a CSV or text file
 
+### CSV with spatial data
+
 Sometimes you have data that contains spatial information but is not in a spatial data format.  A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel. 
 We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.
 
@@ -49,4 +51,61 @@ Click “Add” then “Close”.
 
 ```{r data-source-manager-csv, out.width="50%", fig.cap="The Data Source Manager - Delimited Text", echo=FALSE}
 knitr::include_graphics("figures/import_csv.jpg")
+```
+
+### CSV without spatial data
+
+QGIS will also allow you to import non-spatial data. Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”
+
+## Joining Data
+
+Joining data allows you to link two separate datasets together by something they have in common. There are two types of join.  Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.
+
+### Attribute Joins
+
+We will join the population data onto the LSOA boundaries.
+
+Find “leeds_lsoa” in the Layers panel and right-click to bring up the context menu
+
+Click on Properties
+
+Select Joins from the options on the left
+
+Click the green + button to open the Add Vector Join window
+
+Select the following options:
+
+	Join layer: population
+	
+	Join field: area
+	
+	Target field: lsoa11cd
+	
+Click OK,
+
+Click OK again
+
+```{r joins, out.width="50%", fig.cap="The Add Vector Join window", echo=FALSE}
+knitr::include_graphics("figures/joins.jpg")
+```
+
+
+Use the “Identify features” tool to see that each LSOA now has a population value.
+
+### Spatial Joins
+We will assign an LSOA ID number to each road collision by doing a spatial join.  
+In the “Vector” menu, select “Data Management Tools”, then “Join Attributes by Location”.
+
+```{r joins_menu, out.width="50%", fig.cap="Join Attributes by Location", echo=FALSE}
+knitr::include_graphics("figures/spatial_joins.jpg")
+```
+
+
+```{r joins_window, out.width="50%", fig.cap="Join Attributes by Location Window", echo=FALSE}
+knitr::include_graphics("figures/spatial_joins_window.jpg")
+```
+
+
+```{r joins_result, out.width="50%", fig.cap="Join Results", echo=FALSE}
+knitr::include_graphics("figures/spatial_join_result.jpg")
 ```
