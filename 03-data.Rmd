@@ -17,10 +17,36 @@ Look at the file in your explorer...
 
 To open a file in QGIS first create a QGIS project.
 
-To load a geographic data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure \@ref(fig:data-source-manager)).
+
+## Importing spatial data
+
+To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure \@ref(fig:data-source-manager)).
 
 ```{r data-source-manager, out.width="50%", fig.cap="The Data Source Manager icon", echo=FALSE}
-knitr::include_graphics("figures/open-data-source-manager.png")
+knitr::include_graphics("figures/open-data-source-manager.jpg")
+```
+
+We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.
+
+Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.
+
+Click “Add” then “Close”.
+
+```{r data-source-manager-shp, out.width="50%", fig.cap="The Data Source Manager - Vector", echo=FALSE}
+knitr::include_graphics("figures/import_shp.jpg")
 ```
 
 
+## Importing a CSV or text file
+
+Sometimes you have data that contains spatial information but is not in a spatial data format.  A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel. 
+We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.
+
+Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
+Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”.  Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.
+
+Click “Add” then “Close”.
+
+```{r data-source-manager-csv, out.width="50%", fig.cap="The Data Source Manager - Delimited Text", echo=FALSE}
+knitr::include_graphics("figures/import_csv.jpg")
+```
