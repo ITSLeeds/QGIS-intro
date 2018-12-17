@@ -1,11 +1,11 @@
 # Working with QGIS
 
-```{r}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, out.width = "100%")
 ```
 
-
 Before importing data (covered in Chapter \@ref(data)) it is worth getting to know QGIS, in terms of its main components, how to get help, and how it helps you organise your work into projects.
+This chapter describes some of QGIS's key elements and 
 
 ## Opening QGIS
 
@@ -25,6 +25,9 @@ knitr::include_graphics("figures/qgis-start.png")
 Select 'QGIS Desktop' from the list.
 If you have multiple versions, choose the latest version.
 You should see a new window appear that contains the main features of the QGIS program (see Figure \@ref(fig:qgis-window)).
+
+## Key QGIS components
+
 These include the following main components, numbered from 1:5 in the figure and the bullet points below (source: the [QGIS Manual](https://docs.qgis.org/2.18/en/docs/user_manual/)):
 
 1. Menu Bar: like most GUI-based programs you can control key aspects of QGIS and execute key commands, like saving your project and loading new datasets, by clicking Project or Layer.  Note: shortcuts to access these menus from the keyboard are `Alt+J` and `Alt+L`, respectively.
@@ -33,10 +36,49 @@ These include the following main components, numbered from 1:5 in the figure and
 1. Map View: this is where the geographic data is displayed in an interactive map for interactive visualisation.
 1. Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case EPSG:2964 and scale.
 
-
-
-
 ```{r qgis-window, fig.cap="QGIS after opening it for the first time"}
 knitr::include_graphics("figures/startup.png")
 ```
+
+## Plugins
+
+An important aspect of open source software is the wider community, which often supports a diverse range of extensions which add features to the original program.
+QGIS is no exception: it has a thriving community of programmers who, together, have created dozens of 'plugins', which enhance QGIS's capabilities in countless ways.
+At the time of writing, there are 200+ plugins available for QGIS 3, and this number is continuously rising.
+
+To install a plugin, click on Plugins in the Menu Bar (or press `Alt+P`).
+You should see the following options.
+Select the second option (Manage and Install Plugins, see Figure \@ref(fig:plugins) (left)).
+You should see a new window, like the one displayed in Figure \@ref(fig:plugins) (right).
+
+
+```{r plugins, fig.cap="Plugins menu (left) and the resulting window (right).", fig.show='hold', out.width="50%"}
+knitr::include_graphics(c(
+  "figures/plugins-menu.png",
+  "figures/plugins-window.png"
+))
+```
+
+To install a plugin, click on the 'Install plugin' button in the bottom right corner of Figure \@ref(fig:plugins) (right).
+Use the search bar to explore for plugins. What happens if you search for 'trans', for example (short for transport)?
+
+## Loading a basemap
+
+You can add a basemap by clicking on the 'XYZ Tiles' option in the Browser Panel. Options should include Google and OpenStreetMap.
+Clicking on one of these will add a new layer, which can be seen in the Layers menu.
+
+Another way to add basemaps, with a wide range of default options, is via a plugin. 
+We learned how to install plugins in the previous section so this alternative way is best learned as an exercise.
+
+**Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.**
+Hint: after you have installed the plugin navigate to the Web menu (or press `Alt+W`).
+After completing the exercise your QGIS session should look somthing like that displayed in Figure \@ref(fig:webmap).
+
+```{r webmap, fig.cap="QGIS with a basemap from QuickMapServices"}
+knitr::include_graphics("figures/webmap.png")
+```
+
+
+
+## Projects and files
 
