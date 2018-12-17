@@ -8,7 +8,7 @@ bookdown::gitbook:
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
     download: []
-    edit: https://github.com/yihui/bookdown-crc/edit/master/%s
+    edit: https://github.com/ITSLeeds/QGIS-intro/edit/master/%s
     sharing:
       github: true
       facebook: false
