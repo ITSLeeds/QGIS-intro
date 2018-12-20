@@ -25,7 +25,7 @@
 <meta name="author" content="Robin Lovelace">
 
 
-<meta name="date" content="2018-12-17">
+<meta name="date" content="2018-12-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -146,7 +146,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#loading-a-basemap"><i class="fa fa-check"></i><b>2.4</b> Loading a basemap</a></li>
 <li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projects-and-files"><i class="fa fa-check"></i><b>2.5</b> Projects and files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a><ul>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#importing-spatial-data"><i class="fa fa-check"></i><b>3.1</b> Importing spatial data</a></li>
+<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#importing-a-csv-or-text-file"><i class="fa fa-check"></i><b>3.2</b> Importing a CSV or text file</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data.html"><a href="data.html#csv-with-spatial-data"><i class="fa fa-check"></i><b>3.2.1</b> CSV with spatial data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data.html"><a href="data.html#csv-without-spatial-data"><i class="fa fa-check"></i><b>3.2.2</b> CSV without spatial data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#joining-data"><i class="fa fa-check"></i><b>3.3</b> Joining Data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data.html"><a href="data.html#attribute-joins"><i class="fa fa-check"></i><b>3.3.1</b> Attribute Joins</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data.html"><a href="data.html#spatial-joins"><i class="fa fa-check"></i><b>3.3.2</b> Spatial Joins</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="style-and-select-features.html"><a href="style-and-select-features.html"><i class="fa fa-check"></i><b>4</b> Style and select features</a></li>
 <li class="chapter" data-level="5" data-path="processing-data.html"><a href="processing-data.html"><i class="fa fa-check"></i><b>5</b> Processing data</a><ul>
 <li class="chapter" data-level="5.1" data-path="processing-data.html"><a href="processing-data.html#attribute-calculations"><i class="fa fa-check"></i><b>5.1</b> Attribute calculations</a></li>
@@ -188,7 +198,7 @@ This chapter describes some of QGIS’s key elements and</p>
 <!-- \begin{wrapfigure}{R}   -->
 <!--  \begin{center} -->
 <div class="figure"><span id="fig:qgis-start"></span>
-<img src="figures/qgis-start.png" alt="Starting QGIS" width="50%" />
+<img src="figures/qgis-start.jpg" alt="Starting QGIS" width="50%" />
 <p class="caption">
 FIGURE 2.1: Starting QGIS
 </p>
@@ -210,9 +220,9 @@ You should see a new window appear that contains the main features of the QGIS p
 <li>Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case EPSG:2964 and scale.</li>
 </ol>
 <div class="figure"><span id="fig:qgis-window"></span>
-<img src="figures/startup.png" alt="QGIS after opening it for the first time" width="100%" />
+<img src="figures/startup.png" alt="QGIS after opening it for the first time. Source: the QGIS Manual." width="100%" />
 <p class="caption">
-FIGURE 2.2: QGIS after opening it for the first time
+FIGURE 2.2: QGIS after opening it for the first time. Source: the QGIS Manual.
 </p>
 </div>
 </div>

@@ -25,7 +25,7 @@
 <meta name="author" content="Robin Lovelace">
 
 
-<meta name="date" content="2018-12-17">
+<meta name="date" content="2018-12-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -146,7 +146,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#loading-a-basemap"><i class="fa fa-check"></i><b>2.4</b> Loading a basemap</a></li>
 <li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projects-and-files"><i class="fa fa-check"></i><b>2.5</b> Projects and files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a><ul>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#importing-spatial-data"><i class="fa fa-check"></i><b>3.1</b> Importing spatial data</a></li>
+<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#importing-a-csv-or-text-file"><i class="fa fa-check"></i><b>3.2</b> Importing a CSV or text file</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data.html"><a href="data.html#csv-with-spatial-data"><i class="fa fa-check"></i><b>3.2.1</b> CSV with spatial data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data.html"><a href="data.html#csv-without-spatial-data"><i class="fa fa-check"></i><b>3.2.2</b> CSV without spatial data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#joining-data"><i class="fa fa-check"></i><b>3.3</b> Joining Data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data.html"><a href="data.html#attribute-joins"><i class="fa fa-check"></i><b>3.3.1</b> Attribute Joins</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data.html"><a href="data.html#spatial-joins"><i class="fa fa-check"></i><b>3.3.2</b> Spatial Joins</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="style-and-select-features.html"><a href="style-and-select-features.html"><i class="fa fa-check"></i><b>4</b> Style and select features</a></li>
 <li class="chapter" data-level="5" data-path="processing-data.html"><a href="processing-data.html"><i class="fa fa-check"></i><b>5</b> Processing data</a><ul>
 <li class="chapter" data-level="5.1" data-path="processing-data.html"><a href="processing-data.html#attribute-calculations"><i class="fa fa-check"></i><b>5.1</b> Attribute calculations</a></li>
@@ -185,14 +195,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 In this case we will access data from the following site, which contains data we prepared earlier for the course: <a href="https://github.com/ITSLeeds/SSPA/releases/download/v1.1">github.com/ITSLeeds/SSPA/releases</a>.</p>
 <p>Look at the file in your explorer…</p>
 <p>To open a file in QGIS first create a QGIS project.</p>
-<p>To load a geographic data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure <a href="data.html#fig:data-source-manager">3.1</a>).</p>
+<div id="importing-spatial-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Importing spatial data</h2>
+<p>To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure <a href="data.html#fig:data-source-manager">3.1</a>).</p>
 <div class="figure"><span id="fig:data-source-manager"></span>
-<img src="figures/open-data-source-manager.png" alt="The Data Source Manager icon" width="50%" />
+<img src="figures/open-data-source-manager.jpg" alt="The Data Source Manager icon" width="50%" />
 <p class="caption">
 FIGURE 3.1: The Data Source Manager icon
 </p>
 </div>
+<p>We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.</p>
+<p>Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.</p>
+<p>Click “Add” then “Close”.</p>
+<div class="figure"><span id="fig:data-source-manager-shp"></span>
+<img src="figures/import_shp.jpg" alt="The Data Source Manager - Vector" width="50%" />
+<p class="caption">
+FIGURE 3.2: The Data Source Manager - Vector
+</p>
+</div>
+</div>
+<div id="importing-a-csv-or-text-file" class="section level2">
+<h2><span class="header-section-number">3.2</span> Importing a CSV or text file</h2>
+<div id="csv-with-spatial-data" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> CSV with spatial data</h3>
+<p>Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel.
+We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.</p>
+<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
+Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.</p>
+<p>Click “Add” then “Close”.</p>
+<div class="figure"><span id="fig:data-source-manager-csv"></span>
+<img src="figures/import_csv.jpg" alt="The Data Source Manager - Delimited Text" width="50%" />
+<p class="caption">
+FIGURE 3.3: The Data Source Manager - Delimited Text
+</p>
+</div>
+</div>
+<div id="csv-without-spatial-data" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> CSV without spatial data</h3>
+<p>QGIS will also allow you to import non-spatial data. Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”</p>
+</div>
+</div>
+<div id="joining-data" class="section level2">
+<h2><span class="header-section-number">3.3</span> Joining Data</h2>
+<p>Joining data allows you to link two separate datasets together by something they have in common. There are two types of join. Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.</p>
+<div id="attribute-joins" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Attribute Joins</h3>
+<p>We will join the population data onto the LSOA boundaries.</p>
+<p>Find “leeds_lsoa” in the Layers panel and right-click to bring up the context menu</p>
+<p>Click on Properties</p>
+<p>Select Joins from the options on the left</p>
+<p>Click the green + button to open the Add Vector Join window</p>
+<p>Select the following options:</p>
+<pre><code>Join layer: population
 
+Join field: area
+
+Target field: lsoa11cd</code></pre>
+<p>Click OK,</p>
+<p>Click OK again</p>
+<div class="figure"><span id="fig:joins"></span>
+<img src="figures/joins.jpg" alt="The Add Vector Join window" width="50%" />
+<p class="caption">
+FIGURE 3.4: The Add Vector Join window
+</p>
+</div>
+<p>Use the “Identify features” tool to see that each LSOA now has a population value.</p>
+</div>
+<div id="spatial-joins" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Spatial Joins</h3>
+<p>We will assign an LSOA ID number to each road collision by doing a spatial join.<br />
+In the “Vector” menu, select “Data Management Tools”, then “Join Attributes by Location”.</p>
+<div class="figure">
+<img src="figures/spatial_joins.jpg" alt="Join Attributes by Location" width="50%" />
+<p class="caption">
+(#fig:joins_menu)Join Attributes by Location
+</p>
+</div>
+<div class="figure">
+<img src="figures/spatial_joins_window.jpg" alt="Join Attributes by Location Window" width="50%" />
+<p class="caption">
+(#fig:joins_window)Join Attributes by Location Window
+</p>
+</div>
+<div class="figure">
+<img src="figures/spatial_join_result.jpg" alt="Join Results" width="50%" />
+<p class="caption">
+(#fig:joins_result)Join Results
+</p>
+</div>
+
+</div>
+</div>
 </div>
             </section>
 
