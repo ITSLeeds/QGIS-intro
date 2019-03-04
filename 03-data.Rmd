@@ -39,8 +39,8 @@ knitr::include_graphics("figures/import_shp.jpg")
 
 The result should look something like the map displayed in Figure \@ref(fig:imported).
 
-```{r imported, fig.cap="The map after the file 'leeds_lsoa.shp' has been imported."}
-knitr::include_graphics("https://user-images.githubusercontent.com/1825120/53740479-2f372f00-3e8c-11e9-8add-a163b104037b.png")
+```{r imported, fig.cap="The map after the file 'leeds_lsoa.shp' has been imported.", echo=FALSE}
+knitr::include_graphics("figures/imported.png")
 ```
 
 
@@ -71,8 +71,8 @@ QGIS will also allow you to import non-spatial data.
 Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
 When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:
 
-```{r layers, fig.cap="The imported data layers shown in the Layer window.", out.width="50%"}
-knitr::include_graphics("https://user-images.githubusercontent.com/1825120/53741128-95708180-3e8d-11e9-8070-38a030de2fa2.png")
+```{r layers, fig.cap="The imported data layers shown in the Layer window.", out.width="50%", echo=FALSE}
+knitr::include_graphics("figures/layers.png")
 ```
 
 
@@ -85,5 +85,5 @@ Before moving on to the next chapter make sure you have.
 
 Bonus Exercises
 
-1. Read about the disadvantages of shapefile at some of the alteratives http://switchfromshapefile.org/ 
+1. Read about the disadvantages of shapefile and some of the alteratives http://switchfromshapefile.org/ 
 

@@ -79,6 +79,15 @@ We learned how to install plugins in the previous section so this alternative wa
 knitr::include_graphics("figures/webmap.png")
 ```
 
+## Panning and Zooming
+
+You can naviagate around the map using the mouse or the buttons in the toolbar.
+
+```{r navigation, fig.cap="Navigation buttons: Pan Map, Pan to Selection, Zoom In, Zoom Out, Zoom to Native Resolution, Zoom Full, Zoom to Selection"}
+knitr::include_graphics("figures/navigation.jpg")
+```
+
+
 ## Projects and Files
 
 QGIS allows you to open multiple files at once and overlay them as layers on the same map.
