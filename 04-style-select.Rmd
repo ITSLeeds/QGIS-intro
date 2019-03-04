@@ -30,7 +30,16 @@ For the type of Symbology select "Categorised", the column "accident_severity", 
 knitr::include_graphics("figures/symbology_results.png")
 ```
 
-**Exercise: Experiment using different columns and types of symbology.**
+
+## Summary
+
+Before moving onto the next chapter make sure you have.
+
+1. Styled the stats19 points data
+
+Bonus Exercises
+
+1. Experiment using different columns and types of symbology
 Hint: Think about how different types of symbology are appropriate to different types of data (categorical, discreet, continuous). Can you discover any interesting patterns in the data? How doy your choice of breakpoints affect the presentation of the data?
 
 

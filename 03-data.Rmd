@@ -60,3 +60,12 @@ QGIS will also allow you to import non-spatial data. Import the population.csv e
 
 ## Summary
 
+Before moving on to the next chapter make sure you have.
+
+1. Downloaded the example data
+1. Imported the three files to QGIS
+
+Bonus Exercises
+
+1. Read about the disadvantages of shapefile at some of the alteratives http://switchfromshapefile.org/ 
+
