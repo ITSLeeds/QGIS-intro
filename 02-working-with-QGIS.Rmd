@@ -62,17 +62,18 @@ knitr::include_graphics(c(
 To install a plugin, click on the 'Install plugin' button in the bottom right corner of Figure \@ref(fig:plugins) (right).
 Use the search bar to explore for plugins. What happens if you search for 'trans', for example (short for transport)?
 
-## Loading a basemap
+**Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.**
+Hint: after you have installed the plugin navigate to the Web menu (or press `Alt+W`).
+After completing the exercise your QGIS session should look something like that displayed in Figure \@ref(fig:webmap).
+
+## Loading basemaps
 
 You can add a basemap by clicking on the 'XYZ Tiles' option in the Browser Panel. Options should include Google and OpenStreetMap.
 Clicking on one of these will add a new layer, which can be seen in the Layers menu.
 
 Another way to add basemaps, with a wide range of default options, is via a plugin. 
-We learned how to install plugins in the previous section so this alternative way is best learned as an exercise.
+We learned how to install plugins in the previous section so this alternative way is best learned as an exercise (see exercises section at the end of this chapter, and Figure \@ref(fig:webmap)).
 
-**Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.**
-Hint: after you have installed the plugin navigate to the Web menu (or press `Alt+W`).
-After completing the exercise your QGIS session should look something like that displayed in Figure \@ref(fig:webmap).
 
 ```{r webmap, fig.cap="QGIS with a basemap from QuickMapServices"}
 knitr::include_graphics("figures/webmap.png")
@@ -112,9 +113,19 @@ CRSs are often referred to by the EPSG number. The European Petroleum Survey Gro
 * 4326 - the World Geodetic System 1984 which is a widely used  geographical coordinate system
 * 27700 - the British National Grid
 
+## Summary 
 
+This section introduced QGIS and its main components.
+Before moving on to the next section, in which we will import data into QGIS, ensure that you have:
 
+1. Opened QGIS and created and name a project, saving it in an appropriate place on your computer.
+1. Installed and tested the QuickMapServices plugin, and identified basemaps that are appropriate for use in transport planning
 
+**Bonus exercise:** Find three plugins that may be useful in transport planning.
+Which has the best rating?
 
-
-
+<!-- Networks -->
+<!-- Online Routing Mapper -->
+<!-- Area Along Network -->
+<!-- ORS Tools -->
+<!-- GPS Tools -->

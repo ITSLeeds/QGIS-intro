@@ -40,13 +40,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Preface 
+# Preface {-}
 
-Transport is inherently geographic. All transport involves movement from a place on the Earth to another. This means that Geographic Information Systems (GIS) have great potential to assist transport researchers. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it. QGIS is ideal not only for learning GIS techniques but also using them in practice where software licensing and cost may be important. QGIS is rapidly growing in popularity compared with proprietary GIS and transport software products such as ESRI’s **ArcMap** and PTV's **Visum** (Figure \@ref(fig:trends)).
-
-```{r trends, fig.cap="The growing popularity of QGIS, as measured by internet search traffic. Source: [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,visum).", out.width="65%"}
-knitr::include_graphics("figures/GoogleTrends2019.png")
-```
+Transport is inherently geographic. All transport involves movement from a place on the Earth to another. This means that Geographic Information Systems (GIS) have great potential to assist transport researchers. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it. 
 
 The growing popularity, power and features of QGIS means that **learning it now** could save much time and money long into the future: **QGIS is futureproof**.
 A more mundane for writing this tutorial was the installation of **QGIS 3** across the University of Leeds.

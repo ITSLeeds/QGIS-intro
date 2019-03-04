@@ -58,5 +58,5 @@ knitr::include_graphics("figures/import_csv.jpg")
 
 QGIS will also allow you to import non-spatial data. Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”
 
-
+## Summary
 

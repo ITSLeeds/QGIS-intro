@@ -30,27 +30,20 @@ Since graphical user interfaces (GUIs) for GIS became popular in the early 2000s
 Examples of dedicated GIS software include the open source GIS software QGIS (we will come onto what QGIS is in a subsequent section) and proprietary software such as ArcMap and TransCAD.
 It is also possible, and increasingly popular, to do GIS using a programming language with a command-line interface (CLI) such as Python or R (see \@ref(next-steps))
 
-## Why use GIS for transport research?
+<!-- ## Why use GIS for transport research? -->
 
 ## What is QGIS?
 
 QGIS is an open source dedicated GIS software program.
 It has become the most commonly used open source program for working with geographic data.
-Search engine data from Google suggests that, worldwide, it may have become more popular than the proprietary market leader in GIS software, ESRI's ArcMap product (Figure \@ref(fig:qgis-vs-arcmap), see [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,esri) for further details).
+Search engine data from Google shows that QGIS is becoming increasing popular.
+QGIS is ideal not only for learning GIS techniques but also using them in practice where software licensing and cost may be important. 
+Figure \@ref(fig:trends) shows how QGIS's popularity over time compares with the GIS product ESRI **ArcMap** and the transport planning product, PTV **Visum**.^[
+QGIS does not have dedicate transport planning functionality like Visum
+]
 
-```{r qgis-vs-arcmap, fig.cap="Data on the popularity of different GIS-related search terms, worldwide, from 2004 to 2018. Source: trends.google.com."}
-knitr::include_graphics("figures/qgis-vs-arcmap.png")
-# figure does not label colours !!!!
+```{r trends, fig.cap="The growing popularity of QGIS, as measured by internet search traffic. Source: [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,visum).", out.width="65%"}
+knitr::include_graphics("figures/GoogleTrends2019.png")
 ```
 
-
-## Alternatives to QGIS
-
-Now unplug your Internet cable, and start doing some serious work.
-
-More chapters to come in `02-foo.Rmd`, `03-bar`.Rmd, ...
-
-```{r}
-# this is a code block that triggers 'shaded' environment
-```
-
+<!-- ## Alternatives to QGIS -->
