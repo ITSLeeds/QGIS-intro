@@ -16,7 +16,7 @@ if(!dir.exists("QGISforSSPAdata/")) {
 
 Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.
 
-To open a file in QGIS first create a QGIS project.
+Before opening data files, you should first have created a QGIS project, covered in the previous chapter.
 
 
 ## Importing spatial data
@@ -33,9 +33,16 @@ Open the Data Source Manager and select “Vector” then specify the “File Na
 
 Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.
 
-```{r data-source-manager-shp, out.width="100%", fig.cap="The Data Source Manager - Vector", echo=FALSE}
+```{r data-source-manager-shp, out.width="100%", fig.cap="The Data Source Manager - Vector", echo=FALSE, fig.show='hold'}
 knitr::include_graphics("figures/import_shp.jpg")
 ```
+
+The result should look something like the map displayed in Figure \@ref(fig:imported).
+
+```{r imported, fig.cap="The map after the file 'leeds_lsoa.shp' has been imported."}
+knitr::include_graphics("https://user-images.githubusercontent.com/1825120/53740479-2f372f00-3e8c-11e9-8add-a163b104037b.png")
+```
+
 
 
 ## Importing a CSV or text file
@@ -54,9 +61,20 @@ Click “Add” then “Close”.
 knitr::include_graphics("figures/import_csv.jpg")
 ```
 
+After importing the 'stats19' data, using menus shown in Figure \@ref(fig:data-source-manager-csv), you should see points on the map, representing where crashes in Leeds took place in 2017.
+If you do not see dots on the map, re-read this section.
+If you do, congratuations!
+
 ### CSV without spatial data
 
-QGIS will also allow you to import non-spatial data. Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”
+QGIS will also allow you to import non-spatial data.
+Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
+When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:
+
+```{r layers, fig.cap="The imported data layers shown in the Layer window.", out.width="50%"}
+knitr::include_graphics("https://user-images.githubusercontent.com/1825120/53741128-95708180-3e8d-11e9-8070-38a030de2fa2.png")
+```
+
 
 ## Summary
 
