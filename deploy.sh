@@ -11,6 +11,7 @@
 
 # push book contents:
 git commit -am 'pre-deploy commit'
+Rscript -e 'bookdown::render_book("index.Rmd", output_format = "bookdown::gitbook", clean = FALSE)'
 rm -rv /tmp/_book
 rm -rv /tmp/booksource
 mv _book /tmp/
