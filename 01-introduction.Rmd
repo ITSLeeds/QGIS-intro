@@ -10,7 +10,7 @@ knitr::opts_chunk$set(out.width = "100%")
 ## What is GIS?
 
 GIS stands for Geographic Information Systems.
-The term was first used in the 1960s, and has since become a common way of referring to the analysis of geographic data.
+The term was first used in the 1960s and has since become a common way of referring to the analysis of geographic data.
 
 That raises another question: what do we mean by 'geographic data'?
 The defining feature of geographic data is that it has coordinates that allow the position of records in the dataset to be located on Earth.

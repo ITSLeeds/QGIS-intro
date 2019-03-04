@@ -3,7 +3,7 @@
 A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.
 
 Often, the first stage in the data downloading/loading process is to find the data online. 
-In this case we will access data from the following site, which contains data we prepared earlier for the course: [github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
+In this case, we will access data from the following site, which contains data we prepared earlier for the course: [github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
 
 ```{r, echo=FALSE}
 if(!dir.exists("QGISforSSPAdata/")) {
@@ -14,7 +14,7 @@ if(!dir.exists("QGISforSSPAdata/")) {
 }
 ```
 
-Download and unzip the data.zip file. This fiel contains the data that you will use for the rest of the tutorial.
+Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.
 
 To open a file in QGIS first create a QGIS project.
 

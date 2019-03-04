@@ -42,13 +42,7 @@ knitr::opts_chunk$set(
 
 # Preface 
 
-Transport is inherently geographic.
-All transport involves movement from place on the Earth to another.
-This means that Geographic Information Systems (GIS) have great potential to assist transport researchers.
-QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility.
-QGIS is free and open source, meaning that anyone can download, install and even contribute to it.
-QGIS is ideal not only for learning GIS techniques, but also using them in practice where software licensing and cost may be important.
-QGIS is rapidly growing in popularity compared with proprietary GIS and transport software products such as ESRI's **ArcMap** and PTV's **Visum** (Figure \@ref(fig:trends)).
+Transport is inherently geographic. All transport involves movement from a place on the Earth to another. This means that Geographic Information Systems (GIS) have great potential to assist transport researchers. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it. QGIS is ideal not only for learning GIS techniques but also using them in practice where software licensing and cost may be important. QGIS is rapidly growing in popularity compared with proprietary GIS and transport software products such as ESRI’s **ArcMap** and PTV's **Visum** (Figure \@ref(fig:trends)).
 
 ```{r trends, fig.cap="The growing popularity of QGIS, as measured by internet search traffic. Source: [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,visum).", out.width="65%"}
 knitr::include_graphics("figures/GoogleTrends2019.png")
@@ -57,12 +51,12 @@ knitr::include_graphics("figures/GoogleTrends2019.png")
 The growing popularity, power and features of QGIS means that **learning it now** could save much time and money long into the future: **QGIS is futureproof**.
 A more mundane for writing this tutorial was the installation of **QGIS 3** across the University of Leeds.
 Suddenly existing material, developed for **QGIS 2**, no longer worked.
-Instead of incrementally updating those materials we decided to start from from a blank slate, allowing the inclusion of new datasets and links to excellent on-line content that already exists for QGIS.
+Instead of incrementally updating those materials we decided to start from a blank slate, allowing the inclusion of new datasets and links to excellent online content that already exists for QGIS.
 
 The aim is to get you up-to-speed with *the most important concepts and techniques* in QGIS for *Transport Planning*.
 We refer to Transport Planning in the broad sense of providing evidence-based guidance to support sustainable transport behaviours.
 With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
-For this reason the data used in this booklet focusses on these modes. 
+For this reason, the data used in this booklet focusses on these modes. 
 
 
 

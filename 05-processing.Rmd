@@ -1,14 +1,14 @@
 # Processing data
 
 We saw in Chapter ... how to style and select features of interest from layers loaded into QGIS.
-In this section we will learn how to process data.
+In this section, we will learn how to process data.
 That means creating new data from existing data.
 
 ## Reprojecting Data
 
-Our two spatial datasets has different coridnate systems. This can make if difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.
+Our two spatial datasets have different coordinate systems. This can make it difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.
 
-In the vector menu select Data management Tools, Reproject Layer
+In the vector, menu select Data management Tools, Reproject Layer
 
 ```{r reproject_menu, out.width="100%", fig.cap="Reproject Menu", echo=FALSE}
 knitr::include_graphics("figures/reproject.png")
@@ -22,7 +22,7 @@ knitr::include_graphics("figures/crs.png")
 
 Joining data allows you to link two separate datasets together by something they have in common. There are two types of join.  Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.
 
-In this next section we will use a series of joins to find the area of leeds with the highest rate of road collisions.
+In this next section, we will use a series of joins to find the area of Leeds with the highest rate of road collisions.
 
 ### Attribute Joins
 
@@ -38,12 +38,12 @@ Click the green + button to open the Add Vector Join window
 
 Select the following options:
 
-	Join layer: population
-	
-	Join field: area
-	
-	Target field: lsoa11cd
-	
+    Join layer: population
+    
+    Join field: area
+    
+    Target field: lsoa11cd
+    
 Click OK,
 
 Click OK again
@@ -64,20 +64,20 @@ In the “Vector” menu, select “Data Management Tools”, then “Join Attri
 knitr::include_graphics("figures/spatial_joins.jpg")
 ```
 
-in the Vector Menu, select data Managment Tools, Select Attributes by location.
+In the Vector Menu, select Data Management Tools, Select Attributes by location.
 
 ```{r joins_window, out.width="100%", fig.cap="Join Attributes by Location Window", echo=FALSE}
 knitr::include_graphics("figures/spatial_joins_window.jpg")
 ```
 
-For the Input Layer select "stats19"" and for the output later slelct "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click run.
+For the Input Layer select "stats19" and for the output later select "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click run.
 
 
 ```{r joins_result, out.width="100%", fig.cap="Join Results", echo=FALSE}
 knitr::include_graphics("figures/spatial_join_result.jpg")
 ```
 
-Once the process has completed a new layer will have been added to the map called "joined Layer" you can used the “Identify features” tool to see that each point in the stas19 data now has the  
+Once the process has completed a new layer will have been added to the map called "joined Layer" you can use the “Identify features” tool to see that each point in the stas19 data now has the  
 
 
 

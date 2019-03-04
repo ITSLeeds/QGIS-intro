@@ -31,10 +31,10 @@ You should see a new window appear that contains the main features of the QGIS p
 These include the following main components, numbered from 1:5 in the figure and the bullet points below (source: the [QGIS Manual](https://docs.qgis.org/2.18/en/docs/user_manual/)):
 
 1. Menu Bar: like most GUI-based programs you can control key aspects of QGIS and execute key commands, like saving your project and loading new datasets, by clicking Project or Layer.  Note: shortcuts to access these menus from the keyboard are `Alt+J` and `Alt+L`, respectively.
-1. Toolbars: these are small icons located towards the top and left hand side of Figure \@ref(fig:qgis-window). In addition to options available from the Menu Bar, these icons provide tools for interacting with the map such as Pan (the hand symbol) and Zoom (the + and - signs).
+1. Toolbars: these are small icons located towards the top and left-hand side of Figure \@ref(fig:qgis-window). In addition to options available from the Menu Bar, these icons provide tools for interacting with the map such as Pan (the hand symbol) and Zoom (the + and - signs).
 1. Panels: Panels are interactive elements that show information on particular aspects of the project. A view of files in the Browser Panel and the Layers Panel are shown in Figure \@ref(fig:qgis-window). 
 1. Map View: this is where the geographic data is displayed in an interactive map for interactive visualisation.
-1. Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case EPSG:2964 and scale.
+1. Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case, EPSG:3857 and scale.
 
 ```{r qgis-window, fig.cap="QGIS main user interface features"}
 knitr::include_graphics("figures/main_ui.jpg")
@@ -72,7 +72,7 @@ We learned how to install plugins in the previous section so this alternative wa
 
 **Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.**
 Hint: after you have installed the plugin navigate to the Web menu (or press `Alt+W`).
-After completing the exercise your QGIS session should look somthing like that displayed in Figure \@ref(fig:webmap).
+After completing the exercise your QGIS session should look something like that displayed in Figure \@ref(fig:webmap).
 
 ```{r webmap, fig.cap="QGIS with a basemap from QuickMapServices"}
 knitr::include_graphics("figures/webmap.png")
@@ -80,7 +80,7 @@ knitr::include_graphics("figures/webmap.png")
 
 ## Projects and Files
 
-QGIS allows you to open multiple files at once and overlay them as layers on the same map. You can also customise the visualisation of the layers. To allow you to save your work it is recommended to save a project file.  Projects don't contain any data themselves, but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date.
+QGIS allows you to open multiple files at once and overlay them as layers on the same map. You can also customise the visualisation of the layers. To allow you to save your work it is recommended to save a project file.  Projects don't contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date.
 
 You can create a project and save a project using the buttons shown below or using the options in the Project menu.
 
@@ -89,9 +89,9 @@ You can create a project and save a project using the buttons shown below or usi
 knitr::include_graphics("figures/project_buttons.jpg")
 ```
 
-Note that because the Project does not contain any data itself you cannot simple move a project file from one computer to another. It would be necessary to move both the project and any associated files. You may also need to redirect the project to the new file locations on the new computer.
+Note that because the Project does not contain any data itself you cannot simply move a project file from one computer to another. It would be necessary to move both the project and any associated files. You may also need to redirect the project to the new file locations on the new computer.
 
-## Projections and Cordinate Refercne Systems
+## Projections and Coordinate Reference Systems
 
 ```{r projections, fig.cap="Map Projections, Source XKCD", out.width="50%", fig.align = "right"}
 knitr::include_graphics("figures/map_projections.png")
@@ -99,13 +99,19 @@ knitr::include_graphics("figures/map_projections.png")
 
 When plotting a map you need X and Y coordinates to specify where objects should appear. While this is simple on a flat surface spatial data must fit onto the curved surface of the earth. You may know that it is impossible to unwrap a sphere into a single flat surface without distorting (stretching, twisting, cutting) the surface in some way. The process of making a flat map from a curved Earth is known as projection, and there are many valid ways to project a map.
 
-Cartographers can argue intensely about their preferred projections as this famous XKCD comic alludes to. Coordinate reference systems refers to different ways of defining the X and Y coordinates used in different projections. Largely they fall into two categories:
+Cartographers can argue intensely about their preferred projections as this famous XKCD comic alludes to. Coordinate Reference Systems (CRS) refer to different ways of defining the X and Y coordinates used in different projections. Largely they fall into two categories:
 
 * Geographical Coordinate Systems: use latitude and longitude to represent any place on the Earth
 
 * Projected Coordinate Systems: use distances from an origin point to represent a small part of the Earth, e.g. a country. The advantage of a projects CRS is that it is easier to calculate properties such as distance and area as coordinates are in metres.
 
 You can find a catalogue of different CRSs at http://spatialreference.org/
+
+CRSs are often referred to by the EPSG number. The European Petroleum Survey Group publish a database of different coordinate systems. Two useful projections to commit to memory are:
+
+* 4326 - the World Geodetic System 1984 which is a widely used  geographical coordinate system
+* 27700 - the British National Grid
+
 
 
 
