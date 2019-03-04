@@ -2,15 +2,16 @@
 
 ## Identify Features
 
-The Identify features button allow you to interogate a specific part of your spatial data simply by clicking on it
+The 'Identify features button' allows you to interrogate features on the map by clicking on them (see Figure \@ref(fig:identify)).
 
-```{r idetify, out.width="10%", fig.cap="Identify Features Button", echo=FALSE}
+```{r identify, out.width="10%", fig.cap="Identify Features Button", echo=FALSE}
 knitr::include_graphics("figures/identify.jpg")
 ```
 
-Clicking on a map feature brings up a pannel with more infroamtion about that feature. You can use the mode menu at the bottom of the pannel to select which layers will be included.
+Clicking on a map feature brings up a panel with more information about that feature.
+You can use the mode menu at the bottom of the panel to select which layers will be included (see Figure \@ref(fig:identify-panel)).
 
-```{r identify_pannel, out.width="100%", fig.cap="Identify Features Pannel", echo=FALSE}
+```{r identify-panel, out.width="100%", fig.cap="Identify Features Pannel", echo=FALSE}
 knitr::include_graphics("figures/inspect_pannel.png")
 ```
 
@@ -40,6 +41,6 @@ Before moving onto the next chapter make sure you have.
 Bonus Exercises
 
 1. Experiment using different columns and types of symbology
-Hint: Think about how different types of symbology are appropriate to different types of data (categorical, discreet, continuous). Can you discover any interesting patterns in the data? How doy your choice of breakpoints affect the presentation of the data?
+Hint: Think about how different types of symbology are appropriate to different types of data (categorical, discreet, continuous). Can you discover any interesting patterns in the data? How does your choice of breakpoints affect the presentation of the data?
 
 
