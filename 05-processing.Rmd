@@ -1,13 +1,123 @@
 # Processing data
 
 We saw in Chapter ... how to style and select features of interest from layers loaded into QGIS.
-In this section we will learn how to process data.
+In this section, we will learn how to process data.
 That means creating new data from existing data.
 
-## Attribute calculations
+## Reprojecting Data
 
-New attributes can be added to datasets with the Calculator...
+Our two spatial datasets have different coordinate systems. This can make it difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.
 
-## Buffers
+In the vector, menu select Data management Tools, Reproject Layer
 
-## Spatial subsetting
+```{r reproject-menu, out.width="100%", fig.cap="Reproject Menu", echo=FALSE}
+knitr::include_graphics("figures/reproject.png")
+```
+
+```{r crs-menu, out.width="100%", fig.cap="Reproject MenuCordiante Reference System", echo=FALSE}
+knitr::include_graphics("figures/crs.png")
+```
+
+## Joining Data
+
+Joining data allows you to link two separate datasets together by something they have in common. There are two types of join.  Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.
+
+In this next section, we will use a series of joins to find the area of Leeds with the highest rate of road collisions.
+
+### Attribute Joins
+
+We will join the population data onto the LSOA boundaries.
+
+Find “leeds_lsoa” in the Layers panel and right-click to bring up the context menu
+
+Click on Properties
+
+Select Joins from the options on the left
+
+Click the green + button to open the Add Vector Join window
+
+Select the following options:
+
+    Join layer: population
+    
+    Join field: area
+    
+    Target field: lsoa11cd
+    
+Click OK,
+
+Click OK again
+
+```{r joins, out.width="100%", fig.cap="The Add Vector Join window", echo=FALSE}
+knitr::include_graphics("figures/joins.jpg")
+```
+
+
+Use the “Identify features” tool to see that each LSOA now has a population value.
+
+
+### Spatial Joins
+We will assign an LSOA ID number to each road collision by doing a spatial join.  
+In the “Vector” menu, select “Data Management Tools”, then “Join Attributes by Location”.
+
+```{r joins-menu, out.width="100%", fig.cap="Join Attributes by Location", echo=FALSE}
+knitr::include_graphics("figures/spatial_joins.jpg")
+```
+
+In the Vector Menu, select Data Management Tools, Select Attributes by location.
+
+```{r joins_window, out.width="100%", fig.cap="Join Attributes by Location Window", echo=FALSE}
+knitr::include_graphics("figures/spatial_joins_window.jpg")
+```
+
+For the Input Layer select "stats19" and for the output later select "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click run.
+
+
+```{r joins-result, out.width="100%", fig.cap="Join Results", echo=FALSE}
+knitr::include_graphics("figures/spatial_join_result.jpg")
+```
+
+Once the process has completed a new layer will have been added to the map called "joined Layer" you can use the “Identify features” tool to see that each point in the stas19 data now has the  
+
+## Points in Polygons
+
+The final step for this chapter will be to count the number of road crash casualties in each LSOA.
+
+In the Vector Menu, select Analysis Tools, Count Points in Polygons.
+
+```{r points-polygons, out.width="100%", fig.cap="Points in Polygons Tool", echo=FALSE}
+knitr::include_graphics("figures/points_ins_polygon.jpg")
+```
+
+For the Polygons choose your LSOA areas and the points the stats19 data. USe the number of casualties as a weighting field, and give the "count field name" an appropriate name.
+
+A new layer will be created with the number of casualties for each LSOA. USe Symbology to visualise the most dangerous areas of Leeds.
+
+
+```{r final-plot, out.width="100%", fig.cap="Number of road crash casualties in Leeds", echo=FALSE}
+knitr::include_graphics("figures/final_plot.jpg")
+```
+
+<!-- ## Attribute calculations -->
+
+<!-- New attributes can be added to datasets with the Calculator... -->
+
+<!-- ## Buffers -->
+
+<!-- ## Spatial subsetting -->
+
+
+## Summary 
+
+Before moving onto the next chapter make sure you have.
+
+1. Reprojected the stats19 data to the British National Grid
+1. Done an attribute join of the population data to the LSOA areas
+1. Done a spatial join of the LSOA areas to the stats19 points
+1. Counted the number of casualties in each LSOA
+
+Bonus Exercises
+
+1. Can you use symbology to show the population of each LSOA?
+1. Can you use symbology to show the number of casualties in each LSOA?
+

@@ -1,2 +1,49 @@
 # Style and select features
 
+## Identify Features
+
+The 'Identify features button' allows you to interrogate features on the map by clicking on them (see Figure \@ref(fig:identify)).
+
+```{r identify, out.width="10%", fig.cap="Identify Features Button", echo=FALSE}
+knitr::include_graphics("figures/identify.jpg")
+```
+
+Clicking on a map feature brings up a panel with more information about that feature.
+You can use the mode menu at the bottom of the panel to select which layers will be included (see Figure \@ref(fig:identify-panel)).
+
+```{r identify-panel, out.width="100%", fig.cap="Identify Features Pannel", echo=FALSE}
+knitr::include_graphics("figures/inspect_pannel.png")
+```
+
+## Symbology
+
+In QGIS you can change the appearance of layers to communicate additional information. This is called symbology.
+
+In the layers panel right click on "stats19" and select "properties", in the menu on the left select "Symbology"
+
+```{r symbology-menu, out.width="100%", fig.cap="Symbology Menu", echo=FALSE}
+knitr::include_graphics("figures/symbology.png")
+```
+
+For the type of Symbology select "Categorised", the column "accident_severity", then chose a colour ramp from the drop-down menu. Then click "Classify". This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.
+
+```{r symbology-results, out.width="100%", fig.cap="Road collisons categoried by severity", echo=FALSE}
+knitr::include_graphics("figures/symbology_results.png")
+```
+
+
+## Summary
+
+Before moving onto the next chapter make sure you have.
+
+1. Styled the stats19 points data
+
+**Bonus Exercises**
+
+1. Experiment using different columns and types of symbology
+
+Hint: Think about how different types of symbology are appropriate to different types of data (categorical, discreet, continuous). Can you discover any interesting patterns in the data? How does your choice of breakpoints affect the presentation of the data?
+
+2. Can you work out how to use transparency to overlay mulitple layers clearly?
+
+
