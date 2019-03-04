@@ -119,7 +119,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#plugins"><i class="fa fa-check"></i><b>3.3</b> Plugins</a></li>
 <li class="chapter" data-level="3.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#loading-a-basemap"><i class="fa fa-check"></i><b>3.4</b> Loading a basemap</a></li>
 <li class="chapter" data-level="3.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projects-and-files"><i class="fa fa-check"></i><b>3.5</b> Projects and Files</a></li>
-<li class="chapter" data-level="3.6" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projections-and-cordinate-refercne-systems"><i class="fa fa-check"></i><b>3.6</b> Projections and Cordinate Refercne Systems</a></li>
+<li class="chapter" data-level="3.6" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projections-and-coordinate-reference-systems"><i class="fa fa-check"></i><b>3.6</b> Projections and Coordinate Reference Systems</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>4</b> Downloading and loading data</a><ul>
 <li class="chapter" data-level="4.1" data-path="data.html"><a href="data.html#importing-spatial-data"><i class="fa fa-check"></i><b>4.1</b> Importing spatial data</a></li>
@@ -169,11 +169,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="processing-data" class="section level1">
 <h1><span class="header-section-number">6</span> Processing data</h1>
-<p>We saw in Chapter … how to style and select features of interest from layers loaded into QGIS. In this section we will learn how to process data. That means creating new data from existing data.</p>
+<p>We saw in Chapter … how to style and select features of interest from layers loaded into QGIS. In this section, we will learn how to process data. That means creating new data from existing data.</p>
 <div id="reprojecting-data" class="section level2">
 <h2><span class="header-section-number">6.1</span> Reprojecting Data</h2>
-<p>Our two spatial datasets has different coridnate systems. This can make if difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.</p>
-<p>In the vector menu select Data management Tools, Reproject Layer</p>
+<p>Our two spatial datasets have different coordinate systems. This can make it difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.</p>
+<p>In the vector, menu select Data management Tools, Reproject Layer</p>
 <div class="figure">
 <img src="figures/reproject.png" alt="Reproject Menu" width="100%" />
 <p class="caption">
@@ -190,7 +190,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="joining-data" class="section level2">
 <h2><span class="header-section-number">6.2</span> Joining Data</h2>
 <p>Joining data allows you to link two separate datasets together by something they have in common. There are two types of join. Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.</p>
-<p>In this next section we will use a series of joins to find the area of leeds with the highest rate of road collisions.</p>
+<p>In this next section, we will use a series of joins to find the area of Leeds with the highest rate of road collisions.</p>
 <div id="attribute-joins" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> Attribute Joins</h3>
 <p>We will join the population data onto the LSOA boundaries.</p>
@@ -224,21 +224,21 @@ In the “Vector” menu, select “Data Management Tools”, then “Join Attri
 (#fig:joins_menu)Join Attributes by Location
 </p>
 </div>
-<p>in the Vector Menu, select data Managment Tools, Select Attributes by location.</p>
+<p>In the Vector Menu, select Data Management Tools, Select Attributes by location.</p>
 <div class="figure">
 <img src="figures/spatial_joins_window.jpg" alt="Join Attributes by Location Window" width="100%" />
 <p class="caption">
 (#fig:joins_window)Join Attributes by Location Window
 </p>
 </div>
-<p>For the Input Layer select “stats19”&quot; and for the output later slelct “leeds_lsoa”. For join type select “Create separate feature of each located feature”. Then click run.</p>
+<p>For the Input Layer select “stats19” and for the output later select “leeds_lsoa”. For join type select “Create separate feature of each located feature”. Then click run.</p>
 <div class="figure">
 <img src="figures/spatial_join_result.jpg" alt="Join Results" width="100%" />
 <p class="caption">
 (#fig:joins_result)Join Results
 </p>
 </div>
-<p>Once the process has completed a new layer will have been added to the map called “joined Layer” you can used the “Identify features” tool to see that each point in the stas19 data now has the</p>
+<p>Once the process has completed a new layer will have been added to the map called “joined Layer” you can use the “Identify features” tool to see that each point in the stas19 data now has the</p>
 </div>
 </div>
 <div id="attribute-calculations" class="section level2">
