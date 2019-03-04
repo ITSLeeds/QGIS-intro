@@ -81,7 +81,7 @@ Once the process has completed a new layer will have been added to the map calle
 
 ## Points in Polygons
 
-The final step for this chapter will be to count the number of road crash casualtities in each LSOA.
+The final step for this chapter will be to count the number of road crash casualties in each LSOA.
 
 In the Vector Menu, select Analysis Tools, Count Points in Polygons.
 
@@ -89,12 +89,12 @@ In the Vector Menu, select Analysis Tools, Count Points in Polygons.
 knitr::include_graphics("figures/points_ins_polygon.jpg")
 ```
 
-For the Polygons choose your LSOA areas and the points the stats19 data. USe the number of casulatities as a weighting field, and give the "count field name" an appopriate name.
+For the Polygons choose your LSOA areas and the points the stats19 data. USe the number of casualties as a weighting field, and give the "count field name" an appropriate name.
 
-A new layer will be created with the number of casualaties for each LSOA. USe Symbology to visualise the most dangerous areas of Leeds.
+A new layer will be created with the number of casualties for each LSOA. USe Symbology to visualise the most dangerous areas of Leeds.
 
 
-```{r final-plot, out.width="100%", fig.cap="Number of road crash casulaities in Leeds", echo=FALSE}
+```{r final-plot, out.width="100%", fig.cap="Number of road crash casualties in Leeds", echo=FALSE}
 knitr::include_graphics("figures/final_plot.jpg")
 ```
 
@@ -112,12 +112,12 @@ knitr::include_graphics("figures/final_plot.jpg")
 Before moving onto the next chapter make sure you have.
 
 1. Reprojected the stats19 data to the British National Grid
-1. Done an attribute join of the poulation data to the LSOA areas
+1. Done an attribute join of the population data to the LSOA areas
 1. Done a spatial join of the LSOA areas to the stats19 points
-1. Counted the number of casualities in each LSOA
+1. Counted the number of casualties in each LSOA
 
 Bonus Exercises
 
 1. Can you use symbology to show the population of each LSOA?
-1. Can you use symbology to show the number of casulaties in each LSOA?
+1. Can you use symbology to show the number of casualties in each LSOA?
 
