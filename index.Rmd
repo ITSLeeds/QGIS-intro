@@ -45,7 +45,7 @@ knitr::opts_chunk$set(
 Transport is inherently geographic. All transport involves movement from a place on the Earth to another. This means that Geographic Information Systems (GIS) have great potential to assist transport researchers. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it. 
 
 The growing popularity, power and features of QGIS means that **learning it now** could save much time and money long into the future: **QGIS is futureproof**.
-A more mundane for writing this tutorial was the installation of **QGIS 3** across the University of Leeds.
+A more mundane reason for writing this tutorial was the installation of **QGIS 3** across the University of Leeds.
 Suddenly existing material, developed for **QGIS 2**, no longer worked.
 Instead of incrementally updating those materials we decided to start from a blank slate, allowing the inclusion of new datasets and links to excellent online content that already exists for QGIS.
 
