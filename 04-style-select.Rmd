@@ -21,13 +21,13 @@ In QGIS you can change the appearance of layers to communicate additional inform
 
 In the layers panel right click on "stats19" and select "properties", in the menu on the left select "Symbology"
 
-```{r symbology_menu, out.width="100%", fig.cap="Symbology Menu", echo=FALSE}
+```{r symbology-menu, out.width="100%", fig.cap="Symbology Menu", echo=FALSE}
 knitr::include_graphics("figures/symbology.png")
 ```
 
 For the type of Symbology select "Categorised", the column "accident_severity", then chose a colour ramp from the drop-down menu. Then click "Classify". This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.
 
-```{r symbology_results, out.width="100%", fig.cap="Road collisons categoried by severity", echo=FALSE}
+```{r symbology-results, out.width="100%", fig.cap="Road collisons categoried by severity", echo=FALSE}
 knitr::include_graphics("figures/symbology_results.png")
 ```
 
@@ -38,9 +38,12 @@ Before moving onto the next chapter make sure you have.
 
 1. Styled the stats19 points data
 
-Bonus Exercises
+**Bonus Exercises**
 
 1. Experiment using different columns and types of symbology
+
 Hint: Think about how different types of symbology are appropriate to different types of data (categorical, discreet, continuous). Can you discover any interesting patterns in the data? How does your choice of breakpoints affect the presentation of the data?
+
+2. Can you work out how to use transparency to overlay mulitple layers clearly?
 
 

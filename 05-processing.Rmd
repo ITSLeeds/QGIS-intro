@@ -10,11 +10,11 @@ Our two spatial datasets have different coordinate systems. This can make it dif
 
 In the vector, menu select Data management Tools, Reproject Layer
 
-```{r reproject_menu, out.width="100%", fig.cap="Reproject Menu", echo=FALSE}
+```{r reproject-menu, out.width="100%", fig.cap="Reproject Menu", echo=FALSE}
 knitr::include_graphics("figures/reproject.png")
 ```
 
-```{r crs_menu, out.width="100%", fig.cap="Reproject MenuCordiante Reference System", echo=FALSE}
+```{r crs-menu, out.width="100%", fig.cap="Reproject MenuCordiante Reference System", echo=FALSE}
 knitr::include_graphics("figures/crs.png")
 ```
 
@@ -60,7 +60,7 @@ Use the “Identify features” tool to see that each LSOA now has a population 
 We will assign an LSOA ID number to each road collision by doing a spatial join.  
 In the “Vector” menu, select “Data Management Tools”, then “Join Attributes by Location”.
 
-```{r joins_menu, out.width="100%", fig.cap="Join Attributes by Location", echo=FALSE}
+```{r joins-menu, out.width="100%", fig.cap="Join Attributes by Location", echo=FALSE}
 knitr::include_graphics("figures/spatial_joins.jpg")
 ```
 
@@ -73,7 +73,7 @@ knitr::include_graphics("figures/spatial_joins_window.jpg")
 For the Input Layer select "stats19" and for the output later select "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click run.
 
 
-```{r joins_result, out.width="100%", fig.cap="Join Results", echo=FALSE}
+```{r joins-result, out.width="100%", fig.cap="Join Results", echo=FALSE}
 knitr::include_graphics("figures/spatial_join_result.jpg")
 ```
 
@@ -85,7 +85,7 @@ The final step for this chapter will be to count the number of road crash casual
 
 In the Vector Menu, select Analysis Tools, Count Points in Polygons.
 
-```{r points_polygons, out.width="100%", fig.cap="Points in Polygons Tool", echo=FALSE}
+```{r points-polygons, out.width="100%", fig.cap="Points in Polygons Tool", echo=FALSE}
 knitr::include_graphics("figures/points_ins_polygon.jpg")
 ```
 
@@ -94,7 +94,7 @@ For the Polygons choose your LSOA areas and the points the stats19 data. USe the
 A new layer will be created with the number of casualaties for each LSOA. USe Symbology to visualise the most dangerous areas of Leeds.
 
 
-```{r final_plot, out.width="100%", fig.cap="Number of road crash casulaities in Leeds", echo=FALSE}
+```{r final-plot, out.width="100%", fig.cap="Number of road crash casulaities in Leeds", echo=FALSE}
 knitr::include_graphics("figures/final_plot.jpg")
 ```
 
