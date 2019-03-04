@@ -83,11 +83,11 @@ knitr::include_graphics("figures/webmap.png")
 
 QGIS allows you to open multiple files at once and overlay them as layers on the same map. You can also customise the visualisation of the layers. To allow you to save your work it is recommended to save a project file.  Projects don't contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date.
 
-You can create a project and save a project using the buttons shown below or using the options in the Project menu.
+You can create, load, save and 'save as' projects using the buttons shown in Figure \@ref(fig:project_buttons) or using the options in the Project menu.
 
 
-```{r probect_buttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="50%"}
-knitr::include_graphics("figures/project_buttons.jpg")
+```{r project_buttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="50%"}
+knitr::include_graphics("figures/project_buttons.JPG")
 ```
 
 Note that because the Project does not contain any data itself you cannot simply move a project file from one computer to another. It would be necessary to move both the project and any associated files. You may also need to redirect the project to the new file locations on the new computer.
