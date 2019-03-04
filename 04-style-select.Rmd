@@ -1,2 +1,34 @@
 # Style and select features
 
+## Identify Features
+
+The Identify features button allow you to interogate a specific part of your spatial data simply by clicking on it
+
+```{r idetify, out.width="10%", fig.cap="Identify Features Button", echo=FALSE}
+knitr::include_graphics("figures/identify.jpg")
+```
+
+Clicking on a map feature brings up a pannel with more infroamtion about that feature. You can use the mode menu at the bottom of the pannel to select which layers will be included.
+
+```{r identify_pannel, out.width="100%", fig.cap="Identify Features Pannel", echo=FALSE}
+knitr::include_graphics("figures/inspect_pannel.png")
+```
+
+## Symbology
+
+In QGIS ou can change the apperance of layers to comunicate additonal information. This is called symbology.
+
+In the layers pannel right click on "stats19" and select "properties", in the menu on the left select "Symbology"
+
+```{r symbology_menu, out.width="100%", fig.cap="Symbology Menu", echo=FALSE}
+knitr::include_graphics("figures/symbology.png")
+```
+
+For the type of Sybology select "Categorised", the column "accident_severity", then chose a colour ramp from the drop dwon menu. Then click "Classify". This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.
+
+```{r symbology_results, out.width="100%", fig.cap="Road collisons categoried by severity", echo=FALSE}
+knitr::include_graphics("figures/symbology_results.png")
+```
+
+Experiment using different columns and types of symbology.
+

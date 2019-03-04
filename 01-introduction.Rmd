@@ -40,6 +40,7 @@ Search engine data from Google suggests that, worldwide, it may have become more
 
 ```{r qgis-vs-arcmap, fig.cap="Data on the popularity of different GIS-related search terms, worldwide, from 2004 to 2018. Source: trends.google.com."}
 knitr::include_graphics("figures/qgis-vs-arcmap.png")
+# figure does not label colours !!!!
 ```
 
 
