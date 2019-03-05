@@ -10,11 +10,29 @@ Although this is an unnusual measure of accessibility, the methods can be modifi
 ## Input data
 
 Building on previous chapters, we will use a case study of Leeds.
+There are two additional datasets we'll use for this, saved in the file `data_accessibility.zip` in the releases section of the tutorial.
 
-
-```{r, echo=FALSE, eval=FALSE}
+```{}
 
 ```
+
+The input datasets were taken from 2 places:
+
+- The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool ([CyIPT](https://www.cyipt.bike))
+- The desire lines data were taken from the propensity to cycle tool (see [pct.bike/m/?r=west-yorkshire](http://www.pct.bike/m/?r=west-yorkshire)) [@lovelace_propensity_2017].
+
+Following the guidance in previous chapters, we *pre-processed* these datasets in 2 ways:
+
+- Reproject the datasets so they are in the British National Grid CRS (EPSG:27700)
+- Subset the desire lines so that we only have the top 200 across West Yorksire
+
+Download and unzip the `data_accessibility.zip` file and load the `.gpkg` files.
+As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure \@ref(fig:access-overview).
+
+```{r access-overview, fig.cap="Overview of input data for this chapter."}
+knitr::include_graphics("figures/access-overview.png")
+```
+
 
 
 ## Summary

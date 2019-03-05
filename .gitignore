@@ -14,3 +14,4 @@ QGIS-intro
 leeds_*
 *.geojson
 *.csv
+*.gpkg
