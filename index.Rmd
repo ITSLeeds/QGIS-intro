@@ -9,11 +9,11 @@ description: "A book on using open source Geographic Information System for tran
 github-repo: ITSLeeds/QGIS-intro
 graphics: yes
 #cover-image: images/cover.jpg
+bibliography: [book.bib, packages.bib]
 ---
 
 <!-- For CRC Press format: -->
 <!-- documentclass: krantz -->
-<!-- bibliography: [book.bib, packages.bib] -->
 <!-- biblio-style: apalike -->
 <!-- link-citations: yes -->
 <!-- colorlinks: yes -->

@@ -8,5 +8,9 @@ QGISforSSPAdata*
 bookdown.*
 bookdown_*
 data
-data.zip
+*.zip
+*.pptx
 QGIS-intro
+leeds_*
+*.geojson
+*.csv
