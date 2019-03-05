@@ -64,9 +64,9 @@ In the “Vector” menu, select “Data Management Tools”, then “Join Attri
 knitr::include_graphics("figures/spatial_joins.jpg")
 ```
 
-In the Vector Menu, select Data Management Tools, Select Attributes by location.
+In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in \@ref(fig:joins-window).
 
-```{r joins_window, out.width="100%", fig.cap="Join Attributes by Location Window", echo=FALSE}
+```{r joins-window, out.width="100%", fig.cap="Join Attributes by Location Window", echo=FALSE}
 knitr::include_graphics("figures/spatial_joins_window.jpg")
 ```
 

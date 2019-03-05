@@ -110,9 +110,9 @@ Note that because the Project does not contain any data itself you cannot simply
 ## Projections and Coordinate Reference Systems
 
 ```{r projections, fig.cap="Map Projections. For more projections, see the source at [XKCD](https://xkcd.com/977/) or [Wikipedia](https://en.wikipedia.org/wiki/Map_projection).", out.width="50%", fig.align = "right"}
-# i = magick::image_read("figures/map_projections.png")
-# i = magick::image_crop(image = i, geometry = "x400")
-# magick::image_write(i, "figures/map_projections_mini.png")
+i = magick::image_read("figures/map_projections.png")
+i = magick::image_crop(image = i, geometry = "x400")
+magick::image_write(i, "figures/map_projections_mini.png")
 knitr::include_graphics("figures/map_projections_mini.png")
 ```
 

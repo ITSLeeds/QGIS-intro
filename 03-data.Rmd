@@ -72,7 +72,7 @@ Import the population.csv example file for later use using the same process as a
 When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:
 
 ```{r layers, fig.cap="The imported data layers shown in the Layer window.", out.width="50%", echo=FALSE}
-knitr::include_graphics("figures/layers.png")
+knitr::include_graphics("https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/master/figures/layers.png")
 ```
 
 

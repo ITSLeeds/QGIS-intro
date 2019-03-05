@@ -5,7 +5,7 @@ git clone git@github.com:ITSLeeds/QGIS-intro
 cd QGIS-intro
 git checkout gh-pages
 cd ..
-mv -v _book/* QGIS-intro/
+cp -Rv _book/* QGIS-intro/
 
 # build book...
 cd QGIS-intro
