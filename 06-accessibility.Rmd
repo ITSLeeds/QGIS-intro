@@ -1,0 +1,22 @@
+# Accessibility analysis
+
+Accessibility is a key concept in transport planning.
+One of the key aims of many transport policies is to make places more accessible to people, whether that's shops, schools or hospitals.
+But what does that actually mean?
+
+In this example, we will use QGIS to explore accessibility to cycle infrastructure.
+Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after 'school agglomeration', the topic of an academic paper based on a case study in Sao Paulo, Brazil [@moreno-monroy_public_2017].
+
+## Input data
+
+Building on previous chapters, we will use a case study of Leeds.
+
+
+```{r, echo=FALSE, eval=FALSE}
+
+```
+
+
+## Summary
+
+
