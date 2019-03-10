@@ -1,61 +1,80 @@
-# Making maps
+# Raster Data
 
-While it is useful to view maps within QGIS it is usually necessary to export the maps pro printing to be included in a report.
+So far we have only used Vector data with QGIS, this chapter will introduce raster data.
 
-From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will see a blank page.
+## What is the difference between raster and vector data.
 
-```{r print-layout, fig.cap="The print layout window, highlighting the add new map button", out.width="100%"}
-knitr::include_graphics("figures/print-layout.png")
+Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that polygon can have attributes like the area name, its population etc.
+
+Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or clours beyond human perception such as infra-red or ultraviolet.
+
+## Download Sample Data
+
+Download the sample raster data from here:
+
+https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/leeds_cir_compress.tif 
+
+
+## Adding raster data to the map
+
+Adding raster data to QGIS is done using the same data manager as vector data, except you must use the raster tab. You will notice that the raster contains an aerial photograph of Leeds, except the colours, appear to be wrong.
+
+```{r raster-import, fig.cap="The sample raster data added to the map", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/raster-import.png")
 ```
 
-Use the "Add new map button" to draw a box where you wish you map to be on the page. Your map will appear within the box automatically.
+The colour difference is due to this raster being a colour infrared image. Rather than the usual Red, Green, Blue bands this image has Near Infrared (NI), Red, Green. 
 
+## Normalized difference vegetation index
 
-```{r print-withmap, fig.cap="The print layout window, with map added", out.width="100%"}
-knitr::include_graphics("figures/print-withmap.png")
+You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI)a measure of how much vegetation is within each raster cell.
+
+Within the "Raster" menu select "Raster Calculator" the formula for calculating the NVDI is:
+
+$$\frac{NI - Red}{NI + Red}$$
+
+Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer. 
+
+```{r raster-calc, fig.cap="The raster calcualtor with the NDVI formula", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/raster-calcualtor.png")
 ```
 
-You can pan and zoom within the map using the Move Item Content button
+Remember to specify where you want the results to be saved.
 
-```{r move-item-conten, fig.cap="Move Item content button", out.width="30%"}
-knitr::include_graphics("figures/move-item-content.JPG")
+Once the raster calualtor is complete you should have a new raster layer. It will be in greyscale with vallues between -1 (least vegitated) and 1 most vegitated. You can ajust the symbology to make the vegitated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours appromiatly make trees dark green, grass light green, and all non-vegiation white.
+
+```{r ndvi, fig.cap="The NDVI raster with a psudo-colour scheme applied", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/ndvi.png")
 ```
 
-You can add several different features to the print layout such as titles, legends and scale bars using the buttons on the left side of the window. When an objected is selected you can edit its properties by using the "Item Properties" tab on the right side panel. 
+## Linking Raster and vector data
 
-```{r print-custom, fig.cap="A customised map", out.width="100%"}
-knitr::include_graphics("figures/print-custom.png")
+Finally, we will link the NDVI raster back to the LSOA boundaries so that we can have an average vegetation score for each LSOA.
+
+In the processing menu select "toolbox", this opens the processing toolbox panel on the right side. Use the search bar to find the "zonal statistics" tool.
+
+```{r zone-stats1, fig.cap="The Zonal Statistics tool in the processing toolbox", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/zonal-statistics.png")
 ```
 
-## Saving & Exporting your map
+Complete the form to get statistics from the NDVI raster for each LSOA. When specifying the statistics to calculate select the mean.
 
-You can save a map layout for later use using the save button on the main toolbar or using "Save project" in the "layout" menu. You can export your image in one of three formats.
+```{r zone-stats2, fig.cap="The Zonal Statistics tool", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/zonal-statistics2.png")
+```
 
-* Export as Image - A range of different formats including JPEG, PNG, GIF, TIF etc
-* Export as PDF - A PDF document
-* Export as SVG - A Scalable Vector Graphics image
+Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.
 
-All of these options and the option to print your map directly are in the "layout" menu.
+Adjust the symbology of your LSOA layer to reflect the NDVI scores.
+
+```{r lsoa-ndvi, fig.cap="LSOA areas with average NDVI scores", out.width="100%", echo=FALSE}
+knitr::include_graphics("figures/lsoa-ndvi.png")
+```
 
 ## Summary
 
-This chapter has briefly introduced the print layout window.
-
-Before moving onto the next chapter make sure you have.
-
-1. Produced your own print layout including a map, title, scale bar, and legend.
+This chapter has introduced raster data, the raster calculator, and zonal statistics.
 
 **Bonus Exercises**
 
-Experiment using different tools in the print layout window. Can you find out how to:
-
-1. Pan and zoom the map to a specific area of interest
-1. Customise the legend to only show some of the layers
-1. Change the units on the scale bar
-1. Customise the title font and appearance
-1. Add the ITS logo to your print layout
-1. Add an arrow pointing to your location
-
-
-
-
+Consider how you could use the NDVI values to measure access to green spaces. How might you exclude small areas of green space such as gardens, but include large areas such as parks?
