@@ -34,6 +34,20 @@ knitr::include_graphics("figures/access-overview.png")
 ```
 
 
+##
+
+1. Install the ORS Tools Plugin
+1. Signup for an API token at openrouteservice.org
+1. Add token to ORS Tools Settings
+1. Download the locations of schools from ???
+1. Buffer schools and find population within 1km of a school
+1. Make isochone for 10, 20, 30 min cycle from schools
+1. Dissolve isochone togther 
+1. may need to change nerndering order (properties -> symbology -> layerrendering)
+1. use geoprocessing v.clean (with clean type break)
+1. edit polygons to remove the unneeded sections
+1. join the isochones onto the points
+
 
 ## Summary
 
