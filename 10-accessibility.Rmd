@@ -49,9 +49,28 @@ knitr::include_graphics("figures/select-by-location.png")
 ```
 
 - What proportion of zones have at least some cycle infrastructure, according to this measure?
-- What are the limitations of this approach?
+- What are the limitations of this approach? 
+  - List at least 2.
+  
+<!-- There is no measure of how *much* cycle infrastructure is in each zone. -->
+<!-- There is no measure of the quality of the infrastructure. -->
+<!-- It does not account for whether the infrastructure actually goes where people want to go. -->
 
 ## Calculate distances to cycle infrastructure
+
+A slightly more sophisticated measure of accessibility is Euclidean distance.
+Rather than testing whether or not zones contain cycling infrastructure, resulting in a *binary variable*, `TRUE` or `FALSE`, this simple distance calculation results in a *continuous variable* in units of metres.
+
+
+```{r}
+knitr::include_graphics("figures/processing-hub-distance.png")
+```
+
+```{r}
+knitr::include_graphics("figures/hub-distance-centroids.png")
+```
+
+
 
 
 ## Calculate cycle infrastructure provision along desire lines
