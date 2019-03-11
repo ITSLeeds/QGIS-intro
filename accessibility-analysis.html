@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>8 More Features | QGIS for Transport Research: an introduction</title>
+  <title>10 Accessibility analysis | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="8 More Features | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="10 Accessibility analysis | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 More Features | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="10 Accessibility analysis | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="next-steps.html">
-<link rel="next" href="raster-data.html">
+<link rel="prev" href="raster-data.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -188,20 +188,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="more-features" class="section level1">
-<h1><span class="header-section-number">8</span> More Features</h1>
-<div id="attribute-calculations" class="section level2">
-<h2><span class="header-section-number">8.1</span> Attribute calculations</h2>
-<p>New attributes can be added to datasets with the Calculator…</p>
+<div id="accessibility-analysis" class="section level1">
+<h1><span class="header-section-number">10</span> Accessibility analysis</h1>
+<p>Accessibility is a key concept in transport planning. One of the key aims of many transport policies is to make places more accessible to people, whether that’s shops, schools or hospitals. But what does that actually mean?</p>
+<p>In this example, we will use QGIS to explore accessibility to cycle infrastructure. Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after ‘school agglomeration’, the topic of an academic paper based on a case study in Sao Paulo, Brazil <span class="citation">(Moreno-Monroy, Lovelace, and Ramos 2017)</span>.</p>
+<div id="input-data" class="section level2">
+<h2><span class="header-section-number">10.1</span> Input data</h2>
+<p>Building on previous chapters, we will use a case study of Leeds. There are two additional datasets we’ll use for this, saved in the file <code>data_accessibility.zip</code> in the releases section of the tutorial.</p>
+<pre><code></code></pre>
+<p>The input datasets were taken from 2 places:</p>
+<ul>
+<li>The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool (<a href="https://www.cyipt.bike">CyIPT</a>)</li>
+<li>The desire lines data were taken from the propensity to cycle tool (see <a href="http://www.pct.bike/m/?r=west-yorkshire">pct.bike/m/?r=west-yorkshire</a>) <span class="citation">(Lovelace et al. 2017)</span>.</li>
+</ul>
+<p>Following the guidance in previous chapters, we <em>pre-processed</em> these datasets in 2 ways:</p>
+<ul>
+<li>Reproject the datasets so they are in the British National Grid CRS (EPSG:27700)</li>
+<li>Subset the desire lines so that we only have the top 200 across West Yorksire</li>
+</ul>
+<p>Download and unzip the <code>data_accessibility.zip</code> file and load the <code>.gpkg</code> files. As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure <a href="accessibility-analysis.html#fig:access-overview">10.1</a>.</p>
+<div class="figure"><span id="fig:access-overview"></span>
+<img src="figures/access-overview.png" alt="Overview of input data for this chapter." width="100%" />
+<p class="caption">
+Figure 10.1: Overview of input data for this chapter.
+</p>
 </div>
-<div id="spatial-subsetting" class="section level2">
-<h2><span class="header-section-number">8.2</span> Spatial subsetting</h2>
 </div>
-<div id="geoprocessing-tool-box" class="section level2">
-<h2><span class="header-section-number">8.3</span> Geoprocessing Tool Box</h2>
+<div id="section" class="section level2">
+<h2><span class="header-section-number">10.2</span> </h2>
+<ol style="list-style-type: decimal">
+<li>Install the ORS Tools Plugin</li>
+<li>Signup for an API token at openrouteservice.org</li>
+<li>Add token to ORS Tools Settings</li>
+<li>Download the locations of schools from ???</li>
+<li>Buffer schools and find population within 1km of a school</li>
+<li>Make isochone for 10, 20, 30 min cycle from schools</li>
+<li>Dissolve isochone togther</li>
+<li>may need to change nerndering order (properties -&gt; symbology -&gt; layerrendering)</li>
+<li>use geoprocessing v.clean (with clean type break)</li>
+<li>edit polygons to remove the unneeded sections</li>
+<li>join the isochones onto the points</li>
+</ol>
 </div>
-<div id="summary-5" class="section level2">
-<h2><span class="header-section-number">8.4</span> Summary</h2>
+<div id="summary-7" class="section level2">
+<h2><span class="header-section-number">10.3</span> Summary</h2>
 
 </div>
 </div>
@@ -210,8 +240,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="next-steps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="raster-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="raster-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -241,7 +271,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/08-more-features.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/10-accessibility.Rmd",
 "text": "Edit"
 },
 "history": {
