@@ -4,9 +4,9 @@ So far we have only used Vector data with QGIS, this chapter will introduce rast
 
 ## What is the difference between raster and vector data.
 
-Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that polygon can have attributes like the area name, its population etc.
+Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.
 
-Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or clours beyond human perception such as infra-red or ultraviolet.
+Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.
 
 ## Download Sample Data
 
@@ -27,21 +27,19 @@ The colour difference is due to this raster being a colour infrared image. Rathe
 
 ## Normalized difference vegetation index
 
-You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI)a measure of how much vegetation is within each raster cell.
+You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI) a measure of how much vegetation is within each raster cell.
 
 Within the "Raster" menu select "Raster Calculator" the formula for calculating the NVDI is:
 
 $$\frac{NI - Red}{NI + Red}$$
 
-Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer. 
+Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer. Remember to specify where you want the results to be saved.
 
 ```{r raster-calc, fig.cap="The raster calcualtor with the NDVI formula", out.width="100%", echo=FALSE}
 knitr::include_graphics("figures/raster-calcualtor.png")
 ```
 
-Remember to specify where you want the results to be saved.
-
-Once the raster calualtor is complete you should have a new raster layer. It will be in greyscale with vallues between -1 (least vegitated) and 1 most vegitated. You can ajust the symbology to make the vegitated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours appromiatly make trees dark green, grass light green, and all non-vegiation white.
+Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.
 
 ```{r ndvi, fig.cap="The NDVI raster with a psudo-colour scheme applied", out.width="100%", echo=FALSE}
 knitr::include_graphics("figures/ndvi.png")
@@ -54,7 +52,7 @@ Finally, we will link the NDVI raster back to the LSOA boundaries so that we can
 In the processing menu select "toolbox", this opens the processing toolbox panel on the right side. Use the search bar to find the "zonal statistics" tool.
 
 ```{r zone-stats1, fig.cap="The Zonal Statistics tool in the processing toolbox", out.width="100%", echo=FALSE}
-knitr::include_graphics("figures/zonal-statistics.png")
+knitr::include_graphics("figures/zonal-statistics.JPG")
 ```
 
 Complete the form to get statistics from the NDVI raster for each LSOA. When specifying the statistics to calculate select the mean.

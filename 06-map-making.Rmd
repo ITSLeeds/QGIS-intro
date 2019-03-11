@@ -1,8 +1,10 @@
 # Making maps
 
-While it is useful to view maps within QGIS it is usually necessary to export the maps pro printing to be included in a report.
+## Creating a print layout
 
-From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will see a blank page.
+While it is useful to view maps within QGIS it is usually necessary to export the maps for printing or to be included in a report.
+
+From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will then see a blank page.
 
 ```{r print-layout, fig.cap="The print layout window, highlighting the add new map button", out.width="100%"}
 knitr::include_graphics("figures/print-layout.png")
@@ -15,7 +17,7 @@ Use the "Add new map button" to draw a box where you wish you map to be on the p
 knitr::include_graphics("figures/print-withmap.png")
 ```
 
-You can pan and zoom within the map using the Move Item Content button
+You can pan and zoom within the map using the "Move Item Content" button
 
 ```{r move-item-conten, fig.cap="Move Item content button", out.width="30%"}
 knitr::include_graphics("figures/move-item-content.JPG")
