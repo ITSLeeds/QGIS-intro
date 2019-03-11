@@ -1,11 +1,32 @@
-# Next steps
+<!-- # Next steps -->
 
-Examples of programming languages with CLIs include Python and R; some R
-<!-- and Python -->
-code for plotting geographic data is illustrated below.
+<!-- Examples of programming languages with CLIs include Python and R; some R -->
+<!-- <!-- and Python --> -->
+<!-- code for plotting geographic data is illustrated below. -->
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE, fig.height=3}
-library(sf)
-nc = read_sf(system.file("shape/nc.shp", package="sf"))
-plot(nc)
-```
+<!-- ```{r, echo=TRUE, message=FALSE, warning=FALSE, fig.height=3} -->
+<!-- library(sf) -->
+<!-- nc = read_sf(system.file("shape/nc.shp", package="sf")) -->
+<!-- plot(nc) -->
+<!-- ``` -->
+
+
+
+
+<!-- # More Features -->
+
+
+
+<!-- ## Attribute calculations -->
+
+<!-- New attributes can be added to datasets with the Calculator... -->
+
+
+<!-- ## Spatial subsetting -->
+
+
+<!-- ## Geoprocessing Tool Box -->
+
+
+<!-- ## Summary  -->
+
