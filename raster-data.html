@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>9 Raster Data | QGIS for Transport Research: an introduction</title>
+  <title>7 Raster Data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="9 Raster Data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="7 Raster Data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Raster Data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="7 Raster Data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="more-features.html">
+<link rel="prev" href="making-maps.html">
 <link rel="next" href="accessibility-analysis.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -50,43 +50,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -144,28 +107,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.4" data-path="processing-data.html"><a href="processing-data.html#summary-3"><i class="fa fa-check"></i><b>5.4</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>6</b> Making maps</a><ul>
-<li class="chapter" data-level="6.1" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>6.1</b> Saving &amp; Exporting your map</a></li>
-<li class="chapter" data-level="6.2" data-path="making-maps.html"><a href="making-maps.html#summary-4"><i class="fa fa-check"></i><b>6.2</b> Summary</a></li>
+<li class="chapter" data-level="6.1" data-path="making-maps.html"><a href="making-maps.html#creating-a-print-layout"><i class="fa fa-check"></i><b>6.1</b> Creating a print layout</a></li>
+<li class="chapter" data-level="6.2" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>6.2</b> Saving &amp; Exporting your map</a></li>
+<li class="chapter" data-level="6.3" data-path="making-maps.html"><a href="making-maps.html#summary-4"><i class="fa fa-check"></i><b>6.3</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>7</b> Next steps</a></li>
-<li class="chapter" data-level="8" data-path="more-features.html"><a href="more-features.html"><i class="fa fa-check"></i><b>8</b> More Features</a><ul>
-<li class="chapter" data-level="8.1" data-path="more-features.html"><a href="more-features.html#attribute-calculations"><i class="fa fa-check"></i><b>8.1</b> Attribute calculations</a></li>
-<li class="chapter" data-level="8.2" data-path="more-features.html"><a href="more-features.html#spatial-subsetting"><i class="fa fa-check"></i><b>8.2</b> Spatial subsetting</a></li>
-<li class="chapter" data-level="8.3" data-path="more-features.html"><a href="more-features.html#geoprocessing-tool-box"><i class="fa fa-check"></i><b>8.3</b> Geoprocessing Tool Box</a></li>
-<li class="chapter" data-level="8.4" data-path="more-features.html"><a href="more-features.html#summary-5"><i class="fa fa-check"></i><b>8.4</b> Summary</a></li>
+<li class="chapter" data-level="7" data-path="raster-data.html"><a href="raster-data.html"><i class="fa fa-check"></i><b>7</b> Raster Data</a><ul>
+<li class="chapter" data-level="7.1" data-path="raster-data.html"><a href="raster-data.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>7.1</b> What is the difference between raster and vector data.</a></li>
+<li class="chapter" data-level="7.2" data-path="raster-data.html"><a href="raster-data.html#download-sample-data"><i class="fa fa-check"></i><b>7.2</b> Download Sample Data</a></li>
+<li class="chapter" data-level="7.3" data-path="raster-data.html"><a href="raster-data.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>7.3</b> Adding raster data to the map</a></li>
+<li class="chapter" data-level="7.4" data-path="raster-data.html"><a href="raster-data.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>7.4</b> Normalized difference vegetation index</a></li>
+<li class="chapter" data-level="7.5" data-path="raster-data.html"><a href="raster-data.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>7.5</b> Linking Raster and vector data</a></li>
+<li class="chapter" data-level="7.6" data-path="raster-data.html"><a href="raster-data.html#summary-5"><i class="fa fa-check"></i><b>7.6</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="raster-data.html"><a href="raster-data.html"><i class="fa fa-check"></i><b>9</b> Raster Data</a><ul>
-<li class="chapter" data-level="9.1" data-path="raster-data.html"><a href="raster-data.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>9.1</b> What is the difference between raster and vector data.</a></li>
-<li class="chapter" data-level="9.2" data-path="raster-data.html"><a href="raster-data.html#download-sample-data"><i class="fa fa-check"></i><b>9.2</b> Download Sample Data</a></li>
-<li class="chapter" data-level="9.3" data-path="raster-data.html"><a href="raster-data.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>9.3</b> Adding raster data to the map</a></li>
-<li class="chapter" data-level="9.4" data-path="raster-data.html"><a href="raster-data.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>9.4</b> Normalized difference vegetation index</a></li>
-<li class="chapter" data-level="9.5" data-path="raster-data.html"><a href="raster-data.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>9.5</b> Linking Raster and vector data</a></li>
-<li class="chapter" data-level="9.6" data-path="raster-data.html"><a href="raster-data.html#summary-6"><i class="fa fa-check"></i><b>9.6</b> Summary</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>10</b> Accessibility analysis</a><ul>
-<li class="chapter" data-level="10.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>10.1</b> Input data</a></li>
-<li class="chapter" data-level="10.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#section"><i class="fa fa-check"></i><b>10.2</b> </a></li>
-<li class="chapter" data-level="10.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-7"><i class="fa fa-check"></i><b>10.3</b> Summary</a></li>
+<li class="chapter" data-level="8" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>8</b> Accessibility analysis</a><ul>
+<li class="chapter" data-level="8.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>8.1</b> Input data</a></li>
+<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#section"><i class="fa fa-check"></i><b>8.2</b> </a></li>
+<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.3</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -189,65 +146,64 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="raster-data" class="section level1">
-<h1><span class="header-section-number">9</span> Raster Data</h1>
+<h1><span class="header-section-number">7</span> Raster Data</h1>
 <p>So far we have only used Vector data with QGIS, this chapter will introduce raster data.</p>
 <div id="what-is-the-difference-between-raster-and-vector-data." class="section level2">
-<h2><span class="header-section-number">9.1</span> What is the difference between raster and vector data.</h2>
-<p>Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that polygon can have attributes like the area name, its population etc.</p>
-<p>Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or clours beyond human perception such as infra-red or ultraviolet.</p>
+<h2><span class="header-section-number">7.1</span> What is the difference between raster and vector data.</h2>
+<p>Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.</p>
+<p>Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.</p>
 </div>
 <div id="download-sample-data" class="section level2">
-<h2><span class="header-section-number">9.2</span> Download Sample Data</h2>
+<h2><span class="header-section-number">7.2</span> Download Sample Data</h2>
 <p>Download the sample raster data from here:</p>
 <p><a href="https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/leeds_cir_compress.tif" class="uri">https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/leeds_cir_compress.tif</a></p>
 </div>
 <div id="adding-raster-data-to-the-map" class="section level2">
-<h2><span class="header-section-number">9.3</span> Adding raster data to the map</h2>
+<h2><span class="header-section-number">7.3</span> Adding raster data to the map</h2>
 <p>Adding raster data to QGIS is done using the same data manager as vector data, except you must use the raster tab. You will notice that the raster contains an aerial photograph of Leeds, except the colours, appear to be wrong.</p>
 <div class="figure"><span id="fig:raster-import"></span>
 <img src="figures/raster-import.png" alt="The sample raster data added to the map" width="100%" />
 <p class="caption">
-Figure 9.1: The sample raster data added to the map
+Figure 7.1: The sample raster data added to the map
 </p>
 </div>
 <p>The colour difference is due to this raster being a colour infrared image. Rather than the usual Red, Green, Blue bands this image has Near Infrared (NI), Red, Green.</p>
 </div>
 <div id="normalized-difference-vegetation-index" class="section level2">
-<h2><span class="header-section-number">9.4</span> Normalized difference vegetation index</h2>
-<p>You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI)a measure of how much vegetation is within each raster cell.</p>
+<h2><span class="header-section-number">7.4</span> Normalized difference vegetation index</h2>
+<p>You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI) a measure of how much vegetation is within each raster cell.</p>
 <p>Within the “Raster” menu select “Raster Calculator” the formula for calculating the NVDI is:</p>
 <p><span class="math display">\[\frac{NI - Red}{NI + Red}\]</span></p>
-<p>Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer.</p>
+<p>Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer. Remember to specify where you want the results to be saved.</p>
 <div class="figure"><span id="fig:raster-calc"></span>
 <img src="figures/raster-calcualtor.png" alt="The raster calcualtor with the NDVI formula" width="100%" />
 <p class="caption">
-Figure 9.2: The raster calcualtor with the NDVI formula
+Figure 7.2: The raster calcualtor with the NDVI formula
 </p>
 </div>
-<p>Remember to specify where you want the results to be saved.</p>
-<p>Once the raster calualtor is complete you should have a new raster layer. It will be in greyscale with vallues between -1 (least vegitated) and 1 most vegitated. You can ajust the symbology to make the vegitated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours appromiatly make trees dark green, grass light green, and all non-vegiation white.</p>
+<p>Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.</p>
 <div class="figure"><span id="fig:ndvi"></span>
 <img src="figures/ndvi.png" alt="The NDVI raster with a psudo-colour scheme applied" width="100%" />
 <p class="caption">
-Figure 9.3: The NDVI raster with a psudo-colour scheme applied
+Figure 7.3: The NDVI raster with a psudo-colour scheme applied
 </p>
 </div>
 </div>
 <div id="linking-raster-and-vector-data" class="section level2">
-<h2><span class="header-section-number">9.5</span> Linking Raster and vector data</h2>
+<h2><span class="header-section-number">7.5</span> Linking Raster and vector data</h2>
 <p>Finally, we will link the NDVI raster back to the LSOA boundaries so that we can have an average vegetation score for each LSOA.</p>
 <p>In the processing menu select “toolbox”, this opens the processing toolbox panel on the right side. Use the search bar to find the “zonal statistics” tool.</p>
 <div class="figure"><span id="fig:zone-stats1"></span>
-<img src="figures/zonal-statistics.png" alt="The Zonal Statistics tool in the processing toolbox" width="100%" />
+<img src="figures/zonal-statistics.JPG" alt="The Zonal Statistics tool in the processing toolbox" width="100%" />
 <p class="caption">
-Figure 9.4: The Zonal Statistics tool in the processing toolbox
+Figure 7.4: The Zonal Statistics tool in the processing toolbox
 </p>
 </div>
 <p>Complete the form to get statistics from the NDVI raster for each LSOA. When specifying the statistics to calculate select the mean.</p>
 <div class="figure"><span id="fig:zone-stats2"></span>
 <img src="figures/zonal-statistics2.png" alt="The Zonal Statistics tool" width="100%" />
 <p class="caption">
-Figure 9.5: The Zonal Statistics tool
+Figure 7.5: The Zonal Statistics tool
 </p>
 </div>
 <p>Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.</p>
@@ -255,12 +211,12 @@ Figure 9.5: The Zonal Statistics tool
 <div class="figure"><span id="fig:lsoa-ndvi"></span>
 <img src="figures/lsoa-ndvi.png" alt="LSOA areas with average NDVI scores" width="100%" />
 <p class="caption">
-Figure 9.6: LSOA areas with average NDVI scores
+Figure 7.6: LSOA areas with average NDVI scores
 </p>
 </div>
 </div>
-<div id="summary-6" class="section level2">
-<h2><span class="header-section-number">9.6</span> Summary</h2>
+<div id="summary-5" class="section level2">
+<h2><span class="header-section-number">7.6</span> Summary</h2>
 <p>This chapter has introduced raster data, the raster calculator, and zonal statistics.</p>
 <p><strong>Bonus Exercises</strong></p>
 <p>Consider how you could use the NDVI values to measure access to green spaces. How might you exclude small areas of green space such as gardens, but include large areas such as parks?</p>
@@ -272,7 +228,7 @@ Figure 9.6: LSOA areas with average NDVI scores
           </div>
         </div>
       </div>
-<a href="more-features.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="making-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="accessibility-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
