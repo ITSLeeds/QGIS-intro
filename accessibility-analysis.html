@@ -121,8 +121,10 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>8</b> Accessibility analysis</a><ul>
 <li class="chapter" data-level="8.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>8.1</b> Input data</a></li>
-<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#section"><i class="fa fa-check"></i><b>8.2</b> </a></li>
-<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.3</b> Summary</a></li>
+<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>8.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
+<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>8.3</b> Calculate distances to cycle infrastructure</a></li>
+<li class="chapter" data-level="8.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>8.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
+<li class="chapter" data-level="8.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -171,24 +173,46 @@ Figure 8.1: Overview of input data for this chapter.
 </p>
 </div>
 </div>
-<div id="section" class="section level2">
-<h2><span class="header-section-number">8.2</span> </h2>
-<ol style="list-style-type: decimal">
-<li>Install the ORS Tools Plugin</li>
-<li>Signup for an API token at openrouteservice.org</li>
-<li>Add token to ORS Tools Settings</li>
-<li>Download the locations of schools from ???</li>
-<li>Buffer schools and find population within 1km of a school</li>
-<li>Make isochone for 10, 20, 30 min cycle from schools</li>
-<li>Dissolve isochone togther</li>
-<li>may need to change nerndering order (properties -&gt; symbology -&gt; layerrendering)</li>
-<li>use geoprocessing v.clean (with clean type break)</li>
-<li>edit polygons to remove the unneeded sections</li>
-<li>join the isochones onto the points</li>
-</ol>
+<div id="identify-areas-in-leeds-with-some-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.2</span> Identify areas in Leeds with some cycle infrastructure</h2>
+<p>A simple but effective way of comparing 2 geographic layers, as a first step towards an accessibility indicator, is a spatial selection. We can do this to identify zones that have access to <em>at least some cycle infrastructure</em>:</p>
+<ul>
+<li>Use the Select by location tool to select only those LSOAs with at least some cycleways in</li>
+<li>Do this with the following menu options: Vector &gt; Research Tools &gt; Select by Location</li>
+<li>Save the result as a new layer called, for example, <code>leeds_lsoa_cycleway</code></li>
+</ul>
+<p>The result should look like that shown in Figure <a href="accessibility-analysis.html#fig:select-by-location">8.2</a>.</p>
+<div class="figure"><span id="fig:select-by-location"></span>
+<img src="figures/select-by-location.png" alt="Select by Location: results." width="100%" />
+<p class="caption">
+Figure 8.2: Select by Location: results.
+</p>
+</div>
+<ul>
+<li>What proportion of zones have at least some cycle infrastructure, according to this measure?</li>
+<li>What are the limitations of this approach?</li>
+</ul>
+</div>
+<div id="calculate-distances-to-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.3</span> Calculate distances to cycle infrastructure</h2>
+</div>
+<div id="calculate-cycle-infrastructure-provision-along-desire-lines" class="section level2">
+<h2><span class="header-section-number">8.4</span> Calculate cycle infrastructure provision along desire lines</h2>
+<!-- ## Ideas from Malcolm -->
+<!-- 1. Install the ORS Tools Plugin -->
+<!-- 1. Signup for an API token at openrouteservice.org -->
+<!-- 1. Add token to ORS Tools Settings -->
+<!-- 1. Download the locations of schools from ??? -->
+<!-- 1. Buffer schools and find population within 1km of a school -->
+<!-- 1. Make isochone for 10, 20, 30 min cycle from schools -->
+<!-- 1. Dissolve isochone togther  -->
+<!-- 1. may need to change nerndering order (properties -> symbology -> layerrendering) -->
+<!-- 1. use geoprocessing v.clean (with clean type break) -->
+<!-- 1. edit polygons to remove the unneeded sections -->
+<!-- 1. join the isochones onto the points -->
 </div>
 <div id="summary-6" class="section level2">
-<h2><span class="header-section-number">8.3</span> Summary</h2>
+<h2><span class="header-section-number">8.5</span> Summary</h2>
 
 </div>
 </div>
