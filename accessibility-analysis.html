@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction</title>
+  <title>Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="working-with-qgis.html">
-<link rel="next" href="style-and-select-features.html">
+<link rel="prev" href="raster-data.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -148,82 +148,158 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Downloading and loading data</h1>
-<p>A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.</p>
-<p>Often, the first stage in the data downloading/loading process is to find the data online.
-In this case, we will access data from the following site, which contains data we prepared earlier for the course: <a href="https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01">github.com/ITSLeeds/QGIS-into/releases</a>.</p>
-<p>Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.</p>
-<p>Before opening data files, you should first have created a QGIS project, covered in the previous chapter.</p>
-<div id="importing-spatial-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Importing spatial data</h2>
-<p>To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure <a href="data.html#fig:data-source-manager">3.1</a>).</p>
-<div class="figure"><span id="fig:data-source-manager"></span>
-<img src="figures/open-data-source-manager.jpg" alt="The Data Source Manager icon" width="10%" />
+<div id="accessibility-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Accessibility analysis</h1>
+<p>Accessibility is a key concept in transport planning.
+One of the key aims of many transport policies is to make places more accessible to people, whether that’s shops, schools or hospitals.
+But what does that actually mean?</p>
+<p>In this example, we will use QGIS to explore accessibility to cycle infrastructure.
+Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after ‘school agglomeration’, the topic of an academic paper based on a case study in Sao Paulo, Brazil <span class="citation">(Moreno-Monroy, Lovelace, and Ramos 2017)</span>.</p>
+<div id="input-data" class="section level2">
+<h2><span class="header-section-number">8.1</span> Input data</h2>
+<p>Building on previous chapters, we will use a case study of Leeds.
+There are two additional datasets we’ll use for this, saved in the file <code>data_accessibility.zip</code> in the releases section of the tutorial.</p>
+<pre><code></code></pre>
+<p>The input datasets were taken from 2 places:</p>
+<ul>
+<li>The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool (<a href="https://www.cyipt.bike">CyIPT</a>)</li>
+<li>The desire lines data were taken from the propensity to cycle tool (see <a href="http://www.pct.bike/m/?r=west-yorkshire">pct.bike/m/?r=west-yorkshire</a>) <span class="citation">(Lovelace et al. 2017)</span>.</li>
+</ul>
+<p>Following the guidance in previous chapters, we <em>pre-processed</em> these datasets in 2 ways:</p>
+<ul>
+<li>Reproject the datasets so they are in the British National Grid CRS (EPSG:27700)</li>
+<li>Subset the desire lines so that we only have the top 200 across West Yorksire</li>
+</ul>
+<p>Download and unzip the <code>data_accessibility.zip</code> file and load the <code>.gpkg</code> files.
+As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure <a href="accessibility-analysis.html#fig:access-overview">8.1</a>.</p>
+<div class="figure"><span id="fig:access-overview"></span>
+<img src="figures/access-overview.png" alt="Overview of input data for this chapter." width="100%" />
 <p class="caption">
-FIGURE 3.1: The Data Source Manager icon
-</p>
-</div>
-<p>We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.</p>
-<p>Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.</p>
-<p>Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.</p>
-<div class="figure"><span id="fig:data-source-manager-shp"></span>
-<img src="figures/import_shp.jpg" alt="The Data Source Manager - Vector" width="100%" />
-<p class="caption">
-FIGURE 3.2: The Data Source Manager - Vector
-</p>
-</div>
-<p>The result should look something like the map displayed in Figure <a href="data.html#fig:imported">3.3</a>.</p>
-<div class="figure"><span id="fig:imported"></span>
-<img src="figures/imported.png" alt="The map after the file 'leeds_lsoa.shp' has been imported." width="100%" />
-<p class="caption">
-FIGURE 3.3: The map after the file ‘leeds_lsoa.shp’ has been imported.
-</p>
-</div>
-</div>
-<div id="importing-a-csv-or-text-file" class="section level2">
-<h2><span class="header-section-number">3.2</span> Importing a CSV or text file</h2>
-<div id="csv-with-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> CSV with spatial data</h3>
-<p>Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel.
-We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.</p>
-<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.</p>
-<p>Click “Add” then “Close”.</p>
-<div class="figure"><span id="fig:data-source-manager-csv"></span>
-<img src="figures/import_csv.jpg" alt="The Data Source Manager - Delimited Text" width="100%" />
-<p class="caption">
-FIGURE 3.4: The Data Source Manager - Delimited Text
-</p>
-</div>
-<p>After importing the ‘stats19’ data, using menus shown in Figure <a href="data.html#fig:data-source-manager-csv">3.4</a>, you should see points on the map, representing where crashes in Leeds took place in 2017.
-If you do not see dots on the map, re-read this section.
-If you do, congratuations!</p>
-</div>
-<div id="csv-without-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> CSV without spatial data</h3>
-<p>QGIS will also allow you to import non-spatial data.
-Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
-When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:</p>
-<div class="figure"><span id="fig:layers"></span>
-<img src="https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/master/figures/layers.png" alt="The imported data layers shown in the Layer window." width="50%" />
-<p class="caption">
-FIGURE 3.5: The imported data layers shown in the Layer window.
+FIGURE 8.1: Overview of input data for this chapter.
 </p>
 </div>
 </div>
+<div id="identify-areas-in-leeds-with-some-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.2</span> Identify areas in Leeds with some cycle infrastructure</h2>
+<p>A simple but effective way of comparing 2 geographic layers, as a first step towards an accessibility indicator, is a spatial selection.
+We can do this to identify zones that have access to <em>at least some cycle infrastructure</em>:</p>
+<ul>
+<li>Use the Select by location tool to select only those LSOAs with at least some cycleways in</li>
+<li>Do this with the following menu options: Vector &gt; Research Tools &gt; Select by Location</li>
+<li>Save the result as a new layer called, for example, <code>leeds_lsoa_cycleway</code></li>
+</ul>
+<p>The result should look like that shown in Figure <a href="accessibility-analysis.html#fig:select-by-location">8.2</a>.</p>
+<div class="figure"><span id="fig:select-by-location"></span>
+<img src="figures/select-by-location.png" alt="Select by Location: results." width="100%" />
+<p class="caption">
+FIGURE 8.2: Select by Location: results.
+</p>
 </div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">3.3</span> Summary</h2>
-<p>Before moving on to the next chapter make sure you have.</p>
+<ul>
+<li>What proportion of zones have at least some cycle infrastructure, according to this measure?</li>
+<li>What are the limitations of this approach?
+<ul>
+<li>List at least 2.</li>
+</ul></li>
+</ul>
+<!-- There is no measure of how *much* cycle infrastructure is in each zone. -->
+<!-- There is no measure of the quality of the infrastructure. -->
+<!-- It does not account for whether the infrastructure actually goes where people want to go. -->
+</div>
+<div id="calculate-distances-to-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.3</span> Calculate distances to cycle infrastructure</h2>
+<p>A slightly more sophisticated measure of accessibility is Euclidean distance.
+Rather than testing whether or not zones contain cycling infrastructure, resulting in a <em>binary variable</em>, <code>TRUE</code> or <code>FALSE</code>, this simple distance calculation results in a <em>continuous variable</em> in units of metres.</p>
+<p>To calculate this metric, we will use the ‘Distance to nearest hub’ algorithm in QGIS.
+To run this algorithm:</p>
+<ul>
+<li>Open the Processing Toolbox, e.g. by clicking ‘Processing’ from the menu bar and selecting ‘Toolbox’ (pro tip: this can be achieved more quickly by pressing Alt-C and then T to get to the menu without touching the mouse)</li>
+<li>Search for and select ‘Distance from nearest hub (points)’ in the Processing Toolbox (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">8.3</a>, left)</li>
+<li>Select <code>leeds_lsoa</code> as the Source points layer and the <code>existing-cycle-infrastructure</code> as Destination layer in the popup window (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">8.3</a>, left)</li>
+</ul>
+<div class="figure"><span id="fig:processing-hub-distance"></span>
+<img src="figures/processing-hub-distance.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" /><img src="figures/distance-processing.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" />
+<p class="caption">
+FIGURE 8.3: Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right).
+</p>
+</div>
+<p>The result is a new point layer, with one point per LSOA zone.
+Style this new layer based on the Hub distance field it contains and give it an appropriate colour scheme.
+It should look something like Figure <a href="#fig:hub-distance-centroids"><strong>??</strong></a>.</p>
+<p><img src="figures/hub-distance-centroids.png" width="100%" /></p>
+<ul>
+<li>Is the distribution of distances to cycle infrastructure as you would expect? Why?</li>
+<li>List at least 2 disadvantages of this new accessibility measure and 2 ways you could improve it using your evolving QGIS skills.</li>
+<li>Bonus: Use a spatial join to merge the ‘Hub distance’ variable in the new point layer back onto the LSOA zone layer.</li>
+</ul>
+</div>
+<div id="calculate-cycle-infrastructure-provision-along-desire-lines" class="section level2">
+<h2><span class="header-section-number">8.4</span> Calculate cycle infrastructure provision along desire lines</h2>
+<p>The accessibility measures we have calculated have been for zones.
+These static entities are the basis of many local statistics on their resident populations (inhabitants) but they tell us little about travel patterns.
+A more appropriate level of geographic analysis for transport planning is ofter the desire line, one-way trips between an origin and a destination <span class="citation">(Lovelace, Nowosad, and Muenchow 2019, Chapter 12)</span>.
+Such desire lines are represented in the desire line object, loaded in Section <a href="accessibility-analysis.html#input-data">8.1</a>, which were generated for the Propensity to Cycle Tool project (see <a href="http://www.pct.bike/">www.pct.bike</a>).</p>
+<p>Although the desire lines represent travel, they clearly are not the routes that people actually take from home to work (the dataset comes from the 2011 Census question on travel to work).
+People do not travel in straight lines, only birds can do that (hence the phrase ‘as the crow flies’ to denote straight line distance).
+People take a range of routes from A to B.
+Therefore, the distance of cycleway <em>inside a buffer surrounding a desire line</em> may be a better indication of the accessibility of cycle infrastructure for everyday travel than the previous measures.</p>
+<p>The first step is to subset the desire lines so that only those <em>within</em> the Leeds LSOA object are included.
+You can do this as follows:</p>
+<ul>
+<li>Again, select the Select by location tool, as you did previously to select the LSOA zones that had some cycle infrastructure.</li>
+<li>This time select features in the desire lines that are <em>Within</em> the zones.</li>
+<li>Bonus: what is the difference when you select different types of geometric predicates (see Figure <a href="accessibility-analysis.html#fig:geometric-predicate">8.4</a>)?</li>
+</ul>
+<div class="figure"><span id="fig:geometric-predicate"></span>
+<img src="figures/geometric-predicate.png" alt="Select by location popup, to subset only desire lines within Leeds" width="100%" />
+<p class="caption">
+FIGURE 8.4: Select by location popup, to subset only desire lines within Leeds
+</p>
+</div>
+<p>After you have saved a subset of the desire lines, it’s time to calculate buffers. You will create buffers of 500m (feel free to experiment with different buffer sizes after you have generated the desired result).
+Your growing knowledge of QGIS (and ability to search for help online if you get stuck) should help you do the next step without detailed instructions (hint: it’s also found in the Vector menu).</p>
+<p>The final step in the process is to calculate the length of cycle infrastructure in each buffer.
+Again, you must look this up (hint: the algorithm is called ‘Sum line lengths’).
+After running this algorithm on the correct inputs, and colouring the result according to the length of infrastructure in each polygon, the map should resemble Figure <a href="accessibility-analysis.html#fig:buffered-lines">8.5</a>.</p>
+<div class="figure"><span id="fig:buffered-lines"></span>
+<img src="figures/buffered-lines.png" alt="Buffered lines, coloured by the length of infrastructure within each one." width="100%" />
+<p class="caption">
+FIGURE 8.5: Buffered lines, coloured by the length of infrastructure within each one.
+</p>
+</div>
+<ul>
+<li>Given what you know about Leeds, are these the desire lines you’d expect to be well-served by cycle infrastructure?</li>
+<li>Explore the data in the Propensity to Cycle Tool for Leeds and decide where you think new infrastructure could go (see <a href="http://www.pct.bike/m/?r=west-yorkshire">www.pct.bike/m/?r=west-yorkshire</a>)</li>
+<li>What additional steps could you take with QGIS to improve the accessibility metric shown in Figure <a href="accessibility-analysis.html#fig:buffered-lines">8.5</a>?</li>
+<li>Bonus: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?</li>
+</ul>
+</div>
+<div id="advanced-exercise-optional" class="section level2">
+<h2><span class="header-section-number">8.5</span> Advanced exercise (optional)</h2>
 <ol style="list-style-type: decimal">
-<li>Downloaded the example data</li>
-<li>Imported the three files to QGIS</li>
+<li>Install the ORS Tools Plugin</li>
+<li>Signup for an API token at openrouteservice.org</li>
+<li>Add token to ORS Tools Settings</li>
+<li>Download the locations of schools from <a href="https://overpass-turbo.eu/" class="uri">https://overpass-turbo.eu/</a></li>
+<li>Buffer schools and find population within 1km of a school</li>
+<li>Make isochone for 10, 20, 30 min cycle from schools</li>
+<li>Dissolve isochone togther</li>
+<li>may need to change nerndering order (properties -&gt; symbology -&gt; layerrendering)</li>
+<li>use geoprocessing v.clean (with clean type break)</li>
+<li>edit polygons to remove the unneeded sections</li>
+<li>join the isochones onto the points</li>
 </ol>
-<p>Bonus Exercises</p>
-<ol style="list-style-type: decimal">
-<li>Read about the disadvantages of shapefile and some of the alteratives <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a></li>
-</ol>
+</div>
+<div id="summary-6" class="section level2">
+<h2><span class="header-section-number">8.6</span> Summary</h2>
+<p>This chapter involved downloading and importing more data related to travel behaviour and cycle infrastructure.
+Three simple of indices of accessibility to cycle infrastructure were developed:</p>
+<ul>
+<li>Whether any cycle infrastructure was provided</li>
+<li>Distance from zone centroids to the nearest cycleway</li>
+<li>Length of cycle infrastructure within a given buffer distance of desire lines</li>
+</ul>
+<p>The skills could be used to measure accessibility to different services, including schools, shops and healthcare.</p>
 
 </div>
 </div>
@@ -232,8 +308,8 @@ FIGURE 3.5: The imported data layers shown in the Layer window.
           </div>
         </div>
       </div>
-<a href="working-with-qgis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="style-and-select-features.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="raster-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -263,7 +339,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/03-data.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/10-accessibility.Rmd",
 "text": "Edit"
 },
 "history": {

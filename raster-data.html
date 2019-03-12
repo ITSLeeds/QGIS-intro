@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction</title>
+  <title>Chapter 7 Raster Data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="Chapter 7 Raster Data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="Chapter 7 Raster Data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="working-with-qgis.html">
-<link rel="next" href="style-and-select-features.html">
+<link rel="prev" href="making-maps.html">
+<link rel="next" href="accessibility-analysis.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -148,82 +148,81 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Downloading and loading data</h1>
-<p>A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.</p>
-<p>Often, the first stage in the data downloading/loading process is to find the data online.
-In this case, we will access data from the following site, which contains data we prepared earlier for the course: <a href="https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01">github.com/ITSLeeds/QGIS-into/releases</a>.</p>
-<p>Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.</p>
-<p>Before opening data files, you should first have created a QGIS project, covered in the previous chapter.</p>
-<div id="importing-spatial-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Importing spatial data</h2>
-<p>To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure <a href="data.html#fig:data-source-manager">3.1</a>).</p>
-<div class="figure"><span id="fig:data-source-manager"></span>
-<img src="figures/open-data-source-manager.jpg" alt="The Data Source Manager icon" width="10%" />
+<div id="raster-data" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Raster Data</h1>
+<p>So far we have only used Vector data with QGIS, this chapter will introduce raster data.</p>
+<div id="what-is-the-difference-between-raster-and-vector-data." class="section level2">
+<h2><span class="header-section-number">7.1</span> What is the difference between raster and vector data.</h2>
+<p>Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.</p>
+<p>Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.</p>
+</div>
+<div id="download-sample-data" class="section level2">
+<h2><span class="header-section-number">7.2</span> Download Sample Data</h2>
+<p>Download the sample raster data from here:</p>
+<p><a href="https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/leeds_cir_compress.tif" class="uri">https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/leeds_cir_compress.tif</a></p>
+</div>
+<div id="adding-raster-data-to-the-map" class="section level2">
+<h2><span class="header-section-number">7.3</span> Adding raster data to the map</h2>
+<p>Adding raster data to QGIS is done using the same data manager as vector data, except you must use the raster tab. You will notice that the raster contains an aerial photograph of Leeds, except the colours, appear to be wrong.</p>
+<div class="figure"><span id="fig:raster-import"></span>
+<img src="figures/raster-import.png" alt="The sample raster data added to the map" width="100%" />
 <p class="caption">
-FIGURE 3.1: The Data Source Manager icon
+FIGURE 7.1: The sample raster data added to the map
 </p>
 </div>
-<p>We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.</p>
-<p>Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.</p>
-<p>Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.</p>
-<div class="figure"><span id="fig:data-source-manager-shp"></span>
-<img src="figures/import_shp.jpg" alt="The Data Source Manager - Vector" width="100%" />
+<p>The colour difference is due to this raster being a colour infrared image. Rather than the usual Red, Green, Blue bands this image has Near Infrared (NI), Red, Green.</p>
+</div>
+<div id="normalized-difference-vegetation-index" class="section level2">
+<h2><span class="header-section-number">7.4</span> Normalized difference vegetation index</h2>
+<p>You may have noticed that the trees and grass in the raster appear bright red, but most other features appear grey. We shall use the raster to calculate the Normalized difference vegetation index (NDVI) a measure of how much vegetation is within each raster cell.</p>
+<p>Within the “Raster” menu select “Raster Calculator” the formula for calculating the NVDI is:</p>
+<p><span class="math display">\[\frac{NI - Red}{NI + Red}\]</span></p>
+<p>Enter the formula into the raster calculator notice the use of @ to designate the different bands of the raster layer. Remember to specify where you want the results to be saved.</p>
+<div class="figure"><span id="fig:raster-calc"></span>
+<img src="figures/raster-calcualtor.png" alt="The raster calcualtor with the NDVI formula" width="100%" />
 <p class="caption">
-FIGURE 3.2: The Data Source Manager - Vector
+FIGURE 7.2: The raster calcualtor with the NDVI formula
 </p>
 </div>
-<p>The result should look something like the map displayed in Figure <a href="data.html#fig:imported">3.3</a>.</p>
-<div class="figure"><span id="fig:imported"></span>
-<img src="figures/imported.png" alt="The map after the file 'leeds_lsoa.shp' has been imported." width="100%" />
+<p>Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.</p>
+<div class="figure"><span id="fig:ndvi"></span>
+<img src="figures/ndvi.png" alt="The NDVI raster with a psudo-colour scheme applied" width="100%" />
 <p class="caption">
-FIGURE 3.3: The map after the file ‘leeds_lsoa.shp’ has been imported.
-</p>
-</div>
-</div>
-<div id="importing-a-csv-or-text-file" class="section level2">
-<h2><span class="header-section-number">3.2</span> Importing a CSV or text file</h2>
-<div id="csv-with-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> CSV with spatial data</h3>
-<p>Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel.
-We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.</p>
-<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.</p>
-<p>Click “Add” then “Close”.</p>
-<div class="figure"><span id="fig:data-source-manager-csv"></span>
-<img src="figures/import_csv.jpg" alt="The Data Source Manager - Delimited Text" width="100%" />
-<p class="caption">
-FIGURE 3.4: The Data Source Manager - Delimited Text
-</p>
-</div>
-<p>After importing the ‘stats19’ data, using menus shown in Figure <a href="data.html#fig:data-source-manager-csv">3.4</a>, you should see points on the map, representing where crashes in Leeds took place in 2017.
-If you do not see dots on the map, re-read this section.
-If you do, congratuations!</p>
-</div>
-<div id="csv-without-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> CSV without spatial data</h3>
-<p>QGIS will also allow you to import non-spatial data.
-Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
-When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:</p>
-<div class="figure"><span id="fig:layers"></span>
-<img src="https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/master/figures/layers.png" alt="The imported data layers shown in the Layer window." width="50%" />
-<p class="caption">
-FIGURE 3.5: The imported data layers shown in the Layer window.
+FIGURE 7.3: The NDVI raster with a psudo-colour scheme applied
 </p>
 </div>
 </div>
+<div id="linking-raster-and-vector-data" class="section level2">
+<h2><span class="header-section-number">7.5</span> Linking Raster and vector data</h2>
+<p>Finally, we will link the NDVI raster back to the LSOA boundaries so that we can have an average vegetation score for each LSOA.</p>
+<p>In the processing menu select “toolbox”, this opens the processing toolbox panel on the right side. Use the search bar to find the “zonal statistics” tool.</p>
+<div class="figure"><span id="fig:zone-stats1"></span>
+<img src="figures/zonal-statistics.JPG" alt="The Zonal Statistics tool in the processing toolbox" width="100%" />
+<p class="caption">
+FIGURE 7.4: The Zonal Statistics tool in the processing toolbox
+</p>
 </div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">3.3</span> Summary</h2>
-<p>Before moving on to the next chapter make sure you have.</p>
-<ol style="list-style-type: decimal">
-<li>Downloaded the example data</li>
-<li>Imported the three files to QGIS</li>
-</ol>
-<p>Bonus Exercises</p>
-<ol style="list-style-type: decimal">
-<li>Read about the disadvantages of shapefile and some of the alteratives <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a></li>
-</ol>
+<p>Complete the form to get statistics from the NDVI raster for each LSOA. When specifying the statistics to calculate select the mean.</p>
+<div class="figure"><span id="fig:zone-stats2"></span>
+<img src="figures/zonal-statistics2.png" alt="The Zonal Statistics tool" width="100%" />
+<p class="caption">
+FIGURE 7.5: The Zonal Statistics tool
+</p>
+</div>
+<p>Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.</p>
+<p>Adjust the symbology of your LSOA layer to reflect the NDVI scores.</p>
+<div class="figure"><span id="fig:lsoa-ndvi"></span>
+<img src="figures/lsoa-ndvi.png" alt="LSOA areas with average NDVI scores" width="100%" />
+<p class="caption">
+FIGURE 7.6: LSOA areas with average NDVI scores
+</p>
+</div>
+</div>
+<div id="summary-5" class="section level2">
+<h2><span class="header-section-number">7.6</span> Summary</h2>
+<p>This chapter has introduced raster data, the raster calculator, and zonal statistics.</p>
+<p><strong>Bonus Exercises</strong></p>
+<p>Consider how you could use the NDVI values to measure access to green spaces. How might you exclude small areas of green space such as gardens, but include large areas such as parks?</p>
 
 </div>
 </div>
@@ -232,8 +231,8 @@ FIGURE 3.5: The imported data layers shown in the Layer window.
           </div>
         </div>
       </div>
-<a href="working-with-qgis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="style-and-select-features.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="making-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="accessibility-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -263,7 +262,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/03-data.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/09-raster-data.Rmd",
 "text": "Edit"
 },
 "history": {
