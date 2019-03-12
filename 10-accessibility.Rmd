@@ -124,11 +124,23 @@ knitr::include_graphics("figures/buffered-lines.png")
 ```
 
 - Given what you know about Leeds, are these the desire lines you'd expect to be well-served by cycle infrastructure?
-- Explore the data in the Propensity to Cycle Tool for Leeds and decide where you think new infrastructure could go (see [www.pct.bike/m/?r=west-yorkshire](http://www.pct.bike/m/?r=west-yorkshire))
+- Explore the data in the Propensity to Cycle Tool (PCT) for Leeds and decide where you think new infrastructure could go (see [www.pct.bike/m/?r=west-yorkshire](http://www.pct.bike/m/?r=west-yorkshire) and Figure \@ref(fig:pct-west)).
 - What additional steps could you take with QGIS to improve the accessibility metric shown in Figure \@ref(fig:buffered-lines)?
-- Bonus: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?
 
-## Advanced exercise (optional)
+**The next tasks are bonus extras. Select one of the following (or more if you are fast!):**
+
+- Bonus 1: Download the fast and quiet route data from the PCT's Region Data tab and load it into QGIS (see top of Figure \@ref(fig:pct-west) for the Region data tab).
+
+- Bonus 2: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?
+
+- Bonus 3: explore and download the PCT data for schools [here](http://npct0.vs.mythic-beasts.com/). With reference to an academic paper on the subject [@goodman_scenarios_2019], how could you use the data to generate a 'Sustainable Travel to School Accessibility Measure' (STSAM)?
+
+```{r pct-west, fig.cap="The propensity to cycle tool (PCT), showing data for fast and quiet routes, and demonstrating the Region dat' tab. Go to www.pct.bike to explore the data."}
+knitr::include_graphics("figures/pct-west-yorkshire-fast.jpg")
+```
+
+
+## Advanced exercises (optional)
 
 1. Install the ORS Tools Plugin
 1. Signup for an API token at openrouteservice.org
