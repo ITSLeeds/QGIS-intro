@@ -61,36 +61,95 @@ knitr::include_graphics("figures/select-by-location.png")
 A slightly more sophisticated measure of accessibility is Euclidean distance.
 Rather than testing whether or not zones contain cycling infrastructure, resulting in a *binary variable*, `TRUE` or `FALSE`, this simple distance calculation results in a *continuous variable* in units of metres.
 
+To calculate this metric, we will use the 'Distance to nearest hub' algorithm in QGIS.
+To run this algorithm:
 
-```{r}
-knitr::include_graphics("figures/processing-hub-distance.png")
+- Open the Processing Toolbox, e.g. by clicking 'Processing' from the menu bar and selecting 'Toolbox' (pro tip: this can be achieved more quickly by pressing Alt-C and then T to get to the menu without touching the mouse)
+- Search for and select 'Distance from nearest hub (points)' in the Processing Toolbox (see Figure \@ref(fig:processing-hub-distance), left)
+- Select `leeds_lsoa` as the Source points layer and the `existing-cycle-infrastructure` as Destination layer in the popup window (see Figure \@ref(fig:processing-hub-distance), left)
+
+
+```{r processing-hub-distance, fig.cap="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right).", fig.show='hold', out.width="49%"}
+knitr::include_graphics(c(
+  "figures/processing-hub-distance.png",
+  "figures/distance-processing.png"
+  ))
 ```
 
-```{r}
+The result is a new point layer, with one point per LSOA zone.
+Style this new layer based on the Hub distance field it contains and give it an appropriate colour scheme.
+It should look something like Figure \@ref(fig:hub-distance-centroids).
+
+```{r hub-distance-centroids, out}
 knitr::include_graphics("figures/hub-distance-centroids.png")
 ```
 
-
-
+- Is the distribution of distances to cycle infrastructure as you would expect? Why?
+- List at least 2 disadvantages of this new accessibility measure and 2 ways you could improve it using your evolving QGIS skills.
+- Bonus: Use a spatial join to merge the 'Hub distance' variable in the new point layer back onto the LSOA zone layer.
 
 ## Calculate cycle infrastructure provision along desire lines
 
+The accessibility measures we have calculated have been for zones.
+These static entities are the basis of many local statistics on their resident populations (inhabitants) but they tell us little about travel patterns.
+A more appropriate level of geographic analysis for transport planning is ofter the desire line, one-way trips between an origin and a destination [@lovelace_geocomputation_2019, Chapter 12].
+Such desire lines are represented in the desire line object, loaded in Section \@ref(input-data), which were generated for the Propensity to Cycle Tool project (see [www.pct.bike](http://www.pct.bike/)).
 
-<!-- ## Ideas from Malcolm -->
+Although the desire lines represent travel, they clearly are not the routes that people actually take from home to work (the dataset comes from the 2011 Census question on travel to work).
+People do not travel in straight lines, only birds can do that (hence the phrase 'as the crow flies' to denote straight line distance).
+People take a range of routes from A to B.
+Therefore, the distance of cycleway *inside a buffer surrounding a desire line* may be a better indication of the accessibility of cycle infrastructure for everyday travel than the previous measures.
 
-<!-- 1. Install the ORS Tools Plugin -->
-<!-- 1. Signup for an API token at openrouteservice.org -->
-<!-- 1. Add token to ORS Tools Settings -->
-<!-- 1. Download the locations of schools from ??? -->
-<!-- 1. Buffer schools and find population within 1km of a school -->
-<!-- 1. Make isochone for 10, 20, 30 min cycle from schools -->
-<!-- 1. Dissolve isochone togther  -->
-<!-- 1. may need to change nerndering order (properties -> symbology -> layerrendering) -->
-<!-- 1. use geoprocessing v.clean (with clean type break) -->
-<!-- 1. edit polygons to remove the unneeded sections -->
-<!-- 1. join the isochones onto the points -->
+The first step is to subset the desire lines so that only those *within* the Leeds LSOA object are included.
+You can do this as follows:
+
+- Again, select the Select by location tool, as you did previously to select the LSOA zones that had some cycle infrastructure.
+- This time select features in the desire lines that are *Within* the zones.
+- Bonus: what is the difference when you select different types of geometric predicates (see Figure \@ref(fig:geometric-predicate))?
+
+```{r geometric-predicate, fig.cap="Select by location popup, to subset only desire lines within Leeds"}
+knitr::include_graphics("figures/geometric-predicate.png")
+```
+
+
+After you have saved a subset of the desire lines, it's time to calculate buffers. You will create buffers of 500m (feel free to experiment with different buffer sizes after you have generated the desired result).
+Your growing knowledge of QGIS (and ability to search for help online if you get stuck) should help you do the next step without detailed instructions (hint: it's also found in the Vector menu).
+
+The final step in the process is to calculate the length of cycle infrastructure in each buffer.
+Again, you must look this up (hint: the algorithm is called 'Sum line lengths').
+After running this algorithm on the correct inputs, and colouring the result according to the length of infrastructure in each polygon, the map should resemble Figure \@ref(fig:buffered-lines).
+
+```{r buffered-lines, fig.cap="Buffered lines, coloured by the length of infrastructure within each one."}
+knitr::include_graphics("figures/buffered-lines.png")
+```
+
+- Given what you know about Leeds, are these the desire lines you'd expect to be well-served by cycle infrastructure?
+- Explore the data in the Propensity to Cycle Tool for Leeds and decide where you think new infrastructure could go (see [www.pct.bike/m/?r=west-yorkshire](http://www.pct.bike/m/?r=west-yorkshire))
+- What additional steps could you take with QGIS to improve the accessibility metric shown in Figure \@ref(fig:buffered-lines)?
+- Bonus: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?
+
+## Advanced exercise (optional)
+
+1. Install the ORS Tools Plugin
+1. Signup for an API token at openrouteservice.org
+1. Add token to ORS Tools Settings
+1. Download the locations of schools from https://overpass-turbo.eu/
+1. Buffer schools and find population within 1km of a school
+1. Make isochone for 10, 20, 30 min cycle from schools
+1. Dissolve isochone togther
+1. may need to change nerndering order (properties -> symbology -> layerrendering)
+1. use geoprocessing v.clean (with clean type break)
+1. edit polygons to remove the unneeded sections
+1. join the isochones onto the points
 
 
 ## Summary
 
+This chapter involved downloading and importing more data related to travel behaviour and cycle infrastructure.
+Three simple of indices of accessibility to cycle infrastructure were developed:
 
+- Whether any cycle infrastructure was provided
+- Distance from zone centroids to the nearest cycleway
+- Length of cycle infrastructure within a given buffer distance of desire lines
+
+The skills could be used to measure accessibility to different services, including schools, shops and healthcare.
