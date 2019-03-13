@@ -12,10 +12,6 @@ Although this is an unnusual measure of accessibility, the methods can be modifi
 Building on previous chapters, we will use a case study of Leeds.
 There are two additional datasets we'll use for this, saved in the file `data_accessibility.zip` in the releases section of the tutorial.
 
-```{}
-
-```
-
 The input datasets were taken from 2 places:
 
 - The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool ([CyIPT](https://www.cyipt.bike))
@@ -32,6 +28,8 @@ As a taster of what we will do, and to check you have the right input data, the 
 ```{r access-overview, fig.cap="Overview of input data for this chapter."}
 knitr::include_graphics("figures/access-overview.png")
 ```
+
+
 
 ## Identify areas in Leeds with some cycle infrastructure
 
