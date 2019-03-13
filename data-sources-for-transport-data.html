@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction</title>
+  <title>Chapter 9 Data sources for transport data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="Chapter 9 Data sources for transport data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Downloading and loading data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="Chapter 9 Data sources for transport data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="working-with-qgis.html">
-<link rel="next" href="style-and-select-features.html">
+<link rel="prev" href="accessibility-analysis.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -153,82 +153,36 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Downloading and loading data</h1>
-<p>A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.</p>
-<p>Often, the first stage in the data downloading/loading process is to find the data online.
-In this case, we will access data from the following site, which contains data we prepared earlier for the course: <a href="https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01">github.com/ITSLeeds/QGIS-into/releases</a>.</p>
-<p>Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.</p>
-<p>Before opening data files, you should first have created a QGIS project, covered in the previous chapter.</p>
-<div id="importing-spatial-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Importing spatial data</h2>
-<p>To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure <a href="data.html#fig:data-source-manager">3.1</a>).</p>
-<div class="figure"><span id="fig:data-source-manager"></span>
-<img src="figures/open-data-source-manager.jpg" alt="The Data Source Manager icon" width="10%" />
-<p class="caption">
-FIGURE 3.1: The Data Source Manager icon
-</p>
+<div id="data-sources-for-transport-data" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Data sources for transport data</h1>
+<p>There are many good transport datasets out there, but they are not always easy to find.</p>
+<div id="useful-data-sources" class="section level2">
+<h2><span class="header-section-number">9.1</span> Useful data sources</h2>
+<p>The list below provides links to some key data sources that may be of use and interest, starting with the most universal and easy to use, and ending in rather specific datasets.</p>
+<ul>
+<li>UK geoportal, providing geographic data at many levels: <a href="https://geoportal.statistics.gov.uk" class="uri">https://geoportal.statistics.gov.uk</a></li>
+<li>Other national geoportals exist, such as this: <a href="http://www.geoportal.org/" class="uri">http://www.geoportal.org/</a></li>
+<li>A good source of cleaned origin destination data is the Region downloads tab in the Propensity to Cycle Tool <span class="citation">(Lovelace et al. 2017)</span> - see the Region data tab for West Yorkshire here, for example: <a href="http://www.pct.bike/m/?r=west-yorkshire" class="uri">http://www.pct.bike/m/?r=west-yorkshire</a></li>
+<li>OpenStreetMap is an excellent source of geographic data with global coverage. You can download data on specific queries (e.g. highway=cycleway) from the overpass-turbo service: <a href="https://overpass-turbo.eu/" class="uri">https://overpass-turbo.eu/</a></li>
+</ul>
 </div>
-<p>We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.</p>
-<p>Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.</p>
-<p>Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.</p>
-<div class="figure"><span id="fig:data-source-manager-shp"></span>
-<img src="figures/import_shp.jpg" alt="The Data Source Manager - Vector" width="100%" />
-<p class="caption">
-FIGURE 3.2: The Data Source Manager - Vector
-</p>
+<div id="online-lists" class="section level2">
+<h2><span class="header-section-number">9.2</span> Online lists</h2>
+<p>For other datasets, search online! Good starting points in your research may be:</p>
+<ul>
+<li>The open data section in <span class="citation">Lovelace, Nowosad, and Muenchow (2019)</span> - <a href="https://geocompr.robinlovelace.net/read-write.html#retrieving-data" class="uri">https://geocompr.robinlovelace.net/read-write.html#retrieving-data</a></li>
+<li>Transport datasets mentioned here: <a href="https://data.world/datasets/transportation" class="uri">https://data.world/datasets/transportation</a></li>
+<li>UK government transport data: <a href="https://ckan.publishing.service.gov.uk/publisher/department-for-transport" class="uri">https://ckan.publishing.service.gov.uk/publisher/department-for-transport</a></li>
+</ul>
 </div>
-<p>The result should look something like the map displayed in Figure <a href="data.html#fig:imported">3.3</a>.</p>
-<div class="figure"><span id="fig:imported"></span>
-<img src="figures/imported.png" alt="The map after the file 'leeds_lsoa.shp' has been imported." width="100%" />
-<p class="caption">
-FIGURE 3.3: The map after the file ‘leeds_lsoa.shp’ has been imported.
-</p>
-</div>
-</div>
-<div id="importing-a-csv-or-text-file" class="section level2">
-<h2><span class="header-section-number">3.2</span> Importing a CSV or text file</h2>
-<div id="csv-with-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> CSV with spatial data</h3>
-<p>Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel.
-We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.</p>
-<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.</p>
-<p>Click “Add” then “Close”.</p>
-<div class="figure"><span id="fig:data-source-manager-csv"></span>
-<img src="figures/import_csv.jpg" alt="The Data Source Manager - Delimited Text" width="100%" />
-<p class="caption">
-FIGURE 3.4: The Data Source Manager - Delimited Text
-</p>
-</div>
-<p>After importing the ‘stats19’ data, using menus shown in Figure <a href="data.html#fig:data-source-manager-csv">3.4</a>, you should see points on the map, representing where crashes in Leeds took place in 2017.
-If you do not see dots on the map, re-read this section.
-If you do, congratuations!</p>
-</div>
-<div id="csv-without-spatial-data" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> CSV without spatial data</h3>
-<p>QGIS will also allow you to import non-spatial data.
-Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
-When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:</p>
-<div class="figure"><span id="fig:layers"></span>
-<img src="https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/master/figures/layers.png" alt="The imported data layers shown in the Layer window." width="50%" />
-<p class="caption">
-FIGURE 3.5: The imported data layers shown in the Layer window.
-</p>
-</div>
-</div>
-</div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">3.3</span> Summary</h2>
-<p>Before moving on to the next chapter make sure you have.</p>
-<ol style="list-style-type: decimal">
-<li>Downloaded the example data</li>
-<li>Imported the three files to QGIS</li>
-</ol>
-<p>Bonus Exercises</p>
-<ol style="list-style-type: decimal">
-<li>Read about the disadvantages of shapefile and some of the alteratives <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a></li>
-</ol>
+<div id="data-packages" class="section level2">
+<h2><span class="header-section-number">9.3</span> Data packages</h2>
+<ul>
+<li>The ors and OSMTools QGIS plugins provide a range of datasets</li>
+<li>The stats19 package can get road crash data for anywhere in Great Britain <span class="citation">(Lovelace et al. 2019)</span> see here for info: <a href="https://itsleeds.github.io/stats19/" class="uri">https://itsleeds.github.io/stats19/</a></li>
+<li>The pct package provides access to data in the PCT: <a href="https://github.com/ITSLeeds/pct" class="uri">https://github.com/ITSLeeds/pct</a></li>
+<li>There are many other QGIS and R packages and plugins to help access data</li>
+</ul>
 
 </div>
 </div>
@@ -237,8 +191,8 @@ FIGURE 3.5: The imported data layers shown in the Layer window.
           </div>
         </div>
       </div>
-<a href="working-with-qgis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="style-and-select-features.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="accessibility-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -268,7 +222,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/03-data.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/11-data-sources.Rmd",
 "text": "Edit"
 },
 "history": {
