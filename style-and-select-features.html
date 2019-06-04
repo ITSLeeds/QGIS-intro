@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 4 Style and select features | QGIS for Transport Research: an introduction</title>
-  <meta name="description" content="A book on using open source Geographic Information System for transport planning.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Style and select features | QGIS for Transport Research: an introduction</title>
+  <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Style and select features | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="4 Style and select features | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -17,19 +16,19 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Style and select features | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="4 Style and select features | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
 
-<meta name="author" content="Robin Lovelace and Malcolm Morgan">
+<meta name="author" content="Robin Lovelace and Malcolm Morgan" />
 
 
-<meta name="date" content="2019-03-13">
+<meta name="date" content="2019-06-04" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
 <link rel="prev" href="data.html">
@@ -50,6 +49,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -73,6 +109,7 @@
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what-is-gis"><i class="fa fa-check"></i><b>1.1</b> What is GIS?</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-is-qgis"><i class="fa fa-check"></i><b>1.2</b> What is QGIS?</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#how-to-install-qgis"><i class="fa fa-check"></i><b>1.3</b> How to install QGIS</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
@@ -106,31 +143,17 @@
 <li class="chapter" data-level="5.3" data-path="processing-data.html"><a href="processing-data.html#points-in-polygons"><i class="fa fa-check"></i><b>5.3</b> Points in Polygons</a></li>
 <li class="chapter" data-level="5.4" data-path="processing-data.html"><a href="processing-data.html#summary-3"><i class="fa fa-check"></i><b>5.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>6</b> Making maps</a><ul>
-<li class="chapter" data-level="6.1" data-path="making-maps.html"><a href="making-maps.html#creating-a-print-layout"><i class="fa fa-check"></i><b>6.1</b> Creating a print layout</a></li>
-<li class="chapter" data-level="6.2" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>6.2</b> Saving &amp; Exporting your map</a></li>
-<li class="chapter" data-level="6.3" data-path="making-maps.html"><a href="making-maps.html#summary-4"><i class="fa fa-check"></i><b>6.3</b> Summary</a></li>
+<li class="chapter" data-level="6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>6</b> Accessibility analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>6.1</b> Input data</a></li>
+<li class="chapter" data-level="6.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-4"><i class="fa fa-check"></i><b>6.2</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raster-data.html"><a href="raster-data.html"><i class="fa fa-check"></i><b>7</b> Raster Data</a><ul>
-<li class="chapter" data-level="7.1" data-path="raster-data.html"><a href="raster-data.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>7.1</b> What is the difference between raster and vector data.</a></li>
-<li class="chapter" data-level="7.2" data-path="raster-data.html"><a href="raster-data.html#download-sample-data"><i class="fa fa-check"></i><b>7.2</b> Download Sample Data</a></li>
-<li class="chapter" data-level="7.3" data-path="raster-data.html"><a href="raster-data.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>7.3</b> Adding raster data to the map</a></li>
-<li class="chapter" data-level="7.4" data-path="raster-data.html"><a href="raster-data.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>7.4</b> Normalized difference vegetation index</a></li>
-<li class="chapter" data-level="7.5" data-path="raster-data.html"><a href="raster-data.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>7.5</b> Linking Raster and vector data</a></li>
-<li class="chapter" data-level="7.6" data-path="raster-data.html"><a href="raster-data.html#summary-5"><i class="fa fa-check"></i><b>7.6</b> Summary</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>8</b> Accessibility analysis</a><ul>
-<li class="chapter" data-level="8.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>8.1</b> Input data</a></li>
-<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>8.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
-<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>8.3</b> Calculate distances to cycle infrastructure</a></li>
-<li class="chapter" data-level="8.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>8.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
-<li class="chapter" data-level="8.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>8.5</b> Advanced exercises (optional)</a></li>
-<li class="chapter" data-level="8.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html"><i class="fa fa-check"></i><b>9</b> Data sources for transport data</a><ul>
-<li class="chapter" data-level="9.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#useful-data-sources"><i class="fa fa-check"></i><b>9.1</b> Useful data sources</a></li>
-<li class="chapter" data-level="9.2" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#online-lists"><i class="fa fa-check"></i><b>9.2</b> Online lists</a></li>
-<li class="chapter" data-level="9.3" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#data-packages"><i class="fa fa-check"></i><b>9.3</b> Data packages</a></li>
+<li class="chapter" data-level="7" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>7</b> Making maps</a></li>
+<li class="chapter" data-level="8" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>8</b> Next steps</a></li>
+<li class="chapter" data-level="9" data-path="more-features.html"><a href="more-features.html"><i class="fa fa-check"></i><b>9</b> More Features</a><ul>
+<li class="chapter" data-level="9.1" data-path="more-features.html"><a href="more-features.html#attribute-calculations"><i class="fa fa-check"></i><b>9.1</b> Attribute calculations</a></li>
+<li class="chapter" data-level="9.2" data-path="more-features.html"><a href="more-features.html#spatial-subsetting"><i class="fa fa-check"></i><b>9.2</b> Spatial subsetting</a></li>
+<li class="chapter" data-level="9.3" data-path="more-features.html"><a href="more-features.html#geoprocessing-tool-box"><i class="fa fa-check"></i><b>9.3</b> Geoprocessing Tool Box</a></li>
+<li class="chapter" data-level="9.4" data-path="more-features.html"><a href="more-features.html#summary-5"><i class="fa fa-check"></i><b>9.4</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -154,22 +177,21 @@
 
             <section class="normal" id="section-">
 <div id="style-and-select-features" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Style and select features</h1>
+<h1><span class="header-section-number">4</span> Style and select features</h1>
 <div id="identify-features" class="section level2">
 <h2><span class="header-section-number">4.1</span> Identify Features</h2>
 <p>The ‘Identify features button’ allows you to interrogate features on the map by clicking on them (see Figure <a href="style-and-select-features.html#fig:identify">4.1</a>).</p>
 <div class="figure"><span id="fig:identify"></span>
 <img src="figures/identify.jpg" alt="Identify Features Button" width="10%" />
 <p class="caption">
-FIGURE 4.1: Identify Features Button
+Figure 4.1: Identify Features Button
 </p>
 </div>
-<p>Clicking on a map feature brings up a panel with more information about that feature.
-You can use the mode menu at the bottom of the panel to select which layers will be included (see Figure <a href="style-and-select-features.html#fig:identify-panel">4.2</a>).</p>
+<p>Clicking on a map feature brings up a panel with more information about that feature. You can use the mode menu at the bottom of the panel to select which layers will be included (see Figure <a href="style-and-select-features.html#fig:identify-panel">4.2</a>).</p>
 <div class="figure"><span id="fig:identify-panel"></span>
 <img src="figures/inspect_pannel.png" alt="Identify Features Pannel" width="100%" />
 <p class="caption">
-FIGURE 4.2: Identify Features Pannel
+Figure 4.2: Identify Features Pannel
 </p>
 </div>
 </div>
@@ -180,14 +202,14 @@ FIGURE 4.2: Identify Features Pannel
 <div class="figure"><span id="fig:symbology-menu"></span>
 <img src="figures/symbology.png" alt="Symbology Menu" width="100%" />
 <p class="caption">
-FIGURE 4.3: Symbology Menu
+Figure 4.3: Symbology Menu
 </p>
 </div>
 <p>For the type of Symbology select “Categorised”, the column “accident_severity”, then chose a colour ramp from the drop-down menu. Then click “Classify”. This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.</p>
 <div class="figure"><span id="fig:symbology-results"></span>
 <img src="figures/symbology_results.png" alt="Road collisons categoried by severity" width="100%" />
 <p class="caption">
-FIGURE 4.4: Road collisons categoried by severity
+Figure 4.4: Road collisons categoried by severity
 </p>
 </div>
 </div>
@@ -259,19 +281,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
