@@ -46,4 +46,9 @@ QGIS does not have dedicate transport planning functionality like Visum
 knitr::include_graphics("figures/GoogleTrends2019.png")
 ```
 
+## How to install QGIS
+
+To install QGIS you should follow instructions at [download.qgis.org/](https://download.qgis.org/).
+If you are running Windows, we recommend installing the [OSGeo4W](http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe) package, which includes additional features.
+
 <!-- ## Alternatives to QGIS -->
