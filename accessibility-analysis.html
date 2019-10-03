@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Accessibility analysis | QGIS for Transport Research: an introduction</title>
+  <title>Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Accessibility analysis | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Accessibility analysis | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="Chapter 8 Accessibility analysis | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Robin Lovelace and Malcolm Morgan" />
 
 
-<meta name="date" content="2019-06-04" />
+<meta name="date" content="2019-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="processing-data.html">
-<link rel="next" href="making-maps.html">
+<link rel="prev" href="raster-data.html"/>
+<link rel="next" href="data-sources-for-transport-data.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -49,43 +49,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -143,17 +106,31 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="processing-data.html"><a href="processing-data.html#points-in-polygons"><i class="fa fa-check"></i><b>5.3</b> Points in Polygons</a></li>
 <li class="chapter" data-level="5.4" data-path="processing-data.html"><a href="processing-data.html#summary-3"><i class="fa fa-check"></i><b>5.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>6</b> Accessibility analysis</a><ul>
-<li class="chapter" data-level="6.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>6.1</b> Input data</a></li>
-<li class="chapter" data-level="6.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-4"><i class="fa fa-check"></i><b>6.2</b> Summary</a></li>
+<li class="chapter" data-level="6" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>6</b> Making maps</a><ul>
+<li class="chapter" data-level="6.1" data-path="making-maps.html"><a href="making-maps.html#creating-a-print-layout"><i class="fa fa-check"></i><b>6.1</b> Creating a print layout</a></li>
+<li class="chapter" data-level="6.2" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>6.2</b> Saving &amp; Exporting your map</a></li>
+<li class="chapter" data-level="6.3" data-path="making-maps.html"><a href="making-maps.html#summary-4"><i class="fa fa-check"></i><b>6.3</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>7</b> Making maps</a></li>
-<li class="chapter" data-level="8" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>8</b> Next steps</a></li>
-<li class="chapter" data-level="9" data-path="more-features.html"><a href="more-features.html"><i class="fa fa-check"></i><b>9</b> More Features</a><ul>
-<li class="chapter" data-level="9.1" data-path="more-features.html"><a href="more-features.html#attribute-calculations"><i class="fa fa-check"></i><b>9.1</b> Attribute calculations</a></li>
-<li class="chapter" data-level="9.2" data-path="more-features.html"><a href="more-features.html#spatial-subsetting"><i class="fa fa-check"></i><b>9.2</b> Spatial subsetting</a></li>
-<li class="chapter" data-level="9.3" data-path="more-features.html"><a href="more-features.html#geoprocessing-tool-box"><i class="fa fa-check"></i><b>9.3</b> Geoprocessing Tool Box</a></li>
-<li class="chapter" data-level="9.4" data-path="more-features.html"><a href="more-features.html#summary-5"><i class="fa fa-check"></i><b>9.4</b> Summary</a></li>
+<li class="chapter" data-level="7" data-path="raster-data.html"><a href="raster-data.html"><i class="fa fa-check"></i><b>7</b> Raster Data</a><ul>
+<li class="chapter" data-level="7.1" data-path="raster-data.html"><a href="raster-data.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>7.1</b> What is the difference between raster and vector data.</a></li>
+<li class="chapter" data-level="7.2" data-path="raster-data.html"><a href="raster-data.html#download-sample-data"><i class="fa fa-check"></i><b>7.2</b> Download Sample Data</a></li>
+<li class="chapter" data-level="7.3" data-path="raster-data.html"><a href="raster-data.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>7.3</b> Adding raster data to the map</a></li>
+<li class="chapter" data-level="7.4" data-path="raster-data.html"><a href="raster-data.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>7.4</b> Normalized difference vegetation index</a></li>
+<li class="chapter" data-level="7.5" data-path="raster-data.html"><a href="raster-data.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>7.5</b> Linking Raster and vector data</a></li>
+<li class="chapter" data-level="7.6" data-path="raster-data.html"><a href="raster-data.html#summary-5"><i class="fa fa-check"></i><b>7.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>8</b> Accessibility analysis</a><ul>
+<li class="chapter" data-level="8.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>8.1</b> Input data</a></li>
+<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>8.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
+<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>8.3</b> Calculate distances to cycle infrastructure</a></li>
+<li class="chapter" data-level="8.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>8.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
+<li class="chapter" data-level="8.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>8.5</b> Advanced exercises (optional)</a></li>
+<li class="chapter" data-level="8.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html"><i class="fa fa-check"></i><b>9</b> Data sources for transport data</a><ul>
+<li class="chapter" data-level="9.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#useful-data-sources"><i class="fa fa-check"></i><b>9.1</b> Useful data sources</a></li>
+<li class="chapter" data-level="9.2" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#online-lists"><i class="fa fa-check"></i><b>9.2</b> Online lists</a></li>
+<li class="chapter" data-level="9.3" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#data-packages"><i class="fa fa-check"></i><b>9.3</b> Data packages</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -177,13 +154,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="accessibility-analysis" class="section level1">
-<h1><span class="header-section-number">6</span> Accessibility analysis</h1>
-<p>Accessibility is a key concept in transport planning. One of the key aims of many transport policies is to make places more accessible to people, whether that’s shops, schools or hospitals. But what does that actually mean?</p>
-<p>In this example, we will use QGIS to explore accessibility to cycle infrastructure. Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after ‘school agglomeration’, the topic of an academic paper based on a case study in Sao Paulo, Brazil <span class="citation">(Moreno-Monroy, Lovelace, and Ramos 2017)</span>.</p>
+<h1><span class="header-section-number">Chapter 8</span> Accessibility analysis</h1>
+<p>Accessibility is a key concept in transport planning.
+One of the key aims of many transport policies is to make places more accessible to people, whether that’s shops, schools or hospitals.
+But what does that actually mean?</p>
+<p>In this example, we will use QGIS to explore accessibility to cycle infrastructure.
+Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after ‘school agglomeration’, the topic of an academic paper based on a case study in Sao Paulo, Brazil <span class="citation">(Moreno-Monroy, Lovelace, and Ramos 2017)</span>.</p>
 <div id="input-data" class="section level2">
-<h2><span class="header-section-number">6.1</span> Input data</h2>
-<p>Building on previous chapters, we will use a case study of Leeds. There are two additional datasets we’ll use for this, saved in the file <code>data_accessibility.zip</code> in the releases section of the tutorial.</p>
-<pre><code></code></pre>
+<h2><span class="header-section-number">8.1</span> Input data</h2>
+<p>Building on previous chapters, we will use a case study of Leeds.
+There are two additional datasets we’ll use for this, saved in the file <code>data_accessibility.zip</code> in the releases section of the tutorial.</p>
 <p>The input datasets were taken from 2 places:</p>
 <ul>
 <li>The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool (<a href="https://www.cyipt.bike">CyIPT</a>)</li>
@@ -194,16 +174,147 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Reproject the datasets so they are in the British National Grid CRS (EPSG:27700)</li>
 <li>Subset the desire lines so that we only have the top 200 across West Yorksire</li>
 </ul>
-<p>Download and unzip the <code>data_accessibility.zip</code> file and load the <code>.gpkg</code> files. As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure <a href="accessibility-analysis.html#fig:access-overview">6.1</a>.</p>
+<p>Download and unzip the <code>data_accessibility.zip</code> file and load the <code>.gpkg</code> files.
+As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure <a href="accessibility-analysis.html#fig:access-overview">8.1</a>.</p>
 <div class="figure"><span id="fig:access-overview"></span>
 <img src="figures/access-overview.png" alt="Overview of input data for this chapter." width="100%" />
 <p class="caption">
-Figure 6.1: Overview of input data for this chapter.
+FIGURE 8.1: Overview of input data for this chapter.
 </p>
 </div>
 </div>
-<div id="summary-4" class="section level2">
-<h2><span class="header-section-number">6.2</span> Summary</h2>
+<div id="identify-areas-in-leeds-with-some-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.2</span> Identify areas in Leeds with some cycle infrastructure</h2>
+<p>A simple but effective way of comparing 2 geographic layers, as a first step towards an accessibility indicator, is a spatial selection.
+We can do this to identify zones that have access to <em>at least some cycle infrastructure</em>:</p>
+<ul>
+<li>Use the Select by location tool to select only those LSOAs with at least some cycleways in</li>
+<li>Do this with the following menu options: Vector &gt; Research Tools &gt; Select by Location</li>
+<li>Save the result as a new layer called, for example, <code>leeds_lsoa_cycleway</code></li>
+</ul>
+<p>The result should look like that shown in Figure <a href="accessibility-analysis.html#fig:select-by-location">8.2</a>.</p>
+<div class="figure"><span id="fig:select-by-location"></span>
+<img src="figures/select-by-location.png" alt="Select by Location: results." width="100%" />
+<p class="caption">
+FIGURE 8.2: Select by Location: results.
+</p>
+</div>
+<ul>
+<li>What proportion of zones have at least some cycle infrastructure, according to this measure?</li>
+<li>What are the limitations of this approach?
+<ul>
+<li>List at least 2.</li>
+</ul></li>
+</ul>
+<!-- There is no measure of how *much* cycle infrastructure is in each zone. -->
+<!-- There is no measure of the quality of the infrastructure. -->
+<!-- It does not account for whether the infrastructure actually goes where people want to go. -->
+</div>
+<div id="calculate-distances-to-cycle-infrastructure" class="section level2">
+<h2><span class="header-section-number">8.3</span> Calculate distances to cycle infrastructure</h2>
+<p>A slightly more sophisticated measure of accessibility is Euclidean distance.
+Rather than testing whether or not zones contain cycling infrastructure, resulting in a <em>binary variable</em>, <code>TRUE</code> or <code>FALSE</code>, this simple distance calculation results in a <em>continuous variable</em> in units of metres.</p>
+<p>To calculate this metric, we will use the ‘Distance to nearest hub’ algorithm in QGIS.
+To run this algorithm:</p>
+<ul>
+<li>Open the Processing Toolbox, e.g. by clicking ‘Processing’ from the menu bar and selecting ‘Toolbox’ (pro tip: this can be achieved more quickly by pressing Alt-C and then T to get to the menu without touching the mouse)</li>
+<li>Search for and select ‘Distance from nearest hub (points)’ in the Processing Toolbox (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">8.3</a>, left)</li>
+<li>Select <code>leeds_lsoa</code> as the Source points layer and the <code>existing-cycle-infrastructure</code> as Destination layer in the popup window (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">8.3</a>, left)</li>
+</ul>
+<div class="figure"><span id="fig:processing-hub-distance"></span>
+<img src="figures/processing-hub-distance.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" /><img src="figures/distance-processing.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" />
+<p class="caption">
+FIGURE 8.3: Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right).
+</p>
+</div>
+<p>The result is a new point layer, with one point per LSOA zone.
+Style this new layer based on the Hub distance field it contains and give it an appropriate colour scheme.
+It should look something like Figure <a href="#fig:hub-distance-centroids"><strong>??</strong></a>.</p>
+<p><img src="figures/hub-distance-centroids.png" width="100%" /></p>
+<ul>
+<li>Is the distribution of distances to cycle infrastructure as you would expect? Why?</li>
+<li>List at least 2 disadvantages of this new accessibility measure and 2 ways you could improve it using your evolving QGIS skills.</li>
+<li>Bonus: Use a spatial join to merge the ‘Hub distance’ variable in the new point layer back onto the LSOA zone layer.</li>
+</ul>
+</div>
+<div id="calculate-cycle-infrastructure-provision-along-desire-lines" class="section level2">
+<h2><span class="header-section-number">8.4</span> Calculate cycle infrastructure provision along desire lines</h2>
+<p>The accessibility measures we have calculated have been for zones.
+These static entities are the basis of many local statistics on their resident populations (inhabitants) but they tell us little about travel patterns.
+A more appropriate level of geographic analysis for transport planning is ofter the desire line, one-way trips between an origin and a destination <span class="citation">(Lovelace, Nowosad, and Muenchow 2019, Chapter 12)</span>.
+Such desire lines are represented in the desire line object, loaded in Section <a href="accessibility-analysis.html#input-data">8.1</a>, which were generated for the Propensity to Cycle Tool project (see <a href="http://www.pct.bike/">www.pct.bike</a>).</p>
+<p>Although the desire lines represent travel, they clearly are not the routes that people actually take from home to work (the dataset comes from the 2011 Census question on travel to work).
+People do not travel in straight lines, only birds can do that (hence the phrase ‘as the crow flies’ to denote straight line distance).
+People take a range of routes from A to B.
+Therefore, the distance of cycleway <em>inside a buffer surrounding a desire line</em> may be a better indication of the accessibility of cycle infrastructure for everyday travel than the previous measures.</p>
+<p>The first step is to subset the desire lines so that only those <em>within</em> the Leeds LSOA object are included.
+You can do this as follows:</p>
+<ul>
+<li>Again, select the Select by location tool, as you did previously to select the LSOA zones that had some cycle infrastructure.</li>
+<li>This time select features in the desire lines that are <em>Within</em> the zones.</li>
+<li>Bonus: what is the difference when you select different types of geometric predicates (see Figure <a href="accessibility-analysis.html#fig:geometric-predicate">8.4</a>)?</li>
+</ul>
+<div class="figure"><span id="fig:geometric-predicate"></span>
+<img src="figures/geometric-predicate.png" alt="Select by location popup, to subset only desire lines within Leeds" width="100%" />
+<p class="caption">
+FIGURE 8.4: Select by location popup, to subset only desire lines within Leeds
+</p>
+</div>
+<p>After you have saved a subset of the desire lines, it’s time to calculate buffers. You will create buffers of 500m (feel free to experiment with different buffer sizes after you have generated the desired result).
+Your growing knowledge of QGIS (and ability to search for help online if you get stuck) should help you do the next step without detailed instructions (hint: it’s also found in the Vector menu).</p>
+<p>The final step in the process is to calculate the length of cycle infrastructure in each buffer.
+Again, you must look this up (hint: the algorithm is called ‘Sum line lengths’).
+After running this algorithm on the correct inputs, and colouring the result according to the length of infrastructure in each polygon, the map should resemble Figure <a href="accessibility-analysis.html#fig:buffered-lines">8.5</a>.</p>
+<div class="figure"><span id="fig:buffered-lines"></span>
+<img src="figures/buffered-lines.png" alt="Buffered lines, coloured by the length of infrastructure within each one." width="100%" />
+<p class="caption">
+FIGURE 8.5: Buffered lines, coloured by the length of infrastructure within each one.
+</p>
+</div>
+<ul>
+<li>Given what you know about Leeds, are these the desire lines you’d expect to be well-served by cycle infrastructure?</li>
+<li>Explore the data in the Propensity to Cycle Tool (PCT) for Leeds and decide where you think new infrastructure could go (see <a href="http://www.pct.bike/m/?r=west-yorkshire">www.pct.bike/m/?r=west-yorkshire</a> and Figure <a href="accessibility-analysis.html#fig:pct-west">8.6</a>).</li>
+<li>What additional steps could you take with QGIS to improve the accessibility metric shown in Figure <a href="accessibility-analysis.html#fig:buffered-lines">8.5</a>?</li>
+</ul>
+<p><strong>The next tasks are bonus extras. Select one of the following (or more if you are fast!):</strong></p>
+<ul>
+<li><p>Bonus 1: Download the fast and quiet route data from the PCT’s Region Data tab and load it into QGIS (see top of Figure <a href="accessibility-analysis.html#fig:pct-west">8.6</a> for the Region data tab).</p></li>
+<li><p>Bonus 2: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?</p></li>
+<li><p>Bonus 3: explore and download the PCT data for schools <a href="http://npct0.vs.mythic-beasts.com/">here</a>. With reference to an academic paper on the subject <span class="citation">(Goodman et al. 2019)</span>, how could you use the data to generate a ‘Sustainable Travel to School Accessibility Measure’ (STSAM)?</p></li>
+</ul>
+<div class="figure"><span id="fig:pct-west"></span>
+<img src="figures/pct-west-yorkshire-fast.jpg" alt="The propensity to cycle tool (PCT), showing data for fast and quiet routes, and demonstrating the Region dat' tab. Go to www.pct.bike to explore the data." width="100%" />
+<p class="caption">
+FIGURE 8.6: The propensity to cycle tool (PCT), showing data for fast and quiet routes, and demonstrating the Region dat’ tab. Go to www.pct.bike to explore the data.
+</p>
+</div>
+</div>
+<div id="advanced-exercises-optional" class="section level2">
+<h2><span class="header-section-number">8.5</span> Advanced exercises (optional)</h2>
+<ol style="list-style-type: decimal">
+<li>Install the ORS Tools Plugin</li>
+<li>Signup for an API token at openrouteservice.org</li>
+<li>Add token to ORS Tools Settings</li>
+<li>Download the locations of schools from <a href="https://overpass-turbo.eu/" class="uri">https://overpass-turbo.eu/</a></li>
+<li>Buffer schools and find population within 1km of a school</li>
+<li>Make isochone for 10, 20, 30 min cycle from schools</li>
+<li>Dissolve isochone togther</li>
+<li>may need to change nerndering order (properties -&gt; symbology -&gt; layerrendering)</li>
+<li>use geoprocessing v.clean (with clean type break)</li>
+<li>edit polygons to remove the unneeded sections</li>
+<li>join the isochones onto the points</li>
+</ol>
+</div>
+<div id="summary-6" class="section level2">
+<h2><span class="header-section-number">8.6</span> Summary</h2>
+<p>This chapter involved downloading and importing more data related to travel behaviour and cycle infrastructure.
+Three simple of indices of accessibility to cycle infrastructure were developed:</p>
+<ul>
+<li>Whether any cycle infrastructure was provided</li>
+<li>Distance from zone centroids to the nearest cycleway</li>
+<li>Length of cycle infrastructure within a given buffer distance of desire lines</li>
+</ul>
+<p>The skills could be used to measure accessibility to different services, including schools, shops and healthcare.</p>
 
 </div>
 </div>
@@ -212,8 +323,8 @@ Figure 6.1: Overview of input data for this chapter.
           </div>
         </div>
       </div>
-<a href="processing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="making-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="raster-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-sources-for-transport-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -243,7 +354,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/06-accessibility.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/10-accessibility.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -258,6 +369,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
