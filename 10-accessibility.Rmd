@@ -23,9 +23,9 @@ Following the guidance in previous chapters, we *pre-processed* these datasets i
 - Subset the desire lines so that we only have the top 200 across West Yorksire
 
 Download and unzip the `data_accessibility.zip` file and load the `.gpkg` files.
-As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure \@ref(fig:access-overview).
+As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure \@ref(fig:accesso).
 
-```{r access-overview, fig.cap="Overview of input data for this chapter."}
+```{r accesso, fig.cap="Overview of input data for this chapter."}
 knitr::include_graphics("figures/access-overview.png")
 ```
 
@@ -78,7 +78,7 @@ The result is a new point layer, with one point per LSOA zone.
 Style this new layer based on the Hub distance field it contains and give it an appropriate colour scheme.
 It should look something like Figure \@ref(fig:hub-distance-centroids).
 
-```{r hub-distance-centroids, out}
+```{r hub-distance-centroids, fig.cap="Demonstration of hub distance calculation"}
 knitr::include_graphics("figures/hub-distance-centroids.png")
 ```
 
