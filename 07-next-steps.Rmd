@@ -1,3 +1,34 @@
+
+
+# Introduction to Part 2
+
+### Learning Objectives: 
+**Aim:** Introduce SSPA students to key vector and raster GIS skills that will be used in the subsequent practicals and assessment
+
+**Learning objectives:**  
+
+•	Process key GIS data types; vector and raster
+•	Carry out common vector geo-processing tasks such as joining, selection, buffering and point in polygon operations.  
+•	Carry out a raster processing activity 
+•	Visualise a transport flows as part of an accessibility analysis 
+•	Understand that more complex GIS operations can be achieved in QGIS by using “plug-ins”.  
+•	Be aware of a range openly available spatial data available to and useful to sustainable transport planning.  
+
+
+### What is included in Part 2?
+
+Part 2 contains information about key GIS processing tasks needed for the SSPA module.  
+
+
+
+**NOTE:  Free and open source software such as QGIS changes between versions.  This means that what you see in this resource may look different to what you see in the version of QGIS you are using.**
+
+
+
+
+
+
+
 <!-- # Next steps -->
 
 <!-- Examples of programming languages with CLIs include Python and R; some R -->
