@@ -1,6 +1,6 @@
 --- 
 title: "QGIS for Transport Research: an introduction"
-author: "Robin Lovelace and Malcolm Morgan"
+author: "Robin Lovelace Malcolm Morgan Ian Philips"
 date: "`r Sys.Date()`"
 papersize: a4
 fontsize: 12pt
@@ -42,46 +42,65 @@ knitr::opts_chunk$set(
 
 # Preface {-}
 
-Transport is inherently geographic. All transport involves movement from one place on Earth to another, whether it's by walking, flying or telecomunications. Geographic Information Systems (GIS) therefore have great potential to assist transport researchers and professionals. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it. 
 
 
-The growing popularity, power and features of QGIS means that **learning it now** could save much time and money long into the future: **QGIS is futureproof**.
-A more mundane reason for writing this tutorial was the installation of **QGIS 3** across the University of Leeds.
-Suddenly existing material, developed for **QGIS 2**, no longer worked.
-Instead of incrementally updating those materials we decided to start from a blank slate, allowing the inclusion of new datasets and links to excellent online content that already exists for QGIS.
+## What is this resource?  
 
-The aim is to get you up-to-speed with *the most important concepts and techniques* in QGIS for *Transport Planning*.
-We refer to Transport Planning in the broad sense of providing evidence-based guidance to support sustainable transport behaviours.
-With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
-For this reason, the data used in this booklet focusses on these modes. 
+This resource is in two parts and accompanies teaching delivered on [MSc degrees in  transport](https://environment.leeds.ac.uk/transport-masters) to students at the Institute for Transport Studies (ITS) at the University of Leeds. 
+
+### Part 1 is an introduction to GIS for transport students 
+
+This workbook contains information about getting started using Geographical Information Systems (GIS) using the QGIS application.  It assumes no prior knowledge of either GIS concepts or experience of using GIS applications.  
 
 
+### Part 1 Pre-requisites {-}
 
-## Pre-requisites {-}
+**If you are an ITS student** 
+This part has no pre-requisites:  It is aimed at students little or no experience of using any GIS software and those who are new to the open source software called QGIS.  
+The materials accompany a semester 1 face-to-face workshop for ITS Students, but, they are designed for students to work through at their own pace.  This means that if you do not attend the workshop, you can still make use of the resources.  
 
+**If you are not an ITS student or you are not at the face to face workshop**
 This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
 We will explain how to download the data needed for the practicals in Chapter \@ref(data).
 
+
+
+
+### Part 2 is key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.
+
+[Sustainable Spatial Planning and Analysis](http://webprod3.leeds.ac.uk/catalogue/dynmodules.asp?Y=201920&M=TRAN-5115M) is a second semester MSc module taught at ITS.  
+Part 2 covers key skills required by students on this course.  These materials accompany a face to face workshop delivered as part of the module.  
+
+### Part 2 pre-requisites {-}
+The pre-requisite for this part is to be familiar with the ideas and skills covered in part 1.  
+
+## The aim of this resource: Why are we teaching GIS? 
+We are teaching transport GIS because transport is an inherently geographic phenomena. All transport involves movement from one place on Earth to another, whether its by walking, flying or telecommunications.  Those movements and flows impact and are impacted upon by the people and places along the routes.  Geographic Information Systems (GIS) therefore have great potential to assist transport researchers and practitioners.  We are teaching QGIS.  Which is free and open source.
+
+
+
+
 <!-- ## Structure of the book {-} -->
 
-<!-- Chapters \@ref(introduction) introduces GIS and the program QGIS... -->
+  <!-- Chapters \@ref(Part1) introduces GIS and the program QGIS... -->
 
-<!-- ## Software information and conventions {-} -->
+  <!-- ## Software information and conventions {-} -->
 
-<!-- I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below: -->
+  <!-- I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below: -->
 
-<!-- ```{r} -->
-<!-- xfun::session_info() -->
-<!-- ``` -->
+  <!-- ```{r} -->
+  <!-- xfun::session_info() -->
+  <!-- ``` -->
 
-<!-- Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`). -->
+  <!-- Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`). -->
 
-<!-- ## Acknowledgments {-} -->
+  <!-- ## Acknowledgments {-} -->
 
-<!-- A lot of people helped me when I was writing the book. -->
+  <!-- A lot of people helped me when I was writing the book. -->
 
-<!-- ```{block2, type='flushright', html.tag='p'} -->
-<!-- Frida Gomam   -->
-<!-- on the Mars -->
-<!-- ``` -->
+  <!-- ```{block2, type='flushright', html.tag='p'} -->
+  <!-- Frida Gomam   -->
+  <!-- on the Mars -->
+  <!-- ``` -->
+
 
