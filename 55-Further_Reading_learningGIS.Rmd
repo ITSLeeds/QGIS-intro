@@ -1,0 +1,55 @@
+# Further reading
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(out.width = "100%")
+```
+
+
+## Learning how to use QGIS 
+
+**This is a recent self learn text.  **
+
+Menke,K. (2019)Discover QGIS 3.x: A Workbook for Classroom or Independent Study (Paperback) Locate Press  ISBN: 9780998547763 
+
+
+QGIS also has a very detailed web-based user-manual. 
+http://docs.qgis.org/2.2/en/docs/user_manual/index.html 
+
+
+Other books of interest
+
+Graser, A., 2016. Learning QGIS - Third Edition, 3rd Revised edition edition. ed. Packt Publishing.
+
+Taylor, M.M., Freeman, N., 2014. Getting Started With GIS Using QGIS, 1 edition. ed. CreateSpace Independent Publishing Platform.
+
+
+
+## GIS text books (covering principles of GIS)  
+
+Ferrari, E., Rae, A, (2019). GIS for Planning and the Built Environment. MacMillan ISBN: 9781137307149
+
+Heywood, D.I., Cornelius, M.S., Carver, D.S., 2011. An Introduction to Geographical Information Systems, 4 edition. ed. Prentice Hall, Harlow, England ; Toronto.
+
+Longley, P.A., Goodchild, M.F., Maguire, D.J., Rhind, D.W., 2015. Geographic Information Science and Systems, 4th Revised edition edition. ed. John Wiley & Sons, Hoboken, NJ.
+
+##	Open online resources
+**Further information on GIS concepts**
+Geographic Information System Basics : http://2012books.lardbucket.org/books/geographic-information-system-basics/index.html
+
+
+**Further information on GIS and transport**
+http://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch59.pdf
+
+
+## How to install QGIS on your own computer
+The simplest way to install QGIS is from [download.qgis.org/](https://download.qgis.org/).  
+
+
+Here you can download for windows Mac and other operating systems.  Initially, we recommend the option headed "Long term release repository (most stable):".  
+
+
+There are other ways to download QGIS for windows for example from  [OSGeo4W](http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe) package, which includes additional features which you might not need straight away but which may become useful later.  
+
+
+
