@@ -6,28 +6,95 @@ While it is useful to view maps within QGIS it is usually necessary to export th
 
 From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will then see a blank page.
 
-```{r print-layout, fig.cap="The print layout window, highlighting the add new map button", out.width="100%"}
+```{r print-layout, fig.cap="The print layout window, highlighting the add new map button", echo=FALSE, out.width="100%"}
 knitr::include_graphics("figures/print-layout.png")
 ```
 
-Use the "Add new map button" to draw a box where you wish you map to be on the page. Your map will appear within the box automatically.
-
-
-```{r print-withmap, fig.cap="The print layout window, with map added", out.width="100%"}
-knitr::include_graphics("figures/print-withmap.png")
-```
+Use the "Add new map button" to draw a box where you wish your map to be on the page. Your map will appear within the box automatically.
 
 You can pan and zoom within the map using the "Move Item Content" button
 
-```{r move-item-conten, fig.cap="Move Item content button", out.width="30%"}
+```{r move-item-conten, fig.cap="Move Item content button", echo=FALSE, out.width="30%"}
 knitr::include_graphics("figures/move-item-content.JPG")
 ```
 
-You can add several different features to the print layout such as titles, legends and scale bars using the buttons on the left side of the window. When an objected is selected you can edit its properties by using the "Item Properties" tab on the right side panel. 
+To the right of the print layout you will see a panel.  In this you can set the properties of the different elements on your map.  For example you can change the scale of your map.  
 
-```{r print-custom, fig.cap="A customised map", out.width="100%"}
-knitr::include_graphics("figures/print-custom.png")
+```{r printLayoutProperties, echo=FALSE, fig.cap="Setting the scale of the map in the print layout", out.width="100%"}
+knitr::include_graphics("figures/printLayoutProperties.jpg")
 ```
+
+
+## Basic but essential cartographic elements that allow interpretation of your map.  
+
+The QGIS print composer lets you set many aspects of how each feature looks on the page.This takes practice, but it is possible to produce very striking maps which convey important information.  Communicating the insights drawn from spatial data to policy stakeholders is an important aspect of transport research and planning so it is worth the effort.  
+
+
+**Add a map title**
+
+Every map needs either a title or a caption to explain to the reader what is being shown.  
+
+```{r MapTitle, echo=FALSE, fig.cap="Add a Map title in the print layout", out.width="100%"}
+knitr::include_graphics("figures/MapTitle.jpg")
+```
+
+
+
+* Add a title. Press the 'add new label' button on the left of the print layout. If you run the mouse ofer the buttons their names will be displayed on the screen.  
+
+*	Click on the page, above the map, and a label will appear at the top of the map.
+
+*	Resize it and place it in the top centre of the page. It can be resized and moved in the same way that you resized and moved the map. As you move the title, you’ll notice that guidelines appear to help you position the title in the centre of the page.
+
+
+However, there is also a tool to help position the title relative to the map (not the page):
+
+*	Click the map to select it.
+*	Hold down 'shift' on your keyboard and click on the label so that both the map and the label are selected.
+*	Look for the Align button on the tool bar near the top of the print layout.  
+
+
+```{r titleAlign, echo=FALSE, fig.cap="The Align button", out.width="10%"}
+knitr::include_graphics("figures/alignButton.png")
+```
+
+**Add a scale bar**
+
+*Press the scale bar button on the left of the print layout.  
+*Insert a scale bar using the scale bar button shown below and changing the settings using the settings in the scale item properties.  
+
+
+```{r scale_bar_button, echo=FALSE, fig.cap="The scale bar button", out.width="20%"}
+knitr::include_graphics("figures/scaleButton.jpg")
+```
+
+ 
+*	On the right of the screen click the item properties tab.  
+You can change the map units to metres or miles if you with by pressing the dropdown menu in the Units area.  You can change the look of the scale bar by changing the number of segments.  You can also click the triangle next to fonts and colours to further change the appearance of the scale bar.  
+
+
+```{r scaleitemprop, echo=FALSE, fig.cap="The Align button", out.width="100%"}
+knitr::include_graphics("figures/ScaleItemProperties.jpg")
+```
+
+
+**Add a legend**
+The map reader also needs to be able to see what various things on the map actually mean. In some cases, like the place names, this is quite obvious. In other cases, it’s more difficult to guess.  Let’s add a new legend.
+
+
+* Click on the legend button
+* Click on the page to place the legend, and move it to where you want it:
+* It may initially have more entries than you want.  Go to the legend box on the right of the screen, un-check the auto update box.  
+* Click on 'OpenStreetMap' if you have a basemap, and then press the red minus button below the list.  Repeat this for any other layers that you don’t want in the legend.  
+
+
+
+```{r addlegend, echo=FALSE, fig.cap="Add a map legend.  Use the legend button and the legend items box", out.width="100%"}
+knitr::include_graphics("figures/addLegend.jpg")
+```
+
+
+
 
 ## Saving & Exporting your map
 
@@ -49,15 +116,13 @@ Before moving onto the next chapter make sure you have.
 
 **Bonus Exercises**
 
+
+
 Experiment using different tools in the print layout window. Can you find out how to:
 
 1. Pan and zoom the map to a specific area of interest
-1. Customise the legend to only show some of the layers
-1. Change the units on the scale bar
 1. Customise the title font and appearance
-1. Add the ITS logo to your print layout
 1. Add an arrow pointing to your location
-
-
+1. Add the ITS logo to your print layout
 
 
