@@ -11,6 +11,26 @@ The list below provides links to some key data sources that may be of use and in
 - A good source of cleaned origin destination data is the Region downloads tab in the Propensity to Cycle Tool [@lovelace_propensity_2017] - see the Region data tab for West Yorkshire here, for example: http://www.pct.bike/m/?r=west-yorkshire
 - OpenStreetMap is an excellent source of geographic data with global coverage. You can download data on specific queries (e.g. highway=cycleway) from the overpass-turbo service: https://overpass-turbo.eu/
 
+### UK specific resources
+
+Students can register with Edina Digimap.   It is a service which will allow you to download UK topographic map data.  
+https://digimap.edina.ac.uk/webhelp/digimapsupport/about.htm#access/access_to_digimap.htm 
+
+UK census data can be accessed from several places including:
+https://census.edina.ac.uk/bds.html
+https://www.nomisweb.co.uk/census/2011 
+
+### International resources 
+http://freegisdata.rtwilson.com/ Note this has a listing of several transport data sources
+http://www.gadm.org/ boundary datasets for administrative areas around the world.  
+https://www.gislounge.com/world-gis-data/ links to further resources 
+http://wiki.openstreetmap.org/wiki/Downloading_data information about downloading Open streetmap (OSM) data.  
+https://library.stanford.edu/research/stanford-geospatial-center/data Stanford University directory of data sources 
+http://www.diva-gis.org/gdata available datasets by country.  
+
+(availability of these resources may change)
+
+
 ## Online lists
 
 For other datasets, search online! Good starting points in your research may be:
