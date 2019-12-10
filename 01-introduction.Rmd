@@ -5,50 +5,25 @@ knitr::opts_chunk$set(out.width = "100%")
 ```
 
 
-# Introduction
+# Introduction to Part 1
 
-## What is GIS?
 
-GIS stands for Geographic Information Systems.
-The term was first used in the 1960s and has since become a common way of referring to the analysis of geographic data.
 
-That raises another question: what do we mean by 'geographic data'?
-The defining feature of geographic data is that it has coordinates that allow the position of records in the dataset to be located on Earth.
-There are two main types of geographic data:
+### Learning Objectives: 
+•	Gain a basic understanding of what a GIS is and its relevance to transport studies
+•	Know what some of the key data types and file formats
+•	Import pre-cleaned vector data into QGIS and navigate basic QGIS features
+•	Select a subset of the data
+•	Make a map showing point, line and polygon features and export it.  
+•	Understand the key cartographic elements that must be present to allow interpretation of a map
 
-1. Vector data, which typically represent points, lines and polygons. An example is a series of points representing a road.
-2. Raster data, which typically represent a continuously changing surface, such as height.
-An example is a satellite image of a road.
+### What is included in Part 1?
 
-The difference between vector and raster data types is illustrated in the figure below, which shows the same road (Woodhouse Lane in Leeds) represented in vector and raster geographic data forms.
+*	GIS ideas and concepts - we very briefly introduce some key GIS concepts and ideas.  
+*	Opening QGIS and key features - We then explain what the main components of QGIS are, explain how to set up a project and save work and what some of the most useful buttons do
+*	Downloading and loading data - we show you how to get some data we have prepared for the workshop and load it into QGIS
+*	Style and select features - change the way features look on the screen
+*	Making maps - Make a map which you can export and include in a document 
 
-```{r}
 
-```
 
-Since graphical user interfaces (GUIs) for GIS became popular in the early 2000s, the word GIS has become almost synonymous with 'Dedicated GIS software'.
-Examples of dedicated GIS software include the open source GIS software QGIS (we will come onto what QGIS is in a subsequent section) and proprietary software such as ArcMap and TransCAD.
-It is also possible, and increasingly popular, to do GIS using a programming language with a command-line interface (CLI) such as Python or R (see \@ref(next-steps))
-
-<!-- ## Why use GIS for transport research? -->
-
-## What is QGIS?
-
-QGIS is an open source dedicated GIS software program.
-It has become the most commonly used open source program for working with geographic data.
-Search engine data from Google shows that QGIS is becoming increasing popular.
-QGIS is ideal not only for learning GIS techniques but also using them in practice where software licensing and cost may be important. 
-Figure \@ref(fig:trends) shows how QGIS's popularity over time compares with the GIS product ESRI **ArcMap** and the transport planning product, PTV **Visum**.^[
-QGIS does not have dedicate transport planning functionality like Visum
-]
-
-```{r trends, fig.cap="The growing popularity of QGIS, as measured by internet search traffic. Source: [trends.google.com](https://trends.google.com/trends/explore?date=all&q=qgis,arcmap,visum).", out.width="65%"}
-knitr::include_graphics("figures/GoogleTrends2019.png")
-```
-
-## How to install QGIS
-
-To install QGIS you should follow instructions at [download.qgis.org/](https://download.qgis.org/).
-If you are running Windows, we recommend installing the [OSGeo4W](http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe) package, which includes additional features.
-
-<!-- ## Alternatives to QGIS -->
