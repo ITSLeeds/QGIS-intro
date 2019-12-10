@@ -1,59 +1,62 @@
 # Downloading and loading data {#data}
 
+## Downloading data
 A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.
 
 Often, the first stage in the data downloading/loading process is to find the data online. 
-In this case, we will access data from the following site, which contains data we prepared earlier for the course: [github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
 
-```{r, echo=FALSE}
-if(!dir.exists("QGISforSSPAdata/")) {
-  #u = "https://github.com/ITSLeeds/SSPA/releases/download/v1.1/QGISforSSPAdata.zip" #old data
-  u = "https://github.com/ITSLeeds/QGIS-intro/releases/download/0.01/data.zip" #new data
-  download.file(u, "QGISforSSPAdata.zip")
-  unzip("QGISforSSPAdata.zip")
-}
-```
+You will need several data sets to add to your QGIS project.  First you will need to download the data.  
 
-Download and unzip the data.zip file. This file contains the data that you will use for the rest of the tutorial.
+Click on the link below. 
 
-Before opening data files, you should first have created a QGIS project, covered in the previous chapter.
+[github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
+
+If you scroll down, you will see several data sets in a list.  For the exercises in part 1 you will need this one. "IntroQGISdata2019Part1.zip" . 
+Click it and it will save to your computer. It will appear at the bottom of your browser. Right click on the folders and click “show in folder”. Use cut and paste and select a location for the folder on your computer.  (e.g You can use your M drive if working on a university computer). 
+
+Once downloaded right click on the zipped folder that has been downloaded to your computer and select “extract all”.  
 
 
 ## Importing spatial data
-
 To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure \@ref(fig:data-source-manager)).
 
 ```{r data-source-manager, out.width="10%", fig.cap="The Data Source Manager icon", echo=FALSE}
 knitr::include_graphics("figures/open-data-source-manager.jpg")
 ```
 
-We will use the leeds_lsoa.shp example file to plot the boundaries of the Lower Layer Super Output Areas in Leeds.
 
-Open the Data Source Manager and select “Vector” then specify the “File Name” and location, or use the … to navigate to the file.
+We will first load a polygon layer.  
+Open the Data Source Manager and select “Vector”.  
+Next press the button with 3 dots, which is below and right of where it says **source**.  
+Next navigate to the file by finding the folder "QGISintro_CourseData". 
+Inside this is another folder "Access_DeprivationLeeds"
+Add the data: "Access_DeprivationLeeds.shp"
 
 Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.
 
 ```{r data-source-manager-shp, out.width="100%", fig.cap="The Data Source Manager - Vector", echo=FALSE, fig.show='hold'}
-knitr::include_graphics("figures/import_shp.jpg")
+knitr::include_graphics("figures/AddVectorLayer.jpg")
 ```
 
-The result should look something like the map displayed in Figure \@ref(fig:imported).
+The result should look something like the map displayed in Figure \@ref(fig:imported) (but the colour might be different).
 
-```{r imported, fig.cap="The map after the file 'leeds_lsoa.shp' has been imported.", echo=FALSE}
-knitr::include_graphics("figures/imported.png")
+```{r imported, fig.cap="The map after the file 'Access_DeprivationLeeds.shp' has been imported.", echo=FALSE}
+knitr::include_graphics("figures/AccessDepLayerOnScreen.jpg")
 ```
 
+Next add the cycle_routes layer in the same way.  note this is a line layer       
 
 
 ## Importing a CSV or text file
 
 ### CSV with spatial data
 
+We have already loaded polygon and line data.  Now we will add point data
 Sometimes you have data that contains spatial information but is not in a spatial data format.  A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel. 
-We will use the stats19.csv example file to plot the location of vehicles collisions in Leeds.
+We will plot the location of vehicles collisions in Leeds.  Use the 'stats19.csv' example file.  
 
 Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”.  Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.
+Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”.  Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.  Note here we are explicitly telling QGIS the CRS of the data.  
 
 Click “Add” then “Close”.
 
@@ -62,18 +65,20 @@ knitr::include_graphics("figures/import_csv.jpg")
 ```
 
 After importing the 'stats19' data, using menus shown in Figure \@ref(fig:data-source-manager-csv), you should see points on the map, representing where crashes in Leeds took place in 2017.
-If you do not see dots on the map, re-read this section.
+If you do not see dots on the map, re-read this section and have another go.
 If you do, congratuations!
 
-### CSV without spatial data
 
-QGIS will also allow you to import non-spatial data.
-Import the population.csv example file for later use using the same process as above, but selecting “No geometry (attribute only table)”.
-When you have added this layer, and the others, the items in the Layer panel in the left of QGIS should look like this:
+## Loading basemaps
 
-```{r layers, fig.cap="The imported data layers shown in the Layer window.", out.width="50%", echo=FALSE}
-knitr::include_graphics("https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/master/figures/layers.png")
-```
+You can add a "basemap" by clicking on the 'XYZ Tiles' option in the Browser Panel. Options should include Google and OpenStreetMap.
+Clicking on one of these will add a new layer, which can be seen in the Layers menu.
+
+
+The basemap now obscures the other layers you have added.  Go to the layers panel and drag the basemap to the bottom of the list of layers.  The Basemap will now appear below the other layers.  
+
+
+**Now save your work**. Save your work regularly.  
 
 
 ## Summary
@@ -81,9 +86,12 @@ knitr::include_graphics("https://raw.githubusercontent.com/ITSLeeds/QGIS-intro/m
 Before moving on to the next chapter make sure you have.
 
 1. Downloaded the example data
-1. Imported the three files to QGIS
+1. Imported the files to QGIS
+3. Added a basemap
 
 Bonus Exercises
 
 1. Read about the disadvantages of shapefile and some of the alteratives http://switchfromshapefile.org/ 
+2. In the course data folder, there is a copy of the "Access_DeprivationLeeds" file in Geopackage format.  Have a go at loading this layer into QGIS.  the polygons may be a different colour to the shapefile, but it should cover the same area.     
+
 
