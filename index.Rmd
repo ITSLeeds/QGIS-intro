@@ -60,7 +60,7 @@ This part has no pre-requisites:  It is aimed at students little or no experienc
 The materials accompany a semester 1 face-to-face workshop for ITS Students, but, they are designed for students to work through at their own pace.  This means that if you do not attend the workshop, you can still make use of the resources.  
 
 **If you are not an ITS student or you are not at the face to face workshop**
-This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
+Unless you are using a Univerist of leeds cluster computer, this course assumes that you have access to a working installation of QGIS 3 and an internet connection.
 We will explain how to download the data needed for the practicals in Chapter \@ref(data).
 
 
