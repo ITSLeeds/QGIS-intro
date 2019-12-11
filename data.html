@@ -89,6 +89,7 @@
 <li class="chapter" data-level="1.3.3" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#network-data"><i class="fa fa-check"></i><b>1.3.3</b> Network data</a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#data-formats-how-is-data-stored-in-a-gis-and-on-your-computer."><i class="fa fa-check"></i><b>1.3.4</b> Data formats – how is data stored in a GIS and on your computer.</a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#projections-and-co-ordinate-systems"><i class="fa fa-check"></i><b>1.4</b> Projections and co-ordinate systems</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
@@ -191,8 +192,7 @@
 <p>You will need several data sets to add to your QGIS project. First you will need to download the data.</p>
 <p>Click on the link below.</p>
 <p><a href="https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01">github.com/ITSLeeds/QGIS-into/releases</a>.</p>
-<p>If you scroll down, you will see several data sets in a list. For the exercises in part 1 you will need this one. “IntroQGISdata2019Part1.zip” .
-Click it and it will save to your computer. It will appear at the bottom of your browser. Right click on the folders and click “show in folder”. Use cut and paste and select a location for the folder on your computer. (e.g You can use your M drive if working on a university computer).</p>
+<p>If you scroll down, you will see several data sets in a list. For the exercises in part 1 you will need this one. “IntroQGISdata2019Part1.zip” . Click it and it will save to your computer. It will appear at the bottom of your browser. Right click on the folders and click “show in folder”. Use cut and paste and select a location for the folder on your computer. (e.g You can use your M drive if working on a university computer).</p>
 <p>Once downloaded right click on the zipped folder that has been downloaded to your computer and select “extract all”.</p>
 </div>
 <div id="importing-spatial-data" class="section level2">
@@ -207,9 +207,7 @@ Figure 3.1: The Data Source Manager icon
 <p>We will first load a polygon layer.<br />
 Open the Data Source Manager and select “Vector”.<br />
 Next press the button with 3 dots, which is below and right of where it says <strong>source</strong>.<br />
-Next navigate to the file by finding the folder “QGISintro_CourseData”.
-Inside this is another folder “Access_DeprivationLeeds”
-Add the data: “Access_DeprivationLeeds.shp”</p>
+Next navigate to the file by finding the folder “QGISintro_CourseData”. Inside this is another folder “Access_DeprivationLeeds” Add the data: “Access_DeprivationLeeds.shp”</p>
 <p>Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.</p>
 <div class="figure"><span id="fig:data-source-manager-shp"></span>
 <img src="figures/AddVectorLayer.jpg" alt="The Data Source Manager - Vector" width="100%" />
@@ -230,11 +228,8 @@ Figure 3.3: The map after the file ‘Access_DeprivationLeeds.shp’ has been im
 <h2><span class="header-section-number">3.3</span> Importing a CSV or text file</h2>
 <div id="csv-with-spatial-data" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> CSV with spatial data</h3>
-<p>We have already loaded polygon and line data. Now we will add point data
-Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel.
-We will plot the location of vehicles collisions in Leeds. Use the ‘stats19.csv’ example file.</p>
-<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”. Note here we are explicitly telling QGIS the CRS of the data.</p>
+<p>We have already loaded polygon and line data. Now we will add point data Sometimes you have data that contains spatial information but is not in a spatial data format. A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel. We will plot the location of vehicles collisions in Leeds. Use the ‘stats19.csv’ example file.</p>
+<p>Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file. Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”. Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”. Note here we are explicitly telling QGIS the CRS of the data.</p>
 <p>Click “Add” then “Close”.</p>
 <div class="figure"><span id="fig:data-source-manager-csv"></span>
 <img src="figures/import_csv.jpg" alt="The Data Source Manager - Delimited Text" width="100%" />
@@ -242,15 +237,12 @@ Under the “Geometry definition” select “Point coordinates” and set the �
 Figure 3.4: The Data Source Manager - Delimited Text
 </p>
 </div>
-<p>After importing the ‘stats19’ data, using menus shown in Figure <a href="data.html#fig:data-source-manager-csv">3.4</a>, you should see points on the map, representing where crashes in Leeds took place in 2017.
-If you do not see dots on the map, re-read this section and have another go.
-If you do, congratuations!</p>
+<p>After importing the ‘stats19’ data, using menus shown in Figure <a href="data.html#fig:data-source-manager-csv">3.4</a>, you should see points on the map, representing where crashes in Leeds took place in 2017. If you do not see dots on the map, re-read this section and have another go. If you do, congratuations!</p>
 </div>
 </div>
 <div id="loading-basemaps" class="section level2">
 <h2><span class="header-section-number">3.4</span> Loading basemaps</h2>
-<p>You can add a “basemap” by clicking on the ‘XYZ Tiles’ option in the Browser Panel. Options should include Google and OpenStreetMap.
-Clicking on one of these will add a new layer, which can be seen in the Layers menu.</p>
+<p>You can add a “basemap” by clicking on the ‘XYZ Tiles’ option in the Browser Panel. Options should include Google and OpenStreetMap. Clicking on one of these will add a new layer, which can be seen in the Layers menu.</p>
 <p>The basemap now obscures the other layers you have added. Go to the layers panel and drag the basemap to the bottom of the list of layers. The Basemap will now appear below the other layers.</p>
 <p><strong>Now save your work</strong>. Save your work regularly.</p>
 </div>
@@ -331,7 +323,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

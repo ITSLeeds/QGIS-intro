@@ -89,6 +89,7 @@
 <li class="chapter" data-level="1.3.3" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#network-data"><i class="fa fa-check"></i><b>1.3.3</b> Network data</a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#data-formats-how-is-data-stored-in-a-gis-and-on-your-computer."><i class="fa fa-check"></i><b>1.3.4</b> Data formats – how is data stored in a GIS and on your computer.</a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#projections-and-co-ordinate-systems"><i class="fa fa-check"></i><b>1.4</b> Projections and co-ordinate systems</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
@@ -214,8 +215,7 @@
 <h2><span class="header-section-number">1.2</span> Key ideas:</h2>
 <p>GIS is an abbreviation. Sometimes it is used to mean <strong>Geographic Information System</strong> and sometimes it is used to mean <strong>Geographic information Science</strong>. A more formal definition of a Geographical Information System is:</p>
 <blockquote>
-<p>A powerful set of tools for collecting, storing, retrieving at will, transforming and &gt;displaying spatial data from the real world
-(Burrough, 1986)</p>
+<p>A powerful set of tools for collecting, storing, retrieving at will, transforming and &gt;displaying spatial data from the real world (Burrough, 1986)</p>
 </blockquote>
 <p>The emphasis here is on pieces of software like QGIS. In practical terms a Geographic Information System is a database to store data, a calculator which can manipulate and analyse data, a visualisation window to show results. GIS software like QGIS also has a Graphical User Interface (GUI) with menus and buttons which lets the user ‘do stuff’.</p>
 <p>In Part 1 we are concentrating on learning how to use the basic features of the Geographic information System application called QGIS</p>
@@ -238,8 +238,7 @@ Goodchild, (1992) who argues that Geographical Information Science involves rese
 </div>
 <div id="raster-data" class="section level3">
 <h3><span class="header-section-number">1.3.2</span> Raster data:</h3>
-<p>‘In its simplest form, a raster consists of a matrix of cells (or pixels) organized into rows and columns (or a grid) where each cell contains a value representing information, such as temperature. Rasters are digital aerial photographs, imagery from satellites, digital pictures, or even scanned maps’. (
-webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=What_is_raster_data%3F)</p>
+<p>‘In its simplest form, a raster consists of a matrix of cells (or pixels) organized into rows and columns (or a grid) where each cell contains a value representing information, such as temperature. Rasters are digital aerial photographs, imagery from satellites, digital pictures, or even scanned maps’. ( webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=What_is_raster_data%3F)</p>
 <p>(source: <a href="http://support.esri.com/other-resources/gis-dictionary/term/raster" class="uri">http://support.esri.com/other-resources/gis-dictionary/term/raster</a>)</p>
 </div>
 <div id="network-data" class="section level3">
@@ -261,8 +260,11 @@ Figure 1.1: A shapefile is a group of files. It is a common file format
 </div>
 <p>There are other types of GIS files including as JSON and geo-package formats. Data is stored in GIS as database tables.<br />
 GIS data can be stored and shared in a very large number of ways. (For an introduction see <a href="https://en.wikipedia.org/wiki/GIS_file_formats" class="uri">https://en.wikipedia.org/wiki/GIS_file_formats</a> as well as the further reading in the appendix.</p>
-<p>##Projections and co-ordinate systems
-The world is not flat but computer screens are. Projections and co-ordinate systems allow GIS to represent the curved surface of the earth on a flat screen or page.</p>
+</div>
+</div>
+<div id="projections-and-co-ordinate-systems" class="section level2">
+<h2><span class="header-section-number">1.4</span> Projections and co-ordinate systems</h2>
+<p>The world is not flat but computer screens are. Projections and co-ordinate systems allow GIS to represent the curved surface of the earth on a flat screen or page.</p>
 <div class="figure"><span id="fig:qgis-window-projection"></span>
 <img src="figures/Projection_mjfoster.png" alt="How do we fit a curving earth onto a flat piece of paper" width="100%" />
 <p class="caption">
@@ -283,7 +285,6 @@ Figure 1.2: How do we fit a curving earth onto a flat piece of paper
 <li>27700 - the British National Grid</li>
 </ul>
 
-</div>
 </div>
 </div>
             </section>
@@ -347,7 +348,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
