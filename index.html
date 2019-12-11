@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
-  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
 
-<meta name="author" content="Robin Lovelace and Malcolm Morgan" />
+<meta name="author" content="Robin Lovelace Malcolm Morgan Ian Philips" />
 
 
-<meta name="date" content="2019-10-03" />
+<meta name="date" content="2019-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="introduction.html"/>
+<link rel="next" href="introduction-to-part-1-gis-ideas-and-concepts.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +40,9 @@
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -67,70 +70,96 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#what-is-this-resource"><i class="fa fa-check"></i><b>0.1</b> What is this resource?</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#part-1-is-an-introduction-to-gis-for-transport-students"><i class="fa fa-check"></i><b>0.1.1</b> Part 1 is an introduction to GIS for transport students</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#part-1-pre-requisites"><i class="fa fa-check"></i>Part 1 Pre-requisites</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#part-2-is-key-qgis-skills-for-transport-students-studying-sustainable-spatial-planning-and-analysis."><i class="fa fa-check"></i><b>0.1.2</b> Part 2 is key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#part-2-pre-requisites"><i class="fa fa-check"></i>Part 2 pre-requisites</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what-is-gis"><i class="fa fa-check"></i><b>1.1</b> What is GIS?</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-is-qgis"><i class="fa fa-check"></i><b>1.2</b> What is QGIS?</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#how-to-install-qgis"><i class="fa fa-check"></i><b>1.3</b> How to install QGIS</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#the-aim-of-this-resource-why-are-we-teaching-gis"><i class="fa fa-check"></i><b>0.2</b> The aim of this resource: Why are we teaching GIS?</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html"><i class="fa fa-check"></i><b>1</b> Introduction to Part 1 GIS ideas and concepts</a><ul>
+<li class="chapter" data-level="1.0.1" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#learning-objectives"><i class="fa fa-check"></i><b>1.0.1</b> Learning Objectives:</a></li>
+<li class="chapter" data-level="1.0.2" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#what-is-included-in-part-1"><i class="fa fa-check"></i><b>1.0.2</b> What is included in Part 1?</a></li>
+<li class="chapter" data-level="1.1" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#what-is-gis"><i class="fa fa-check"></i><b>1.1</b> What is GIS?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#key-ideas"><i class="fa fa-check"></i><b>1.2</b> Key ideas:</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#free-and-open-source-software."><i class="fa fa-check"></i><b>1.3</b> Free and Open Source Software.</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#vector-data"><i class="fa fa-check"></i><b>1.3.1</b> Vector data</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#raster-data"><i class="fa fa-check"></i><b>1.3.2</b> Raster data:</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#network-data"><i class="fa fa-check"></i><b>1.3.3</b> Network data</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction-to-part-1-gis-ideas-and-concepts.html"><a href="introduction-to-part-1-gis-ideas-and-concepts.html#data-formats-how-is-data-stored-in-a-gis-and-on-your-computer."><i class="fa fa-check"></i><b>1.3.4</b> Data formats – how is data stored in a GIS and on your computer.</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
 <li class="chapter" data-level="2.2" data-path="working-with-qgis.html"><a href="working-with-qgis.html#key-qgis-components"><i class="fa fa-check"></i><b>2.2</b> Key QGIS components</a></li>
-<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#plugins"><i class="fa fa-check"></i><b>2.3</b> Plugins</a></li>
-<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#loading-basemaps"><i class="fa fa-check"></i><b>2.4</b> Loading basemaps</a></li>
-<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.5</b> Panning and Zooming</a></li>
-<li class="chapter" data-level="2.6" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projects-and-files"><i class="fa fa-check"></i><b>2.6</b> Projects and Files</a></li>
-<li class="chapter" data-level="2.7" data-path="working-with-qgis.html"><a href="working-with-qgis.html#projections-and-coordinate-reference-systems"><i class="fa fa-check"></i><b>2.7</b> Projections and Coordinate Reference Systems</a></li>
-<li class="chapter" data-level="2.8" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.8</b> Summary</a></li>
+<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#set-up-the-project."><i class="fa fa-check"></i><b>2.3</b> Set up the project.</a></li>
+<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.4</b> Panning and Zooming</a></li>
+<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a><ul>
-<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#importing-spatial-data"><i class="fa fa-check"></i><b>3.1</b> Importing spatial data</a></li>
-<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#importing-a-csv-or-text-file"><i class="fa fa-check"></i><b>3.2</b> Importing a CSV or text file</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="data.html"><a href="data.html#csv-with-spatial-data"><i class="fa fa-check"></i><b>3.2.1</b> CSV with spatial data</a></li>
-<li class="chapter" data-level="3.2.2" data-path="data.html"><a href="data.html#csv-without-spatial-data"><i class="fa fa-check"></i><b>3.2.2</b> CSV without spatial data</a></li>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#downloading-data"><i class="fa fa-check"></i><b>3.1</b> Downloading data</a></li>
+<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#importing-spatial-data"><i class="fa fa-check"></i><b>3.2</b> Importing spatial data</a></li>
+<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#importing-a-csv-or-text-file"><i class="fa fa-check"></i><b>3.3</b> Importing a CSV or text file</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data.html"><a href="data.html#csv-with-spatial-data"><i class="fa fa-check"></i><b>3.3.1</b> CSV with spatial data</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#summary-1"><i class="fa fa-check"></i><b>3.3</b> Summary</a></li>
+<li class="chapter" data-level="3.4" data-path="data.html"><a href="data.html#loading-basemaps"><i class="fa fa-check"></i><b>3.4</b> Loading basemaps</a></li>
+<li class="chapter" data-level="3.5" data-path="data.html"><a href="data.html#summary-1"><i class="fa fa-check"></i><b>3.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="style-and-select-features.html"><a href="style-and-select-features.html"><i class="fa fa-check"></i><b>4</b> Style and select features</a><ul>
 <li class="chapter" data-level="4.1" data-path="style-and-select-features.html"><a href="style-and-select-features.html#identify-features"><i class="fa fa-check"></i><b>4.1</b> Identify Features</a></li>
-<li class="chapter" data-level="4.2" data-path="style-and-select-features.html"><a href="style-and-select-features.html#symbology"><i class="fa fa-check"></i><b>4.2</b> Symbology</a></li>
-<li class="chapter" data-level="4.3" data-path="style-and-select-features.html"><a href="style-and-select-features.html#summary-2"><i class="fa fa-check"></i><b>4.3</b> Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="style-and-select-features.html"><a href="style-and-select-features.html#the-attribute-table"><i class="fa fa-check"></i><b>4.2</b> The Attribute Table</a></li>
+<li class="chapter" data-level="4.3" data-path="style-and-select-features.html"><a href="style-and-select-features.html#symbology"><i class="fa fa-check"></i><b>4.3</b> Symbology</a></li>
+<li class="chapter" data-level="4.4" data-path="style-and-select-features.html"><a href="style-and-select-features.html#summary-2"><i class="fa fa-check"></i><b>4.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="processing-data.html"><a href="processing-data.html"><i class="fa fa-check"></i><b>5</b> Processing data</a><ul>
-<li class="chapter" data-level="5.1" data-path="processing-data.html"><a href="processing-data.html#reprojecting-data"><i class="fa fa-check"></i><b>5.1</b> Reprojecting Data</a></li>
-<li class="chapter" data-level="5.2" data-path="processing-data.html"><a href="processing-data.html#joining-data"><i class="fa fa-check"></i><b>5.2</b> Joining Data</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="processing-data.html"><a href="processing-data.html#attribute-joins"><i class="fa fa-check"></i><b>5.2.1</b> Attribute Joins</a></li>
-<li class="chapter" data-level="5.2.2" data-path="processing-data.html"><a href="processing-data.html#spatial-joins"><i class="fa fa-check"></i><b>5.2.2</b> Spatial Joins</a></li>
+<li class="chapter" data-level="5" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>5</b> Making maps</a><ul>
+<li class="chapter" data-level="5.1" data-path="making-maps.html"><a href="making-maps.html#creating-a-print-layout"><i class="fa fa-check"></i><b>5.1</b> Creating a print layout</a></li>
+<li class="chapter" data-level="5.2" data-path="making-maps.html"><a href="making-maps.html#basic-but-essential-cartographic-elements-that-allow-interpretation-of-your-map."><i class="fa fa-check"></i><b>5.2</b> Basic but essential cartographic elements that allow interpretation of your map.</a></li>
+<li class="chapter" data-level="5.3" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>5.3</b> Saving &amp; Exporting your map</a></li>
+<li class="chapter" data-level="5.4" data-path="making-maps.html"><a href="making-maps.html#summary-3"><i class="fa fa-check"></i><b>5.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="processing-data.html"><a href="processing-data.html#points-in-polygons"><i class="fa fa-check"></i><b>5.3</b> Points in Polygons</a></li>
-<li class="chapter" data-level="5.4" data-path="processing-data.html"><a href="processing-data.html#summary-3"><i class="fa fa-check"></i><b>5.4</b> Summary</a></li>
+<li class="chapter" data-level="6" data-path="introduction-to-part-2.html"><a href="introduction-to-part-2.html"><i class="fa fa-check"></i><b>6</b> Introduction to Part 2</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="introduction-to-part-2.html"><a href="introduction-to-part-2.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.0.1</b> Learning Objectives:</a></li>
+<li class="chapter" data-level="6.0.2" data-path="introduction-to-part-2.html"><a href="introduction-to-part-2.html#what-is-included-in-part-2"><i class="fa fa-check"></i><b>6.0.2</b> What is included in Part 2?</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>6</b> Making maps</a><ul>
-<li class="chapter" data-level="6.1" data-path="making-maps.html"><a href="making-maps.html#creating-a-print-layout"><i class="fa fa-check"></i><b>6.1</b> Creating a print layout</a></li>
-<li class="chapter" data-level="6.2" data-path="making-maps.html"><a href="making-maps.html#saving-exporting-your-map"><i class="fa fa-check"></i><b>6.2</b> Saving &amp; Exporting your map</a></li>
-<li class="chapter" data-level="6.3" data-path="making-maps.html"><a href="making-maps.html#summary-4"><i class="fa fa-check"></i><b>6.3</b> Summary</a></li>
+<li class="chapter" data-level="7" data-path="processing-vector-data.html"><a href="processing-vector-data.html"><i class="fa fa-check"></i><b>7</b> Processing vector data</a><ul>
+<li class="chapter" data-level="7.1" data-path="processing-vector-data.html"><a href="processing-vector-data.html#reprojecting-data"><i class="fa fa-check"></i><b>7.1</b> Reprojecting Data</a></li>
+<li class="chapter" data-level="7.2" data-path="processing-vector-data.html"><a href="processing-vector-data.html#joining-data"><i class="fa fa-check"></i><b>7.2</b> Joining Data</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="processing-vector-data.html"><a href="processing-vector-data.html#attribute-joins"><i class="fa fa-check"></i><b>7.2.1</b> Attribute Joins</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processing-vector-data.html"><a href="processing-vector-data.html#spatial-joins"><i class="fa fa-check"></i><b>7.2.2</b> Spatial Joins</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raster-data.html"><a href="raster-data.html"><i class="fa fa-check"></i><b>7</b> Raster Data</a><ul>
-<li class="chapter" data-level="7.1" data-path="raster-data.html"><a href="raster-data.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>7.1</b> What is the difference between raster and vector data.</a></li>
-<li class="chapter" data-level="7.2" data-path="raster-data.html"><a href="raster-data.html#download-sample-data"><i class="fa fa-check"></i><b>7.2</b> Download Sample Data</a></li>
-<li class="chapter" data-level="7.3" data-path="raster-data.html"><a href="raster-data.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>7.3</b> Adding raster data to the map</a></li>
-<li class="chapter" data-level="7.4" data-path="raster-data.html"><a href="raster-data.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>7.4</b> Normalized difference vegetation index</a></li>
-<li class="chapter" data-level="7.5" data-path="raster-data.html"><a href="raster-data.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>7.5</b> Linking Raster and vector data</a></li>
-<li class="chapter" data-level="7.6" data-path="raster-data.html"><a href="raster-data.html#summary-5"><i class="fa fa-check"></i><b>7.6</b> Summary</a></li>
+<li class="chapter" data-level="7.3" data-path="processing-vector-data.html"><a href="processing-vector-data.html#points-in-polygons"><i class="fa fa-check"></i><b>7.3</b> Points in Polygons</a></li>
+<li class="chapter" data-level="7.4" data-path="processing-vector-data.html"><a href="processing-vector-data.html#summary-4"><i class="fa fa-check"></i><b>7.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>8</b> Accessibility analysis</a><ul>
-<li class="chapter" data-level="8.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>8.1</b> Input data</a></li>
-<li class="chapter" data-level="8.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>8.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
-<li class="chapter" data-level="8.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>8.3</b> Calculate distances to cycle infrastructure</a></li>
-<li class="chapter" data-level="8.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>8.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
-<li class="chapter" data-level="8.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>8.5</b> Advanced exercises (optional)</a></li>
-<li class="chapter" data-level="8.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
+<li class="chapter" data-level="8" data-path="raster-data-1.html"><a href="raster-data-1.html"><i class="fa fa-check"></i><b>8</b> Raster Data</a><ul>
+<li class="chapter" data-level="8.1" data-path="raster-data-1.html"><a href="raster-data-1.html#what-is-the-difference-between-raster-and-vector-data."><i class="fa fa-check"></i><b>8.1</b> What is the difference between raster and vector data.</a></li>
+<li class="chapter" data-level="8.2" data-path="raster-data-1.html"><a href="raster-data-1.html#download-sample-data"><i class="fa fa-check"></i><b>8.2</b> Download Sample Data</a></li>
+<li class="chapter" data-level="8.3" data-path="raster-data-1.html"><a href="raster-data-1.html#adding-raster-data-to-the-map"><i class="fa fa-check"></i><b>8.3</b> Adding raster data to the map</a></li>
+<li class="chapter" data-level="8.4" data-path="raster-data-1.html"><a href="raster-data-1.html#normalized-difference-vegetation-index"><i class="fa fa-check"></i><b>8.4</b> Normalized difference vegetation index</a></li>
+<li class="chapter" data-level="8.5" data-path="raster-data-1.html"><a href="raster-data-1.html#linking-raster-and-vector-data"><i class="fa fa-check"></i><b>8.5</b> Linking Raster and vector data</a></li>
+<li class="chapter" data-level="8.6" data-path="raster-data-1.html"><a href="raster-data-1.html#summary-5"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html"><i class="fa fa-check"></i><b>9</b> Data sources for transport data</a><ul>
-<li class="chapter" data-level="9.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#useful-data-sources"><i class="fa fa-check"></i><b>9.1</b> Useful data sources</a></li>
-<li class="chapter" data-level="9.2" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#online-lists"><i class="fa fa-check"></i><b>9.2</b> Online lists</a></li>
-<li class="chapter" data-level="9.3" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#data-packages"><i class="fa fa-check"></i><b>9.3</b> Data packages</a></li>
+<li class="chapter" data-level="9" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html"><i class="fa fa-check"></i><b>9</b> Accessibility analysis</a><ul>
+<li class="chapter" data-level="9.1" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#input-data"><i class="fa fa-check"></i><b>9.1</b> Input data</a></li>
+<li class="chapter" data-level="9.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>9.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
+<li class="chapter" data-level="9.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>9.3</b> Calculate distances to cycle infrastructure</a></li>
+<li class="chapter" data-level="9.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>9.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
+<li class="chapter" data-level="9.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>9.5</b> Advanced exercises (optional)</a></li>
+<li class="chapter" data-level="9.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>9.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html"><i class="fa fa-check"></i><b>10</b> Data sources for transport data</a><ul>
+<li class="chapter" data-level="10.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#useful-data-sources"><i class="fa fa-check"></i><b>10.1</b> Useful data sources</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#uk-specific-resources"><i class="fa fa-check"></i><b>10.1.1</b> UK specific resources</a></li>
+<li class="chapter" data-level="10.1.2" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#international-resources"><i class="fa fa-check"></i><b>10.1.2</b> International resources</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#online-lists"><i class="fa fa-check"></i><b>10.2</b> Online lists</a></li>
+<li class="chapter" data-level="10.3" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#data-packages"><i class="fa fa-check"></i><b>10.3</b> Data packages</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="further-reading.html"><a href="further-reading.html"><i class="fa fa-check"></i><b>11</b> Further reading</a><ul>
+<li class="chapter" data-level="11.1" data-path="further-reading.html"><a href="further-reading.html#learning-how-to-use-qgis"><i class="fa fa-check"></i><b>11.1</b> Learning how to use QGIS</a></li>
+<li class="chapter" data-level="11.2" data-path="further-reading.html"><a href="further-reading.html#gis-text-books-covering-principles-of-gis"><i class="fa fa-check"></i><b>11.2</b> GIS text books (covering principles of GIS)</a></li>
+<li class="chapter" data-level="11.3" data-path="further-reading.html"><a href="further-reading.html#open-online-resources"><i class="fa fa-check"></i><b>11.3</b> Open online resources</a></li>
+<li class="chapter" data-level="11.4" data-path="further-reading.html"><a href="further-reading.html#how-to-install-qgis-on-your-own-computer"><i class="fa fa-check"></i><b>11.4</b> How to install QGIS on your own computer</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -155,38 +184,54 @@
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">QGIS for Transport Research: an introduction</h1>
-<p class="author"><em>Robin Lovelace and Malcolm Morgan</em></p>
-<p class="date"><em>2019-10-03</em></p>
+<p class="author"><em>Robin Lovelace Malcolm Morgan Ian Philips</em></p>
+<p class="date"><em>2019-12-11</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
-<p>Transport is inherently geographic. All transport involves movement from one place on Earth to another, whether it’s by walking, flying or telecomunications. Geographic Information Systems (GIS) therefore have great potential to assist transport researchers. QGIS is a powerful GIS package that has become popular worldwide due to its wide range of features (including via hundreds of community contributed plugins), intuitive interface, and accessibility. QGIS is free and open source, meaning that anyone can download, install and even contribute to it.</p>
-<p>The growing popularity, power and features of QGIS means that <strong>learning it now</strong> could save much time and money long into the future: <strong>QGIS is futureproof</strong>.
-A more mundane reason for writing this tutorial was the installation of <strong>QGIS 3</strong> across the University of Leeds.
-Suddenly existing material, developed for <strong>QGIS 2</strong>, no longer worked.
-Instead of incrementally updating those materials we decided to start from a blank slate, allowing the inclusion of new datasets and links to excellent online content that already exists for QGIS.</p>
-<p>The aim is to get you up-to-speed with <em>the most important concepts and techniques</em> in QGIS for <em>Transport Planning</em>.
-We refer to Transport Planning in the broad sense of providing evidence-based guidance to support sustainable transport behaviours.
-With air pollution, the obesity crisis, and growing levels of economic inequality in cities worldwide, this inevitably means investment in walking, cycling and public transport.
-For this reason, the data used in this booklet focusses on these modes.</p>
-<div id="pre-requisites" class="section level2 unnumbered">
-<h2>Pre-requisites</h2>
-<p>This course assumes that you have access to a working installation of QGIS 3 and an internet connection.
+<div id="what-is-this-resource" class="section level2">
+<h2><span class="header-section-number">0.1</span> What is this resource?</h2>
+<p>This resource is in two parts and accompanies teaching delivered on <a href="https://environment.leeds.ac.uk/transport-masters">MSc degrees in transport</a> to students at the Institute for Transport Studies (ITS) at the University of Leeds.</p>
+<div id="part-1-is-an-introduction-to-gis-for-transport-students" class="section level3">
+<h3><span class="header-section-number">0.1.1</span> Part 1 is an introduction to GIS for transport students</h3>
+<p>This workbook contains information about getting started using Geographical Information Systems (GIS) using the QGIS application. It assumes no prior knowledge of either GIS concepts or experience of using GIS applications.</p>
+</div>
+<div id="part-1-pre-requisites" class="section level3 unnumbered">
+<h3>Part 1 Pre-requisites</h3>
+<p><strong>If you are an ITS student</strong>
+This part has no pre-requisites: It is aimed at students little or no experience of using any GIS software and those who are new to the open source software called QGIS.<br />
+The materials accompany a semester 1 face-to-face workshop for ITS Students, but, they are designed for students to work through at their own pace. This means that if you do not attend the workshop, you can still make use of the resources.</p>
+<p><strong>If you are not an ITS student or you are not at the face to face workshop</strong>
+Unless you are using a Univerist of leeds cluster computer, this course assumes that you have access to a working installation of QGIS 3 and an internet connection.
 We will explain how to download the data needed for the practicals in Chapter <a href="data.html#data">3</a>.</p>
+</div>
+<div id="part-2-is-key-qgis-skills-for-transport-students-studying-sustainable-spatial-planning-and-analysis." class="section level3">
+<h3><span class="header-section-number">0.1.2</span> Part 2 is key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.</h3>
+<p><a href="http://webprod3.leeds.ac.uk/catalogue/dynmodules.asp?Y=201920&amp;M=TRAN-5115M">Sustainable Spatial Planning and Analysis</a> is a second semester MSc module taught at ITS.<br />
+Part 2 covers key skills required by students on this course. These materials accompany a face to face workshop delivered as part of the module.</p>
+</div>
+<div id="part-2-pre-requisites" class="section level3 unnumbered">
+<h3>Part 2 pre-requisites</h3>
+<p>The pre-requisite for this part is to be familiar with the ideas and skills covered in part 1.</p>
+</div>
+</div>
+<div id="the-aim-of-this-resource-why-are-we-teaching-gis" class="section level2">
+<h2><span class="header-section-number">0.2</span> The aim of this resource: Why are we teaching GIS?</h2>
+<p>We are teaching transport GIS because transport is an inherently geographic phenomena. All transport involves movement from one place on Earth to another, whether its by walking, flying or telecommunications. Those movements and flows impact and are impacted upon by the people and places along the routes. Geographic Information Systems (GIS) therefore have great potential to assist transport researchers and practitioners. We are teaching QGIS. Which is free and open source.</p>
 <!-- ## Structure of the book {-} -->
-<!-- Chapters \@ref(introduction) introduces GIS and the program QGIS... -->
-<!-- ## Software information and conventions {-} -->
-<!-- I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below: -->
-<!-- ```{r} -->
+<p><!-- Chapters \@ref(Part1) introduces GIS and the program QGIS... --></p>
+<p><!-- ## Software information and conventions {-} --></p>
+<p><!-- I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below: --></p>
+<p><!-- ```{r} -->
 <!-- xfun::session_info() -->
-<!-- ``` -->
-<!-- Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`). -->
-<!-- ## Acknowledgments {-} -->
-<!-- A lot of people helped me when I was writing the book. -->
-<!-- ```{block2, type='flushright', html.tag='p'} -->
+<!-- ``` --></p>
+<p><!-- Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`). --></p>
+<p><!-- ## Acknowledgments {-} --></p>
+<p><!-- A lot of people helped me when I was writing the book. --></p>
+<p><!-- ```{block2, type='flushright', html.tag='p'} -->
 <!-- Frida Gomam   -->
 <!-- on the Mars -->
-<!-- ``` -->
+<!-- ``` --></p>
 
 
 </div>
@@ -197,16 +242,18 @@ We will explain how to download the data needed for the practicals in Chapter <a
         </div>
       </div>
 
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction-to-part-1-gis-ideas-and-concepts.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
 <script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
 <script src="libs/gitbook/js/plugin-search.js"></script>
 <script src="libs/gitbook/js/plugin-sharing.js"></script>
 <script src="libs/gitbook/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -214,12 +261,11 @@ gitbook.start({
 "github": true,
 "facebook": false,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -231,6 +277,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },

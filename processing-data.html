@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Processing data | QGIS for Transport Research: an introduction</title>
+  <title>5 Processing data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Processing data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="5 Processing data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Processing data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="5 Processing data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -154,7 +154,7 @@
 
             <section class="normal" id="section-">
 <div id="processing-data" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Processing data</h1>
+<h1><span class="header-section-number">5</span> Processing data</h1>
 <p>We saw in Chapter … how to style and select features of interest from layers loaded into QGIS.
 In this section, we will learn how to process data.
 That means creating new data from existing data.</p>
@@ -165,13 +165,13 @@ That means creating new data from existing data.</p>
 <div class="figure"><span id="fig:reproject-menu"></span>
 <img src="figures/reproject.png" alt="Reproject Menu" width="100%" />
 <p class="caption">
-FIGURE 5.1: Reproject Menu
+Figure 5.1: Reproject Menu
 </p>
 </div>
 <div class="figure"><span id="fig:crs-menu"></span>
 <img src="figures/crs.png" alt="Reproject MenuCordiante Reference System" width="100%" />
 <p class="caption">
-FIGURE 5.2: Reproject MenuCordiante Reference System
+Figure 5.2: Reproject MenuCordiante Reference System
 </p>
 </div>
 </div>
@@ -197,7 +197,7 @@ Target field: lsoa11cd</code></pre>
 <div class="figure"><span id="fig:joins"></span>
 <img src="figures/joins.jpg" alt="The Add Vector Join window" width="100%" />
 <p class="caption">
-FIGURE 5.3: The Add Vector Join window
+Figure 5.3: The Add Vector Join window
 </p>
 </div>
 <p>Use the “Identify features” tool to see that each LSOA now has a population value.</p>
@@ -209,21 +209,21 @@ In the “Vector” menu, select “Data Management Tools”, then “Join Attri
 <div class="figure"><span id="fig:joins-menu"></span>
 <img src="figures/spatial_joins.jpg" alt="Join Attributes by Location" width="100%" />
 <p class="caption">
-FIGURE 5.4: Join Attributes by Location
+Figure 5.4: Join Attributes by Location
 </p>
 </div>
 <p>In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in <a href="processing-data.html#fig:joins-window">5.5</a>.</p>
 <div class="figure"><span id="fig:joins-window"></span>
 <img src="figures/spatial_joins_window.jpg" alt="Join Attributes by Location Window" width="100%" />
 <p class="caption">
-FIGURE 5.5: Join Attributes by Location Window
+Figure 5.5: Join Attributes by Location Window
 </p>
 </div>
 <p>For the Input Layer select “stats19” and for the output later select “leeds_lsoa”. For join type select “Create separate feature of each located feature”. Then click run.</p>
 <div class="figure"><span id="fig:joins-result"></span>
 <img src="figures/spatial_join_result.jpg" alt="Join Results" width="100%" />
 <p class="caption">
-FIGURE 5.6: Join Results
+Figure 5.6: Join Results
 </p>
 </div>
 <p>Once the process has completed a new layer will have been added to the map called “joined Layer” you can use the “Identify features” tool to see that each point in the stas19 data now has the</p>
@@ -236,7 +236,7 @@ FIGURE 5.6: Join Results
 <div class="figure"><span id="fig:points-polygons"></span>
 <img src="figures/points_ins_polygon.jpg" alt="Points in Polygons Tool" width="100%" />
 <p class="caption">
-FIGURE 5.7: Points in Polygons Tool
+Figure 5.7: Points in Polygons Tool
 </p>
 </div>
 <p>For the Polygons choose your LSOA areas and the points the stats19 data. USe the number of casualties as a weighting field, and give the “count field name” an appropriate name.</p>
@@ -244,7 +244,7 @@ FIGURE 5.7: Points in Polygons Tool
 <div class="figure"><span id="fig:final-plot"></span>
 <img src="figures/final_plot.jpg" alt="Number of road crash casualties in Leeds" width="100%" />
 <p class="caption">
-FIGURE 5.8: Number of road crash casualties in Leeds
+Figure 5.8: Number of road crash casualties in Leeds
 </p>
 </div>
 <!-- ## Attribute calculations -->

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Accessibility analysis | QGIS for Transport Research: an introduction</title>
+  <title>1 Introduction to Part 1 GIS ideas and concepts | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Accessibility analysis | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="1 Introduction to Part 1 GIS ideas and concepts | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Accessibility analysis | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="1 Introduction to Part 1 GIS ideas and concepts | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="raster-data-1.html"/>
-<link rel="next" href="data-sources-for-transport-data.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="working-with-qgis.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -182,174 +182,108 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="accessibility-analysis" class="section level1">
-<h1><span class="header-section-number">9</span> Accessibility analysis</h1>
-<p>Accessibility is a key concept in transport planning.
-One of the key aims of many transport policies is to make places more accessible to people, whether that’s shops, schools or hospitals.
-But what does that actually mean?</p>
-<p>In this example, we will use QGIS to explore accessibility to cycle infrastructure.
-Although this is an unnusual measure of accessibility, the methods can be modified and extended to explore other types of accessibility, for example accessibility to schools before and after ‘school agglomeration’, the topic of an academic paper based on a case study in Sao Paulo, Brazil <span class="citation">(Moreno-Monroy, Lovelace, and Ramos 2017)</span>.</p>
-<div id="input-data" class="section level2">
-<h2><span class="header-section-number">9.1</span> Input data</h2>
-<p>Building on previous chapters, we will use a case study of Leeds.
-There are two additional datasets we’ll use for this, saved in the file <code>data_accessibility.zip</code> in the releases section of the tutorial.</p>
-<p>The input datasets were taken from 2 places:</p>
+<div id="introduction-to-part-1-gis-ideas-and-concepts" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction to Part 1 GIS ideas and concepts</h1>
+<div id="learning-objectives" class="section level3">
+<h3><span class="header-section-number">1.0.1</span> Learning Objectives:</h3>
 <ul>
-<li>The cycle infrastructure data was taken from they Cycling Infrastructure Prioritisation Tool (<a href="https://www.cyipt.bike">CyIPT</a>)</li>
-<li>The desire lines data were taken from the propensity to cycle tool (see <a href="http://www.pct.bike/m/?r=west-yorkshire">pct.bike/m/?r=west-yorkshire</a>) <span class="citation">(Lovelace et al. 2017)</span>.</li>
+<li>Gain a basic understanding of what a GIS is and its relevance to transport studies</li>
+<li>Know what some of the key data types and file formats</li>
+<li>Import pre-cleaned vector data into QGIS and navigate basic QGIS features</li>
+<li>Select a subset of the data</li>
+<li>Make a map showing point, line and polygon features and export it.<br />
+</li>
+<li>Understand the key cartographic elements that must be present to allow interpretation of a map</li>
 </ul>
-<p>Following the guidance in previous chapters, we <em>pre-processed</em> these datasets in 2 ways:</p>
+</div>
+<div id="what-is-included-in-part-1" class="section level3">
+<h3><span class="header-section-number">1.0.2</span> What is included in Part 1?</h3>
 <ul>
-<li>Reproject the datasets so they are in the British National Grid CRS (EPSG:27700)</li>
-<li>Subset the desire lines so that we only have the top 200 across West Yorksire</li>
+<li>GIS ideas and concepts - we very briefly introduce some key GIS concepts and ideas.<br />
+</li>
+<li>Opening QGIS and key features - We then explain what the main components of QGIS are, explain how to set up a project and save work and what some of the most useful buttons do</li>
+<li>Downloading and loading data - we show you how to get some data we have prepared for the workshop and load it into QGIS</li>
+<li>Style and select features - change the way features look on the screen</li>
+<li>Making maps - Make a map which you can export and include in a document</li>
 </ul>
-<p>Download and unzip the <code>data_accessibility.zip</code> file and load the <code>.gpkg</code> files.
-As a taster of what we will do, and to check you have the right input data, the results should look something like the map shown in Figure <a href="accessibility-analysis.html#fig:accesso">9.1</a>.</p>
-<div class="figure"><span id="fig:accesso"></span>
-<img src="figures/access-overview.png" alt="Overview of input data for this chapter." width="100%" />
+</div>
+<div id="what-is-gis" class="section level2">
+<h2><span class="header-section-number">1.1</span> What is GIS?</h2>
+</div>
+<div id="key-ideas" class="section level2">
+<h2><span class="header-section-number">1.2</span> Key ideas:</h2>
+<p>GIS is an abbreviation. Sometimes it is used to mean <strong>Geographic Information System</strong> and sometimes it is used to mean <strong>Geographic information Science</strong>. A more formal definition of a Geographical Information System is:</p>
+<blockquote>
+<p>A powerful set of tools for collecting, storing, retrieving at will, transforming and &gt;displaying spatial data from the real world
+(Burrough, 1986)</p>
+</blockquote>
+<p>The emphasis here is on pieces of software like QGIS. In practical terms a Geographic Information System is a database to store data, a calculator which can manipulate and analyse data, a visualisation window to show results. GIS software like QGIS also has a Graphical User Interface (GUI) with menus and buttons which lets the user ‘do stuff’.</p>
+<p>In Part 1 we are concentrating on learning how to use the basic features of the Geographic information System application called QGIS</p>
+<p>A more formal definition of Geographical Information Science is given by<br />
+Goodchild, (1992) who argues that Geographical Information Science involves research that investigates spatial data acquisition, spatial statistics, modelling and theories of spatial data, development of analytical tools and consideration of the management and ethics of working with spatial data.</p>
+<p>As an introduction the wikipedia entry cotrains alot of information. In the further reading section there are references to key GIS textbooks for a more formal treatment of key GIS concepts.<br />
+<a href="https://en.wikipedia.org/wiki/Geographic_information_science" class="uri">https://en.wikipedia.org/wiki/Geographic_information_science</a></p>
+<p>GIS in both of the systems and science contexts described above is important for anyone studying transport because it is an inherently spatial topic of study. Data used in the study of transport can be visualised and analysed using GIS. Learning how to use a GISystem like QGIS is a very useful skill in its own right. It is also a very useful start point for people wanting to learn and apply GIScience.</p>
+<p>There are other terms you may come across including “spatial data analytics”. The emphasis here is on a branch of science at the nexus of statistics, computer science and quantitative geography. You may also come across the term “geo-computation”. Geocomputation is associated with computational methods that has been customized to address the special characteristics of spatial data ( <a href="https://dx.doi.org/10.4135/9780857024442.d64" class="uri">https://dx.doi.org/10.4135/9780857024442.d64</a>). There are technical academic differences between these terms, but in practice they get used interchangably. This range of terms might sound confusing, but they are all related.</p>
+</div>
+<div id="free-and-open-source-software." class="section level2">
+<h2><span class="header-section-number">1.3</span> Free and Open Source Software.</h2>
+<p>We are using QGIS software which is free to download and use. The university has a licence for commercial GIS software, but we are aware that not all students will have access to commercial software after completing the course. QGIS is becoming popular with many organisations. For more information about FOSS see: <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" class="uri">https://en.wikipedia.org/wiki/Free_and_open-source_software</a></p>
+<div id="vector-data" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Vector data</h3>
+<p>Vector data represents the features of the world as either ‘points’ ‘lines’ or ‘areas’ (also called polygons).</p>
+<p>Each type of feature is displayed in the GIS as a distinct layer. A layer will only contain either points, or lines or polygons. It is also good practice to have different layers for different types of line features. For example it is good to have a layer for roads and another for rivers.</p>
+<p>Maps can be made of several layers of vector data as seen here:<br />
+<a href="https://upload.wikimedia.org/wikipedia/commons/3/3b/USGS_The_National_Map.jpg" class="uri">https://upload.wikimedia.org/wikipedia/commons/3/3b/USGS_The_National_Map.jpg</a></p>
+</div>
+<div id="raster-data" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Raster data:</h3>
+<p>‘In its simplest form, a raster consists of a matrix of cells (or pixels) organized into rows and columns (or a grid) where each cell contains a value representing information, such as temperature. Rasters are digital aerial photographs, imagery from satellites, digital pictures, or even scanned maps’. (
+webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=What_is_raster_data%3F)</p>
+<p>(source: <a href="http://support.esri.com/other-resources/gis-dictionary/term/raster" class="uri">http://support.esri.com/other-resources/gis-dictionary/term/raster</a>)</p>
+</div>
+<div id="network-data" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Network data</h3>
+<p>A network dataset takes a line dataset and defines its topology explicitly. Defining topology means having a data tables that explicitly lists which lines are connected and at which nodes.<br />
+In its simplest form this means that the connections between the ends of different lines are recorded in the GIS.</p>
+</div>
+<div id="data-formats-how-is-data-stored-in-a-gis-and-on-your-computer." class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Data formats – how is data stored in a GIS and on your computer.</h3>
+<p>QGIS can handle a very large number of different data formats.<br />
+In today’s exervises we will start by using use a file format called “Shapefile” as it is a very common type of vector GIS data format. The Shapefile format was developed by ESRI who make the commercial GIS software ArcGIS(ArcGIS is also available on university machine).</p>
+<p>The Shapefile format appears on your computer as several files which may seem a little confusing. Each file contains a different type of information that the GIS needs to represent the spatial data.</p>
+<p>NB. If you ever want to share a shapefile with someone, you have to send the whole group of files</p>
+<div class="figure"><span id="fig:shp"></span>
+<img src="figures/Shapefile.jpg" alt="A shapefile is a group of files.  It is a common file format" width="100%" />
 <p class="caption">
-Figure 9.1: Overview of input data for this chapter.
+Figure 1.1: A shapefile is a group of files. It is a common file format
 </p>
 </div>
-</div>
-<div id="identify-areas-in-leeds-with-some-cycle-infrastructure" class="section level2">
-<h2><span class="header-section-number">9.2</span> Identify areas in Leeds with some cycle infrastructure</h2>
-<p>A simple but effective way of comparing 2 geographic layers, as a first step towards an accessibility indicator, is a spatial selection.
-We can do this to identify zones that have access to <em>at least some cycle infrastructure</em>:</p>
-<ul>
-<li>Use the Select by location tool to select only those LSOAs with at least some cycleways in</li>
-<li>Do this with the following menu options: Vector &gt; Research Tools &gt; Select by Location</li>
-<li>Save the result as a new layer called, for example, <code>leeds_lsoa_cycleway</code></li>
-</ul>
-<p>The result should look like that shown in Figure <a href="accessibility-analysis.html#fig:select-by-location">9.2</a>.</p>
-<div class="figure"><span id="fig:select-by-location"></span>
-<img src="figures/select-by-location.png" alt="Select by Location: results." width="100%" />
+<p>There are other types of GIS files including as JSON and geo-package formats. Data is stored in GIS as database tables.<br />
+GIS data can be stored and shared in a very large number of ways. (For an introduction see <a href="https://en.wikipedia.org/wiki/GIS_file_formats" class="uri">https://en.wikipedia.org/wiki/GIS_file_formats</a> as well as the further reading in the appendix.</p>
+<p>##Projections and co-ordinate systems
+The world is not flat but computer screens are. Projections and co-ordinate systems allow GIS to represent the curved surface of the earth on a flat screen or page.</p>
+<div class="figure"><span id="fig:qgis-window-projection"></span>
+<img src="figures/Projection_mjfoster.png" alt="How do we fit a curving earth onto a flat piece of paper" width="100%" />
 <p class="caption">
-Figure 9.2: Select by Location: results.
+Figure 1.2: How do we fit a curving earth onto a flat piece of paper
 </p>
 </div>
+<p>Image source comes from this presentation: <a href="http://mjfoster83.github.io/projections/#/5" class="uri">http://mjfoster83.github.io/projections/#/5</a></p>
+<p>The projection is a mathematical formula explaining how places in the real world which are on a near spherical globe can be represented on a flat map. More information on projections and coordinate systems can be found in GIS test books.</p>
+<p>Coordinate Reference Systems (CRS) refer to different ways of defining the X and Y coordinates used in different projections. Largely they fall into two categories:</p>
 <ul>
-<li>What proportion of zones have at least some cycle infrastructure, according to this measure?</li>
-<li>What are the limitations of this approach?
-<ul>
-<li>List at least 2.</li>
-</ul></li>
+<li><p>Geographical Coordinate Systems: use latitude and longitude to represent any place on the Earth</p></li>
+<li><p>Projected Coordinate Systems: use distances from an origin point to represent a small part of the Earth, e.g. a country. The advantage of a projects CRS is that it is easier to calculate properties such as distance and area as coordinates are in metres.</p></li>
 </ul>
-<!-- There is no measure of how *much* cycle infrastructure is in each zone. -->
-<!-- There is no measure of the quality of the infrastructure. -->
-<!-- It does not account for whether the infrastructure actually goes where people want to go. -->
-</div>
-<div id="calculate-distances-to-cycle-infrastructure" class="section level2">
-<h2><span class="header-section-number">9.3</span> Calculate distances to cycle infrastructure</h2>
-<p>A slightly more sophisticated measure of accessibility is Euclidean distance.
-Rather than testing whether or not zones contain cycling infrastructure, resulting in a <em>binary variable</em>, <code>TRUE</code> or <code>FALSE</code>, this simple distance calculation results in a <em>continuous variable</em> in units of metres.</p>
-<p>To calculate this metric, we will use the ‘Distance to nearest hub’ algorithm in QGIS.
-To run this algorithm:</p>
+<p>You can find a catalogue of different CRSs at <a href="http://spatialreference.org/" class="uri">http://spatialreference.org/</a></p>
+<p>CRSs are often referred to by the EPSG number. The European Petroleum Survey Group publish a database of different coordinate systems. Two useful projections to commit to memory are:</p>
 <ul>
-<li>Open the Processing Toolbox, e.g. by clicking ‘Processing’ from the menu bar and selecting ‘Toolbox’ (pro tip: this can be achieved more quickly by pressing Alt-C and then T to get to the menu without touching the mouse)</li>
-<li>Search for and select ‘Distance from nearest hub (points)’ in the Processing Toolbox (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">9.3</a>, left)</li>
-<li>Select <code>leeds_lsoa</code> as the Source points layer and the <code>existing-cycle-infrastructure</code> as Destination layer in the popup window (see Figure <a href="accessibility-analysis.html#fig:processing-hub-distance">9.3</a>, left)</li>
+<li>4326 - the World Geodetic System 1984 which is a widely used geographical coordinate system, used in GPS datasets and the .geojson file format, for example.</li>
+<li>27700 - the British National Grid</li>
 </ul>
-<div class="figure"><span id="fig:processing-hub-distance"></span>
-<img src="figures/processing-hub-distance.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" /><img src="figures/distance-processing.png" alt="Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right)." width="49%" />
-<p class="caption">
-Figure 9.3: Distance to nearest hub algorithm selection (left) and input parameters in the resulting popup (right).
-</p>
-</div>
-<p>The result is a new point layer, with one point per LSOA zone.
-Style this new layer based on the Hub distance field it contains and give it an appropriate colour scheme.
-It should look something like Figure <a href="accessibility-analysis.html#fig:hub-distance-centroids">9.4</a>.</p>
-<div class="figure"><span id="fig:hub-distance-centroids"></span>
-<img src="figures/hub-distance-centroids.png" alt="Demonstration of hub distance calculation" width="100%" />
-<p class="caption">
-Figure 9.4: Demonstration of hub distance calculation
-</p>
-</div>
-<ul>
-<li>Is the distribution of distances to cycle infrastructure as you would expect? Why?</li>
-<li>List at least 2 disadvantages of this new accessibility measure and 2 ways you could improve it using your evolving QGIS skills.</li>
-<li>Bonus: Use a spatial join to merge the ‘Hub distance’ variable in the new point layer back onto the LSOA zone layer.</li>
-</ul>
-</div>
-<div id="calculate-cycle-infrastructure-provision-along-desire-lines" class="section level2">
-<h2><span class="header-section-number">9.4</span> Calculate cycle infrastructure provision along desire lines</h2>
-<p>The accessibility measures we have calculated have been for zones.
-These static entities are the basis of many local statistics on their resident populations (inhabitants) but they tell us little about travel patterns.
-A more appropriate level of geographic analysis for transport planning is ofter the desire line, one-way trips between an origin and a destination <span class="citation">(Lovelace, Nowosad, and Muenchow 2019, Chapter 12)</span>.
-Such desire lines are represented in the desire line object, loaded in Section <a href="accessibility-analysis.html#input-data">9.1</a>, which were generated for the Propensity to Cycle Tool project (see <a href="http://www.pct.bike/">www.pct.bike</a>).</p>
-<p>Although the desire lines represent travel, they clearly are not the routes that people actually take from home to work (the dataset comes from the 2011 Census question on travel to work).
-People do not travel in straight lines, only birds can do that (hence the phrase ‘as the crow flies’ to denote straight line distance).
-People take a range of routes from A to B.
-Therefore, the distance of cycleway <em>inside a buffer surrounding a desire line</em> may be a better indication of the accessibility of cycle infrastructure for everyday travel than the previous measures.</p>
-<p>The first step is to subset the desire lines so that only those <em>within</em> the Leeds LSOA object are included.
-You can do this as follows:</p>
-<ul>
-<li>Again, select the Select by location tool, as you did previously to select the LSOA zones that had some cycle infrastructure.</li>
-<li>This time select features in the desire lines that are <em>Within</em> the zones.</li>
-<li>Bonus: what is the difference when you select different types of geometric predicates (see Figure <a href="accessibility-analysis.html#fig:geometric-predicate">9.5</a>)?</li>
-</ul>
-<div class="figure"><span id="fig:geometric-predicate"></span>
-<img src="figures/geometric-predicate.png" alt="Select by location popup, to subset only desire lines within Leeds" width="100%" />
-<p class="caption">
-Figure 9.5: Select by location popup, to subset only desire lines within Leeds
-</p>
-</div>
-<p>After you have saved a subset of the desire lines, it’s time to calculate buffers. You will create buffers of 500m (feel free to experiment with different buffer sizes after you have generated the desired result).
-Your growing knowledge of QGIS (and ability to search for help online if you get stuck) should help you do the next step without detailed instructions (hint: it’s also found in the Vector menu).</p>
-<p>The final step in the process is to calculate the length of cycle infrastructure in each buffer.
-Again, you must look this up (hint: the algorithm is called ‘Sum line lengths’).
-After running this algorithm on the correct inputs, and colouring the result according to the length of infrastructure in each polygon, the map should resemble Figure <a href="accessibility-analysis.html#fig:buffered-lines">9.6</a>.</p>
-<div class="figure"><span id="fig:buffered-lines"></span>
-<img src="figures/buffered-lines.png" alt="Buffered lines, coloured by the length of infrastructure within each one." width="100%" />
-<p class="caption">
-Figure 9.6: Buffered lines, coloured by the length of infrastructure within each one.
-</p>
-</div>
-<ul>
-<li>Given what you know about Leeds, are these the desire lines you’d expect to be well-served by cycle infrastructure?</li>
-<li>Explore the data in the Propensity to Cycle Tool (PCT) for Leeds and decide where you think new infrastructure could go (see <a href="http://www.pct.bike/m/?r=west-yorkshire">www.pct.bike/m/?r=west-yorkshire</a> and Figure <a href="accessibility-analysis.html#fig:pct-west">9.7</a>).</li>
-<li>What additional steps could you take with QGIS to improve the accessibility metric shown in Figure <a href="accessibility-analysis.html#fig:buffered-lines">9.6</a>?</li>
-</ul>
-<p><strong>The next tasks are bonus extras. Select one of the following (or more if you are fast!):</strong></p>
-<ul>
-<li><p>Bonus 1: Download the fast and quiet route data from the PCT’s Region Data tab and load it into QGIS (see top of Figure <a href="accessibility-analysis.html#fig:pct-west">9.7</a> for the Region data tab).</p></li>
-<li><p>Bonus 2: is there positive correlation between cycling levels and the length of cycle infrustructure in the buffer of each desire line?</p></li>
-<li><p>Bonus 3: explore and download the PCT data for schools <a href="http://npct0.vs.mythic-beasts.com/">here</a>. With reference to an academic paper on the subject <span class="citation">(Goodman et al. 2019)</span>, how could you use the data to generate a ‘Sustainable Travel to School Accessibility Measure’ (STSAM)?</p></li>
-</ul>
-<div class="figure"><span id="fig:pct-west"></span>
-<img src="figures/pct-west-yorkshire-fast.jpg" alt="The propensity to cycle tool (PCT), showing data for fast and quiet routes, and demonstrating the Region dat' tab. Go to www.pct.bike to explore the data." width="100%" />
-<p class="caption">
-Figure 9.7: The propensity to cycle tool (PCT), showing data for fast and quiet routes, and demonstrating the Region dat’ tab. Go to www.pct.bike to explore the data.
-</p>
-</div>
-</div>
-<div id="advanced-exercises-optional" class="section level2">
-<h2><span class="header-section-number">9.5</span> Advanced exercises (optional)</h2>
-<ol style="list-style-type: decimal">
-<li>Install the ORS Tools Plugin</li>
-<li>Signup for an API token at openrouteservice.org</li>
-<li>Add token to ORS Tools Settings</li>
-<li>Download the locations of schools from <a href="https://overpass-turbo.eu/" class="uri">https://overpass-turbo.eu/</a></li>
-<li>Buffer schools and find population within 1km of a school</li>
-<li>Make isochone for 10, 20, 30 min cycle from schools</li>
-<li>Dissolve isochone togther</li>
-<li>may need to change nerndering order (properties -&gt; symbology -&gt; layerrendering)</li>
-<li>use geoprocessing v.clean (with clean type break)</li>
-<li>edit polygons to remove the unneeded sections</li>
-<li>join the isochones onto the points</li>
-</ol>
-</div>
-<div id="summary-6" class="section level2">
-<h2><span class="header-section-number">9.6</span> Summary</h2>
-<p>This chapter involved downloading and importing more data related to travel behaviour and cycle infrastructure.
-Three simple of indices of accessibility to cycle infrastructure were developed:</p>
-<ul>
-<li>Whether any cycle infrastructure was provided</li>
-<li>Distance from zone centroids to the nearest cycleway</li>
-<li>Length of cycle infrastructure within a given buffer distance of desire lines</li>
-</ul>
-<p>The skills could be used to measure accessibility to different services, including schools, shops and healthcare.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -357,8 +291,8 @@ Three simple of indices of accessibility to cycle infrastructure were developed:
           </div>
         </div>
       </div>
-<a href="raster-data-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-sources-for-transport-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="working-with-qgis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -389,7 +323,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/10-accessibility.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/01-introduction.Rmd",
 "text": "Edit"
 },
 "history": {

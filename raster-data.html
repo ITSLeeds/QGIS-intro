@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Raster Data | QGIS for Transport Research: an introduction</title>
+  <title>7 Raster Data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Raster Data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="7 Raster Data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Raster Data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="7 Raster Data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -154,7 +154,7 @@
 
             <section class="normal" id="section-">
 <div id="raster-data" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Raster Data</h1>
+<h1><span class="header-section-number">7</span> Raster Data</h1>
 <p>So far we have only used Vector data with QGIS, this chapter will introduce raster data.</p>
 <div id="what-is-the-difference-between-raster-and-vector-data." class="section level2">
 <h2><span class="header-section-number">7.1</span> What is the difference between raster and vector data.</h2>
@@ -172,7 +172,7 @@
 <div class="figure"><span id="fig:raster-import"></span>
 <img src="figures/raster-import.png" alt="The sample raster data added to the map" width="100%" />
 <p class="caption">
-FIGURE 7.1: The sample raster data added to the map
+Figure 7.1: The sample raster data added to the map
 </p>
 </div>
 <p>The colour difference is due to this raster being a colour infrared image. Rather than the usual Red, Green, Blue bands this image has Near Infrared (NI), Red, Green.</p>
@@ -186,14 +186,14 @@ FIGURE 7.1: The sample raster data added to the map
 <div class="figure"><span id="fig:raster-calc"></span>
 <img src="figures/raster-calcualtor.png" alt="The raster calcualtor with the NDVI formula" width="100%" />
 <p class="caption">
-FIGURE 7.2: The raster calcualtor with the NDVI formula
+Figure 7.2: The raster calcualtor with the NDVI formula
 </p>
 </div>
 <p>Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.</p>
 <div class="figure"><span id="fig:ndvi"></span>
 <img src="figures/ndvi.png" alt="The NDVI raster with a psudo-colour scheme applied" width="100%" />
 <p class="caption">
-FIGURE 7.3: The NDVI raster with a psudo-colour scheme applied
+Figure 7.3: The NDVI raster with a psudo-colour scheme applied
 </p>
 </div>
 </div>
@@ -204,14 +204,14 @@ FIGURE 7.3: The NDVI raster with a psudo-colour scheme applied
 <div class="figure"><span id="fig:zone-stats1"></span>
 <img src="figures/zonal-statistics.JPG" alt="The Zonal Statistics tool in the processing toolbox" width="100%" />
 <p class="caption">
-FIGURE 7.4: The Zonal Statistics tool in the processing toolbox
+Figure 7.4: The Zonal Statistics tool in the processing toolbox
 </p>
 </div>
 <p>Complete the form to get statistics from the NDVI raster for each LSOA. When specifying the statistics to calculate select the mean.</p>
 <div class="figure"><span id="fig:zone-stats2"></span>
 <img src="figures/zonal-statistics2.png" alt="The Zonal Statistics tool" width="100%" />
 <p class="caption">
-FIGURE 7.5: The Zonal Statistics tool
+Figure 7.5: The Zonal Statistics tool
 </p>
 </div>
 <p>Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.</p>
@@ -219,7 +219,7 @@ FIGURE 7.5: The Zonal Statistics tool
 <div class="figure"><span id="fig:lsoa-ndvi"></span>
 <img src="figures/lsoa-ndvi.png" alt="LSOA areas with average NDVI scores" width="100%" />
 <p class="caption">
-FIGURE 7.6: LSOA areas with average NDVI scores
+Figure 7.6: LSOA areas with average NDVI scores
 </p>
 </div>
 </div>
