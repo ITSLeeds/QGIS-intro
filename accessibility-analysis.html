@@ -145,8 +145,9 @@
 <li class="chapter" data-level="9.2" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#identify-areas-in-leeds-with-some-cycle-infrastructure"><i class="fa fa-check"></i><b>9.2</b> Identify areas in Leeds with some cycle infrastructure</a></li>
 <li class="chapter" data-level="9.3" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-distances-to-cycle-infrastructure"><i class="fa fa-check"></i><b>9.3</b> Calculate distances to cycle infrastructure</a></li>
 <li class="chapter" data-level="9.4" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#calculate-cycle-infrastructure-provision-along-desire-lines"><i class="fa fa-check"></i><b>9.4</b> Calculate cycle infrastructure provision along desire lines</a></li>
-<li class="chapter" data-level="9.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>9.5</b> Advanced exercises (optional)</a></li>
-<li class="chapter" data-level="9.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>9.6</b> Summary</a></li>
+<li class="chapter" data-level="9.5" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#plugins"><i class="fa fa-check"></i><b>9.5</b> Plugins</a></li>
+<li class="chapter" data-level="9.6" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#advanced-exercises-optional"><i class="fa fa-check"></i><b>9.6</b> Advanced exercises (optional)</a></li>
+<li class="chapter" data-level="9.7" data-path="accessibility-analysis.html"><a href="accessibility-analysis.html#summary-6"><i class="fa fa-check"></i><b>9.7</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html"><i class="fa fa-check"></i><b>10</b> Data sources for transport data</a><ul>
 <li class="chapter" data-level="10.1" data-path="data-sources-for-transport-data.html"><a href="data-sources-for-transport-data.html#useful-data-sources"><i class="fa fa-check"></i><b>10.1</b> Useful data sources</a><ul>
@@ -302,8 +303,21 @@ Figure 9.7: The propensity to cycle tool (PCT), showing data for fast and quiet 
 </p>
 </div>
 </div>
+<div id="plugins" class="section level2">
+<h2><span class="header-section-number">9.5</span> Plugins</h2>
+<p>An important aspect of open source software is the wider community, which often supports a diverse range of extensions which add features to the original program. QGIS is no exception: it has a thriving community of programmers who, together, have created dozens of ‘plugins’, which enhance QGIS’s capabilities in countless ways. At the time of writing, there are 200+ plugins available for QGIS 3, and this number is continuously rising.</p>
+<p>To install a plugin, click on Plugins in the Menu Bar (or press <code>Alt+P</code>). You should see the following options. Select the second option (Manage and Install Plugins, see Figure <a href="accessibility-analysis.html#fig:plugins">9.8</a> (left)). You should see a new window, like the one displayed in Figure <a href="accessibility-analysis.html#fig:plugins">9.8</a> (right).</p>
+<div class="figure"><span id="fig:plugins"></span>
+<img src="figures/plugins-menu.png" alt="Plugins menu (left) and the resulting window (right)." width="50%" /><img src="figures/plugins-window.png" alt="Plugins menu (left) and the resulting window (right)." width="50%" />
+<p class="caption">
+Figure 9.8: Plugins menu (left) and the resulting window (right).
+</p>
+</div>
+<p>To install a plugin, click on the ‘Install plugin’ button in the bottom right corner of Figure <a href="accessibility-analysis.html#fig:plugins">9.8</a> (right). Use the search bar to explore for plugins. What happens if you search for ‘trans’, for example (short for transport)?</p>
+<p><strong>Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.</strong> Hint: after you have installed the plugin navigate to the Web menu (or press <code>Alt+W</code>). After completing the exercise your QGIS session should look something like that displayed in Figure <a href="#fig:webmap"><strong>??</strong></a>.</p>
+</div>
 <div id="advanced-exercises-optional" class="section level2">
-<h2><span class="header-section-number">9.5</span> Advanced exercises (optional)</h2>
+<h2><span class="header-section-number">9.6</span> Advanced exercises (optional)</h2>
 <ol style="list-style-type: decimal">
 <li>Install the ORS Tools Plugin</li>
 <li>Signup for an API token at openrouteservice.org</li>
@@ -319,7 +333,7 @@ Figure 9.7: The propensity to cycle tool (PCT), showing data for fast and quiet 
 </ol>
 </div>
 <div id="summary-6" class="section level2">
-<h2><span class="header-section-number">9.6</span> Summary</h2>
+<h2><span class="header-section-number">9.7</span> Summary</h2>
 <p>This chapter involved downloading and importing more data related to travel behaviour and cycle infrastructure. Three simple of indices of accessibility to cycle infrastructure were developed:</p>
 <ul>
 <li>Whether any cycle infrastructure was provided</li>
