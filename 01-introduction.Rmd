@@ -101,7 +101,7 @@ GIS data can be stored and shared in a very large number of ways.  (For an intro
 The world is not flat but computer screens are.  Projections and co-ordinate systems allow GIS to represent  the curved surface of the earth on a flat screen or page. 
 
 
-```{r qgis-window, echo=FALSE,fig.cap="How do we fit a curving earth onto a flat piece of paper"}
+```{r qgis-window-projection, echo=FALSE,fig.cap="How do we fit a curving earth onto a flat piece of paper"}
 knitr::include_graphics("figures/Projection_mjfoster.png")
 ```
 
