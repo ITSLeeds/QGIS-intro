@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Working with QGIS | QGIS for Transport Research: an introduction</title>
+  <title>1 Introduction: GIS ideas and concepts | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
   <meta name="generator" content="bookdown 0.17.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Working with QGIS | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="1 Introduction: GIS ideas and concepts | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Working with QGIS | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="1 Introduction: GIS ideas and concepts | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-gis-ideas-and-concepts.html"/>
-<link rel="next" href="data.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="working-with-qgis.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -186,101 +186,117 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="working-with-qgis" class="section level1">
-<h1><span class="header-section-number">2</span> Working with QGIS</h1>
-<p>Before importing data (covered in Chapter <a href="data.html#data">3</a>) it is worth getting to know QGIS, in terms of its main components, how to get help, and how it helps you organise your work into projects.
-This chapter describes some of QGIS’s key elements.</p>
-<div id="opening-qgis" class="section level2">
-<h2><span class="header-section-number">2.1</span> Opening QGIS</h2>
-<p>Probably the quickest way to open QGIS on your computer press ‘Windows button’ on your keyboard and type ‘qgis’ (see Figure <a href="working-with-qgis.html#fig:qgis-start">2.1</a>).</p>
-<!-- \begin{wrapfigure}{R}   -->
-<!--  \begin{center} -->
-<div class="figure"><span id="fig:qgis-start"></span>
-<img src="figures/qgis-start.jpg" alt="Starting QGIS" width="50%" />
+<div id="introduction-gis-ideas-and-concepts" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction: GIS ideas and concepts</h1>
+<div id="learning-objectives" class="section level3">
+<h3><span class="header-section-number">1.0.1</span> Learning Objectives:</h3>
+<ul>
+<li>Gain a basic understanding of what a GIS is and its relevance to transport studies</li>
+<li>Know what some of the key data types and file formats</li>
+<li>Import pre-cleaned vector data into QGIS and navigate basic QGIS features</li>
+<li>Select a subset of the data</li>
+<li>Make a map showing point, line and polygon features and export it.<br />
+</li>
+<li>Understand the key cartographic elements that must be present to allow interpretation of a map</li>
+</ul>
+</div>
+<div id="what-is-included-in-part-1" class="section level3">
+<h3><span class="header-section-number">1.0.2</span> What is included in Part 1?</h3>
+<ul>
+<li>GIS ideas and concepts - we very briefly introduce some key GIS concepts and ideas.<br />
+</li>
+<li>Opening QGIS and key features - We then explain what the main components of QGIS are, explain how to set up a project and save work and what some of the most useful buttons do</li>
+<li>Downloading and loading data - we show you how to get some data we have prepared for the workshop and load it into QGIS</li>
+<li>Style and select features - change the way features look on the screen</li>
+<li>Making maps - Make a map which you can export and include in a document</li>
+</ul>
+</div>
+<div id="what-is-gis" class="section level2">
+<h2><span class="header-section-number">1.1</span> What is GIS?</h2>
+</div>
+<div id="key-ideas" class="section level2">
+<h2><span class="header-section-number">1.2</span> Key ideas:</h2>
+<p>GIS is an abbreviation. Sometimes it is used to mean <strong>Geographic Information System</strong> and sometimes it is used to mean <strong>Geographic information Science</strong>. A more formal definition of a Geographical Information System is:</p>
+<blockquote>
+<p>A powerful set of tools for collecting, storing, retrieving at will, transforming and &gt;displaying spatial data from the real world
+(Burrough, 1986)</p>
+</blockquote>
+<p>The emphasis here is on pieces of software like QGIS. In practical terms a Geographic Information System is a database to store data, a calculator which can manipulate and analyse data, a visualisation window to show results. GIS software like QGIS also has a Graphical User Interface (GUI) with menus and buttons which lets the user ‘do stuff’.</p>
+<p>In Part 1 we are concentrating on learning how to use the basic features of the Geographic information System application called QGIS</p>
+<p>A more formal definition of Geographical Information Science is given by<br />
+Goodchild, (1992) who argues that Geographical Information Science involves research that investigates spatial data acquisition, spatial statistics, modelling and theories of spatial data, development of analytical tools and consideration of the management and ethics of working with spatial data.</p>
+<p>As an introduction the wikipedia entry cotrains alot of information. In the further reading section there are references to key GIS textbooks for a more formal treatment of key GIS concepts.<br />
+<a href="https://en.wikipedia.org/wiki/Geographic_information_science" class="uri">https://en.wikipedia.org/wiki/Geographic_information_science</a></p>
+<p>GIS in both of the systems and science contexts described above is important for anyone studying transport because it is an inherently spatial topic of study. Data used in the study of transport can be visualised and analysed using GIS. Learning how to use a GISystem like QGIS is a very useful skill in its own right. It is also a very useful start point for people wanting to learn and apply GIScience.</p>
+<p>There are other terms you may come across including “spatial data analytics”. The emphasis here is on a branch of science at the nexus of statistics, computer science and quantitative geography. You may also come across the term “geo-computation”. Geocomputation is associated with computational methods that has been customized to address the special characteristics of spatial data ( <a href="https://dx.doi.org/10.4135/9780857024442.d64" class="uri">https://dx.doi.org/10.4135/9780857024442.d64</a>). There are technical academic differences between these terms, but in practice they get used interchangably. This range of terms might sound confusing, but they are all related.</p>
+</div>
+<div id="free-and-open-source-software." class="section level2">
+<h2><span class="header-section-number">1.3</span> Free and Open Source Software.</h2>
+<p>We are using QGIS software which is free to download and use. The university has a licence for commercial GIS software, but we are aware that not all students will have access to commercial software after completing the course. QGIS is becoming popular with many organisations. For more information about FOSS see: <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" class="uri">https://en.wikipedia.org/wiki/Free_and_open-source_software</a></p>
+<div id="vector-data" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Vector data</h3>
+<p>Vector data represents the features of the world as either ‘points’ ‘lines’ or ‘areas’ (also called polygons).</p>
+<p>Each type of feature is displayed in the GIS as a distinct layer. A layer will only contain either points, or lines or polygons. It is also good practice to have different layers for different types of line features. For example it is good to have a layer for roads and another for rivers.</p>
+<p>Maps can be made of several layers of vector data as seen here:<br />
+<a href="https://upload.wikimedia.org/wikipedia/commons/3/3b/USGS_The_National_Map.jpg" class="uri">https://upload.wikimedia.org/wikipedia/commons/3/3b/USGS_The_National_Map.jpg</a></p>
+</div>
+<div id="raster-data" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Raster data:</h3>
+<p>‘In its simplest form, a raster consists of a matrix of cells (or pixels) organized into rows and columns (or a grid) where each cell contains a value representing information, such as temperature. Rasters are digital aerial photographs, imagery from satellites, digital pictures, or even scanned maps’. (
+webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=What_is_raster_data%3F)</p>
+<p>(source: <a href="http://support.esri.com/other-resources/gis-dictionary/term/raster" class="uri">http://support.esri.com/other-resources/gis-dictionary/term/raster</a>)</p>
+</div>
+<div id="network-data" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Network data</h3>
+<p>A network dataset takes a line dataset and defines its topology explicitly. Defining topology means having a data tables that explicitly lists which lines are connected and at which nodes.<br />
+In its simplest form this means that the connections between the ends of different lines are recorded in the GIS.</p>
+</div>
+<div id="data-formats-how-is-data-stored-in-a-gis-and-on-your-computer." class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Data formats – how is data stored in a GIS and on your computer.</h3>
+<p>QGIS can handle a very large number of different data formats.<br />
+In today’s exervises we will start by using use a file format called “Shapefile” as it is a very common type of vector GIS data format. The Shapefile format was developed by ESRI who make the commercial GIS software ArcGIS(ArcGIS is also available on university machine).</p>
+<p>The Shapefile format appears on your computer as several files which may seem a little confusing. Each file contains a different type of information that the GIS needs to represent the spatial data.</p>
+<p>NB. If you ever want to share a shapefile with someone, you have to send the whole group of files</p>
+<div class="figure"><span id="fig:shp"></span>
+<img src="figures/Shapefile.jpg" alt="A shapefile is a group of files.  It is a common file format" width="100%" />
 <p class="caption">
-Figure 2.1: Starting QGIS
+Figure 1.1: A shapefile is a group of files. It is a common file format
 </p>
 </div>
-<!-- \end{center} -->
-<!-- \end{wrapfigure} -->
-<p>Select ‘QGIS Desktop’ from the list.
-If you have multiple versions, choose the latest version.
-You should see a new window appear that contains the main features of the QGIS program (see Figure <a href="working-with-qgis.html#fig:qgis-window">2.2</a>).</p>
-</div>
-<div id="key-qgis-components" class="section level2">
-<h2><span class="header-section-number">2.2</span> Key QGIS components</h2>
-<p>These include the following main components, numbered from 1:5 in the figure and the bullet points below (source: adapted from the <a href="https://docs.qgis.org/2.18/en/docs/user_manual/">QGIS Manual</a>):</p>
-<ol style="list-style-type: decimal">
-<li>Menu Bar: like most GUI-based programs you can control key aspects of QGIS and execute key commands, like saving your project and loading new datasets, by clicking Project or Layer. Note: shortcuts to access these menus from the keyboard are <code>Alt+J</code> and <code>Alt+L</code>, respectively.</li>
-<li>Toolbars: these are small icons located towards the top and left-hand side of Figure <a href="working-with-qgis.html#fig:qgis-window">2.2</a>. In addition to options available from the Menu Bar, these icons provide tools for interacting with the map such as Pan (the hand symbol) and Zoom (the + and - signs).</li>
-<li>Panels: Panels are interactive elements that show information on particular aspects of the project. A view of files in the Browser Panel and the Layers Panel are shown in Figure <a href="working-with-qgis.html#fig:qgis-window">2.2</a>.</li>
-<li>Map View: this is where the geographic data is displayed in an interactive map for interactive visualisation.</li>
-<li>Status Bar: this small but important element at the bottom of QGIS shows details about the current status of the Map View, such as the Coordinate Reference System (CRS), in this case, EPSG:3857 and scale.</li>
-</ol>
-<p>NB. GUI stands for Graphical User Interface. Any programme which wou interact with using menus and buttons has a GUI. Examples are Excel and QGIS.</p>
-<div class="figure"><span id="fig:qgis-window"></span>
-<img src="figures/QGISGUI.jpg" alt="QGIS main user interface features" width="100%" />
+<p>There are other types of GIS files including as JSON and geo-package formats. Data is stored in GIS as database tables.<br />
+GIS data can be stored and shared in a very large number of ways. (For an introduction see <a href="https://en.wikipedia.org/wiki/GIS_file_formats" class="uri">https://en.wikipedia.org/wiki/GIS_file_formats</a> as well as the further reading in the appendix.</p>
+<p>##Projections and co-ordinate systems
+The world is not flat but computer screens are. Projections and co-ordinate systems allow GIS to represent the curved surface of the earth on a flat screen or page.</p>
+<div class="figure"><span id="fig:qgis-window-projection"></span>
+<img src="figures/Projection_mjfoster.png" alt="How do we fit a curving earth onto a flat piece of paper" width="100%" />
 <p class="caption">
-Figure 2.2: QGIS main user interface features
+Figure 1.2: How do we fit a curving earth onto a flat piece of paper
 </p>
 </div>
-</div>
-<div id="set-up-the-project." class="section level2">
-<h2><span class="header-section-number">2.3</span> Set up the project.</h2>
-<p>Projects don’t contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date. They also allow you to set the co-ordinate reference system.</p>
-<p><strong>Set up the project as follows.</strong></p>
-<p>From the Project menu select project properties</p>
-<p>The following dialog box appears</p>
-<div class="figure"><span id="fig:projectsetup"></span>
-<img src="figures/setProjection.JPG" alt="Project menu, project properties, set Coordinate ReferenceSystsm 27700" width="50%" />
-<p class="caption">
-Figure 2.3: Project menu, project properties, set Coordinate ReferenceSystsm 27700
-</p>
-</div>
-<p>Type 27700 into the Filter box. 27700 refers to the “OSGB 1936 British National Grid”. This is a projected coordinate system for the UK. (there is a brief explanation of co-ordinate systems in chapter 2)</p>
-<p><strong>Click apply </strong> before clicking OK.
-If it has worked the bottom right of your screen will say “EPSG:27700”</p>
-<p>Save the project and give it a suitable name such as “QGIS_Intro”</p>
-<p>You can create, load, save and ‘save as’ projects using the buttons shown in Figure <a href="working-with-qgis.html#fig:projectbuttons">2.4</a> or using the options in the Project menu. QGIS project files have the extension.qgz</p>
-<div class="figure"><span id="fig:projectbuttons"></span>
-<img src="figures/project_buttons.JPG" alt="New Project, Open Project, Save Project, Save Project As buttons" width="50%" />
-<p class="caption">
-Figure 2.4: New Project, Open Project, Save Project, Save Project As buttons
-</p>
-</div>
-<p>A common GIS mistake is to send someone a project file and expect that they can look at your maps and data. But, this does not work, because project files do not contain data.<br />
-If you want to send someone a QGIS project to work on or look at, then you need to send them the project file and any data which you have loaded into the project. (We will show how to load data in the next chapter).</p>
-</div>
-<div id="panning-and-zooming" class="section level2">
-<h2><span class="header-section-number">2.4</span> Panning and Zooming</h2>
-<p>You can naviagate around the map using the mouse or the buttons in the toolbar.</p>
-<div class="figure"><span id="fig:navigation"></span>
-<img src="figures/navigation.jpg" alt="Navigation buttons: Pan Map, Pan to Selection, Zoom In, Zoom Out, Zoom to Native Resolution, Zoom Full, Zoom to Selection" width="100%" />
-<p class="caption">
-Figure 2.5: Navigation buttons: Pan Map, Pan to Selection, Zoom In, Zoom Out, Zoom to Native Resolution, Zoom Full, Zoom to Selection
-</p>
-</div>
-</div>
-<div id="summary" class="section level2">
-<h2><span class="header-section-number">2.5</span> Summary</h2>
-<p>This section introduced QGIS and its main components.
-Before moving on to the next section, in which we will import data into QGIS, ensure that you have:</p>
-<ol style="list-style-type: decimal">
-<li>Opened QGIS and created and named a project, setting the coordinate reference system and saving it in an appropriate place on your computer.</li>
-</ol>
+<p>Image source comes from this presentation: <a href="http://mjfoster83.github.io/projections/#/5" class="uri">http://mjfoster83.github.io/projections/#/5</a></p>
+<p>The projection is a mathematical formula explaining how places in the real world which are on a near spherical globe can be represented on a flat map. More information on projections and coordinate systems can be found in GIS test books.</p>
+<p>Coordinate Reference Systems (CRS) refer to different ways of defining the X and Y coordinates used in different projections. Largely they fall into two categories:</p>
+<ul>
+<li><p>Geographical Coordinate Systems: use latitude and longitude to represent any place on the Earth</p></li>
+<li><p>Projected Coordinate Systems: use distances from an origin point to represent a small part of the Earth, e.g. a country. The advantage of a projects CRS is that it is easier to calculate properties such as distance and area as coordinates are in metres.</p></li>
+</ul>
+<p>You can find a catalogue of different CRSs at <a href="http://spatialreference.org/" class="uri">http://spatialreference.org/</a></p>
+<p>CRSs are often referred to by the EPSG number. The European Petroleum Survey Group publish a database of different coordinate systems. Two useful projections to commit to memory are:</p>
+<ul>
+<li>4326 - the World Geodetic System 1984 which is a widely used geographical coordinate system, used in GPS datasets and the .geojson file format, for example.</li>
+<li>27700 - the British National Grid</li>
+</ul>
 
 </div>
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction-gis-ideas-and-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="working-with-qgis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -311,7 +327,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/02-working-with-QGIS.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/01-introduction.Rmd",
 "text": "Edit"
 },
 "history": {
