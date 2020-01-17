@@ -25,14 +25,14 @@ knitr::include_graphics("figures/open-data-source-manager.jpg")
 ```
 
 
-We will first load a polygon layer.  
-Open the Data Source Manager and select “Vector”.  
-Next press the button with 3 dots, which is below and right of where it says **source**.  
-Next navigate to the file by finding the folder "QGISintro_CourseData". 
-Inside this is another folder "Access_DeprivationLeeds"
-Add the data: "Access_DeprivationLeeds.shp"
+We will first load a polygon layer. 
 
-Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.
+1. Open the Data Source Manager and select “Vector”.  
+1. Next press the button with 3 dots, which is below and right of where it says **source**.  
+1. Next navigate to the file by finding the folder "QGISintro_CourseData". 
+1. Inside this is another folder "Access_DeprivationLeeds"
+1. Add the data: "Access_DeprivationLeeds.shp"
+1. Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.
 
 ```{r data-source-manager-shp, out.width="100%", fig.cap="The Data Source Manager - Vector", echo=FALSE, fig.show='hold'}
 knitr::include_graphics("figures/AddVectorLayer.jpg")
@@ -44,7 +44,10 @@ The result should look something like the map displayed in Figure \@ref(fig:impo
 knitr::include_graphics("figures/AccessDepLayerOnScreen.jpg")
 ```
 
-Next add the cycle_routes layer (note this is a line layer).  Follow the steps above, but note that you may need to 'navigate up the file tree (which means go up a folder level to 'IntroQGISdata2019') then you wil be able to click on the folder 'cycle_routes.         
+Next add the cycle_routes layer (note this is a line layer).  
+
+Follow the steps above, but note that you may need to 'navigate up the file tree' (which means go up a folder level to 'IntroQGISdata2019') then you will be able to click on the folder 'cycle_routes'.  
+
 
 
 ## Importing a CSV or text file
@@ -55,10 +58,10 @@ We have already loaded polygon and line data.  Now we will add point data
 Sometimes you have data that contains spatial information but is not in a spatial data format.  A common example is to have a CSV file with latitude and longitude columns. CSV is a common format for storing data and can be opened by lots of different software, including Microsoft Excel. 
 We will plot the location of vehicles collisions in Leeds.  Use the 'stats19.csv' example file.  
 
-Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
-Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”.  Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.  Note here we are explicitly telling QGIS the CRS of the data.  
+1. Open the Data Source Manager and select “Delimited Text” then specify the “File Name” and location, or use the … to navigate to the file.
+1. Under the “Geometry definition” select “Point coordinates” and set the “X field” to “longitude” and the “Y field” to “latitude”.  Set the “Geometry CRS” to “EPSG: 4326 – WGS 84”.  Note here we are explicitly telling QGIS the CRS of the data.  
 
-Click “Add” then “Close”.
+1. Click “Add” then “Close”.
 
 ```{r data-source-manager-csv, out.width="100%", fig.cap="The Data Source Manager - Delimited Text", echo=FALSE}
 knitr::include_graphics("figures/import_csv.jpg")
@@ -71,11 +74,11 @@ If you do, congratuations!
 
 ## Loading basemaps
 
-You can add a "basemap" by clicking on the 'XYZ Tiles' option in the Browser Panel. Options should include Google and OpenStreetMap.
-Clicking on one of these will add a new layer, which can be seen in the Layers menu.
+You can add a "basemap" as follows:  
 
-
-The basemap now obscures the other layers you have added.  Go to the layers panel and drag the basemap to the bottom of the list of layers.  The Basemap will now appear below the other layers.  
+1. Click on the 'XYZ Tiles' option in the Browser Panel. Options should include Google and OpenStreetMap.
+1. Clicking on one of these will add a new layer, which can be seen in the Layers menu.
+1. The basemap now obscures the other layers you have added.  Go to the layers panel and drag the basemap to the bottom of the list of layers.  The Basemap will now appear below the other layers.  
 
 
 **Now save your work**. Save your work regularly.  
