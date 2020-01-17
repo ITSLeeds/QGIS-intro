@@ -7,11 +7,18 @@
 
 **Learning objectives:**  
 
+
+
 * Process key GIS data types; vector and raster.
+
 * Carry out common vector geoprocessing tasks such as joining, selection, buffering and point in polygon operations.  
+
 * Carry out a raster processing activity.
+
 * Visualise transport flows as part of an accessibility analysis.
+
 * Understand that more complex GIS operations can be achieved in QGIS by using “plug-ins”.  
+
 * Be aware of a range openly available spatial data available to and useful to sustainable transport planning.  
 
 
