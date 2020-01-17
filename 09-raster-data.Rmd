@@ -1,12 +1,12 @@
 # Raster Data
 
-So far we have only used Vector data with QGIS, this chapter will introduce raster data.
+So far, we have only used Vector data with QGIS; this chapter will introduce raster data.
 
 ## What is the difference between raster and vector data.
 
-Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.
+Vector data is made up of points, lines, and polygons with attributes. This data structure makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.
 
-Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.
+Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands; for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.
 
 ## Download Sample Data
 
@@ -39,7 +39,7 @@ Enter the formula into the raster calculator notice the use of @ to designate th
 knitr::include_graphics("figures/raster-calcualtor.png")
 ```
 
-Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.
+Once the raster calculator is complete, you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.
 
 ```{r ndvi, fig.cap="The NDVI raster with a psudo-colour scheme applied", out.width="100%", echo=FALSE}
 knitr::include_graphics("figures/ndvi.png")
@@ -61,7 +61,7 @@ Complete the form to get statistics from the NDVI raster for each LSOA. When spe
 knitr::include_graphics("figures/zonal-statistics2.png")
 ```
 
-Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.
+Zonal statistics may take several minutes to run. Once completed, the mean NDVI value will be appended to the attribute table of the LSOA polygons.
 
 Adjust the symbology of your LSOA layer to reflect the NDVI scores.
 
