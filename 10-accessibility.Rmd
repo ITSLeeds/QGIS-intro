@@ -88,9 +88,8 @@ knitr::include_graphics("figures/hub-distance-centroids.png")
 
 ## Calculate cycle infrastructure provision along desire lines
 
-The accessibility measures we have calculated have been for zones.
-These static entities are the basis of many local statistics on their resident populations (inhabitants), but they tell us little about travel patterns.
-A more appropriate level of geographic analysis for transport planning is ofter the desire line, one-way trips between an origin and a destination [@lovelace_geocomputation_2019, Chapter 12].
+We have created an acessability measures for zones. WHile zones are widley used for local statics about resident populations (inhabitants), thier static nature tell us little about travel patterns.
+A more appropriate level of geographic analysis for transport planning is often the desire line; a one-way trip between an origin and a destination [@lovelace_geocomputation_2019, Chapter 12].
 Such desire lines are represented in the desire line object, loaded in Section \@ref(input-data), which were generated for the Propensity to Cycle Tool project (see [www.pct.bike](http://www.pct.bike/)).
 
 Although the desire lines represent travel, they clearly are not the routes that people take from home to work (the dataset comes from the 2011 Census question on travel to work).
