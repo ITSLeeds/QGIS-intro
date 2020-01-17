@@ -44,7 +44,7 @@ The result should look something like the map displayed in Figure \@ref(fig:impo
 knitr::include_graphics("figures/AccessDepLayerOnScreen.jpg")
 ```
 
-Next add the cycle_routes layer in the same way.  note this is a line layer       
+Next add the cycle_routes layer (note this is a line layer).  Follow the steps above, but note that you may need to 'navigate up the file tree (which means go up a folder level to 'IntroQGISdata2019') then you wil be able to click on the folder 'cycle_routes.         
 
 
 ## Importing a CSV or text file
