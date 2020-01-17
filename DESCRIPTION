@@ -1,0 +1,17 @@
+Package: QGISIntro
+Title: QGIS for Transport Research
+Version: 0.0.1
+Authors@R: c(person("Robin", "Lovelace", role = c("aut", "cre"), email = "r.lovelace@leeds.ac.uk"), 
+    person("Malcolm", "Morgan", role = c("aut")),
+    person("Ian", "Philips", role = c("aut")))
+Description: This resource is in two parts and accompanies teaching delivered on MSc degrees in transport to students at the
+  Institute for Transport Studies (ITS) at the University of Leeds.
+License: CC BY-NC-ND 4.0
+Depends: 
+    bookdown,
+    sf,
+    tmap,
+    spDataLarge,
+    geocompkg
+Encoding: UTF-8
+LazyData: true
