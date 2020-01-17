@@ -1,6 +1,6 @@
+# (PART) Extensions {-}
 
-
-# Introduction to Part 2
+# Next steps
 
 ### Learning Objectives: 
 **Aim:** Introduce SSPA students to key vector and raster GIS skills that will be used in the subsequent practicals and assessment
@@ -15,13 +15,13 @@
 •	Be aware of a range openly available spatial data available to and useful to sustainable transport planning.  
 
 
-### What is included in Part 2?
+<!-- ### What is included in Part 2? -->
 
-Part 2 contains information about key GIS processing tasks needed for the SSPA module.  
+<!-- Part 2 contains information about key GIS processing tasks needed for the SSPA module.   -->
 
 
 
-**NOTE:  Free and open source software such as QGIS changes between versions.  This means that what you see in this resource may look different to what you see in the version of QGIS you are using.**
+<!-- **NOTE:  Free and open source software such as QGIS changes between versions.  This means that what you see in this resource may look different to what you see in the version of QGIS you are using.** -->
 
 
 

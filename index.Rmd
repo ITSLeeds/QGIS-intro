@@ -44,14 +44,13 @@ knitr::opts_chunk$set(
 
 
 
-## What is this resource?  
+## What is this resource? {-}
 
 This resource is in two parts and accompanies teaching delivered on [MSc degrees in  transport](https://environment.leeds.ac.uk/transport-masters) to students at the Institute for Transport Studies (ITS) at the University of Leeds. 
 
-### Part 1 is an introduction to GIS for transport students 
+## Part 1: an introduction to GIS {-}
 
 This workbook contains information about getting started using Geographical Information Systems (GIS) using the QGIS application.  It assumes no prior knowledge of either GIS concepts or experience of using GIS applications.  
-
 
 ### Part 1 Pre-requisites {-}
 
@@ -63,18 +62,19 @@ The materials accompany a semester 1 face-to-face workshop for ITS Students, but
 Unless you are using a Univerist of leeds cluster computer, this course assumes that you have access to a working installation of QGIS 3 and an internet connection.
 We will explain how to download the data needed for the practicals in Chapter \@ref(data).
 
+## Part 2: QGIS for transport {-}
 
-
-
-### Part 2 is key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.
-
+Part 2 is about key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.
 [Sustainable Spatial Planning and Analysis](http://webprod3.leeds.ac.uk/catalogue/dynmodules.asp?Y=201920&M=TRAN-5115M) is a second semester MSc module taught at ITS.  
 Part 2 covers key skills required by students on this course.  These materials accompany a face to face workshop delivered as part of the module.  
 
-### Part 2 pre-requisites {-}
-The pre-requisite for this part is to be familiar with the ideas and skills covered in part 1.  
 
-## The aim of this resource: Why are we teaching GIS? 
+### Part 2 Pre-requisites {-}
+
+The pre-requisite for this part is to have worked through part 1.  
+
+## Why learn GIS? {-}
+
 We are teaching transport GIS because transport is an inherently geographic phenomena. All transport involves movement from one place on Earth to another, whether its by walking, flying or telecommunications.  Those movements and flows impact and are impacted upon by the people and places along the routes.  Geographic Information Systems (GIS) therefore have great potential to assist transport researchers and practitioners.  We are teaching QGIS.  Which is free and open source.
 
 
