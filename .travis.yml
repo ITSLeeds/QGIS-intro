@@ -11,6 +11,19 @@ cache:
   - ccache
 latex: false
 
+
+env:
+  global:
+    - MAKEFLAGS="-j 2"
+
+addons:
+    apt:
+        packages:
+            - libudunits2-dev
+            - libproj-dev
+            - libgeos-dev
+            - libgdal-dev
+
 # environment variables --------------------------------------------------------
 
 env:
