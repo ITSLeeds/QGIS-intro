@@ -14,7 +14,9 @@ In the vector, menu select Data management Tools, Reproject Layer.
 knitr::include_graphics("figures/reproject.png")
 ```
 
-```{r crs-menu, out.width="100%", fig.cap="Reproject MenuCordiante Reference System", echo=FALSE}
+Then select the British National Grid as the target CRS. If it is not listed in the drop-down menu, then use the button to the right to open the Coordinate Reference System menu.  You can use the search box to search for a CRS by name or its EPSG code.
+
+```{r crs-menu, out.width="100%", fig.cap="Reproject Menu Coordinate Reference System", echo=FALSE}
 knitr::include_graphics("figures/crs.png")
 ```
 
