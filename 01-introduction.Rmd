@@ -4,8 +4,10 @@
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
+# (PART) Foundations {-}
 
-# Introduction to Part 1 GIS ideas and concepts
+
+# Introduction: GIS ideas and concepts
 
 
 
