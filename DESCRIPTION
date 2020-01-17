@@ -9,9 +9,8 @@ Description: This resource is in two parts and accompanies teaching delivered on
 License: CC BY-NC-ND 4.0
 Depends: 
     bookdown,
+    dplyr,
     sf,
-    tmap,
-    spDataLarge,
-    geocompkg
+    tmap
 Encoding: UTF-8
 LazyData: true
