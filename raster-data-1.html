@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Raster Data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
-  <meta name="generator" content="bookdown 0.17.1 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Raster Data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
@@ -123,7 +123,7 @@
 </ul></li>
 <li class="part"><span><b>III Extensions</b></span></li>
 <li class="chapter" data-level="6" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>6</b> Next steps</a><ul>
-<li class="chapter" data-level="6.0.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.0.1</b> Learning Objectives:</a></li>
+<li class="chapter" data-level="6.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives:</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="processing-vector-data.html"><a href="processing-vector-data.html"><i class="fa fa-check"></i><b>7</b> Processing vector data</a><ul>
 <li class="chapter" data-level="7.1" data-path="processing-vector-data.html"><a href="processing-vector-data.html#reprojecting-data"><i class="fa fa-check"></i><b>7.1</b> Reprojecting Data</a></li>
@@ -188,11 +188,11 @@
             <section class="normal" id="section-">
 <div id="raster-data-1" class="section level1">
 <h1><span class="header-section-number">8</span> Raster Data</h1>
-<p>So far we have only used Vector data with QGIS, this chapter will introduce raster data.</p>
+<p>So far, we have only used Vector data with QGIS; this chapter will introduce raster data.</p>
 <div id="what-is-the-difference-between-raster-and-vector-data." class="section level2">
 <h2><span class="header-section-number">8.1</span> What is the difference between raster and vector data.</h2>
-<p>Vector data is made up of points, lines, and polygons with attributes. This makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.</p>
-<p>Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands, for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.</p>
+<p>Vector data is made up of points, lines, and polygons with attributes. This data structure makes it well suited to many GIS purposes. For example, we have already seen that the boundaries of an LSOA can be recorded as a polygon and that each polygon can have attributes like the area name, population etc.</p>
+<p>Raster data is very different. It is essentially an image where each pixel has a value. Rasters are always rectangular and have a fixed resolution (so they become pixilated as you zoom in). A common use of raster data is satellite and aerial photography. These images are made from three overlapping rasters (often called a raster stack or raster brick). The three rasters represent the Red, Blue, Green colour bands which together make up a full-colour image. Raster can have more than three bands; for example, they may be used to represent changes over time or colours beyond human perception such as infra-red or ultraviolet.</p>
 </div>
 <div id="download-sample-data" class="section level2">
 <h2><span class="header-section-number">8.2</span> Download Sample Data</h2>
@@ -222,7 +222,7 @@ Figure 8.1: The sample raster data added to the map
 Figure 8.2: The raster calcualtor with the NDVI formula
 </p>
 </div>
-<p>Once the raster calculator is complete you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.</p>
+<p>Once the raster calculator is complete, you should have a new raster layer. It will be in greyscale with values between -1 (least vegetated) and 1 most vegetated. You can adjust the symbology to make the vegetated areas clearer. In the figure, three colours are defined 0 (white), 0.2 (light green), 1 (dark green). These colours approximately make trees dark green, grass light green, and all non-vegetation white.</p>
 <div class="figure"><span id="fig:ndvi"></span>
 <img src="figures/ndvi.png" alt="The NDVI raster with a psudo-colour scheme applied" width="100%" />
 <p class="caption">
@@ -247,7 +247,7 @@ Figure 8.4: The Zonal Statistics tool in the processing toolbox
 Figure 8.5: The Zonal Statistics tool
 </p>
 </div>
-<p>Zonal statistics may take several minutes to run. Once completed the mean NDVI value will be appended to the attribute table of the LSOA polygons.</p>
+<p>Zonal statistics may take several minutes to run. Once completed, the mean NDVI value will be appended to the attribute table of the LSOA polygons.</p>
 <p>Adjust the symbology of your LSOA layer to reflect the NDVI scores.</p>
 <div class="figure"><span id="fig:lsoa-ndvi"></span>
 <img src="figures/lsoa-ndvi.png" alt="LSOA areas with average NDVI scores" width="100%" />

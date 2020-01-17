@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Processing vector data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
-  <meta name="generator" content="bookdown 0.17.1 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Processing vector data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
@@ -123,7 +123,7 @@
 </ul></li>
 <li class="part"><span><b>III Extensions</b></span></li>
 <li class="chapter" data-level="6" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>6</b> Next steps</a><ul>
-<li class="chapter" data-level="6.0.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.0.1</b> Learning Objectives:</a></li>
+<li class="chapter" data-level="6.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives:</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="processing-vector-data.html"><a href="processing-vector-data.html"><i class="fa fa-check"></i><b>7</b> Processing vector data</a><ul>
 <li class="chapter" data-level="7.1" data-path="processing-vector-data.html"><a href="processing-vector-data.html#reprojecting-data"><i class="fa fa-check"></i><b>7.1</b> Reprojecting Data</a></li>
@@ -193,32 +193,33 @@ In this section, we will learn how to process data.
 That means creating new data from existing data.</p>
 <div id="reprojecting-data" class="section level2">
 <h2><span class="header-section-number">7.1</span> Reprojecting Data</h2>
-<p>Our two spatial datasets have different coordinate systems. This can make it difficult to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.K</p>
-<p>In the vector, menu select Data management Tools, Reproject Layer</p>
+<p>Our two spatial datasets have different coordinate systems. This can make it challenging to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.</p>
+<p>In the vector, menu select Data management Tools, Reproject Layer.</p>
 <div class="figure"><span id="fig:reproject-menu"></span>
 <img src="figures/reproject.png" alt="Reproject Menu" width="100%" />
 <p class="caption">
 Figure 7.1: Reproject Menu
 </p>
 </div>
+<p>Then select the British National Grid as the target CRS. If it is not listed in the drop-down menu, then use the button to the right to open the Coordinate Reference System menu. You can use the search box to search for a CRS by name or its EPSG code.</p>
 <div class="figure"><span id="fig:crs-menu"></span>
-<img src="figures/crs.png" alt="Reproject MenuCordiante Reference System" width="100%" />
+<img src="figures/crs.png" alt="Reproject Menu Coordinate Reference System" width="100%" />
 <p class="caption">
-Figure 7.2: Reproject MenuCordiante Reference System
+Figure 7.2: Reproject Menu Coordinate Reference System
 </p>
 </div>
 </div>
 <div id="joining-data" class="section level2">
 <h2><span class="header-section-number">7.2</span> Joining Data</h2>
-<p>Joining data allows you to link two separate datasets together by something they have in common. There are two types of join. Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link dataset by a shared location.</p>
+<p>Joining data allows you to link two separate datasets together by something they have in common. There are two types of join. Attribute joins (often just called joins) link two datasets by a common attribute such as an ID number. Spatial joins link datasets by a shared location.</p>
 <p>In this next section, we will use a series of joins to find the area of Leeds with the highest rate of road collisions.</p>
 <div id="attribute-joins" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> Attribute Joins</h3>
 <p>We will join the population data onto the LSOA boundaries.</p>
-<p>Find “leeds_lsoa” in the Layers panel and right-click to bring up the context menu</p>
+<p>Find “leeds_lsoa” in the Layers panel and right-click to bring up the context menu.</p>
 <p>Click on Properties</p>
-<p>Select Joins from the options on the left</p>
-<p>Click the green + button to open the Add Vector Join window</p>
+<p>Select Joins from the options on the left.</p>
+<p>Click the green + button to open the Add Vector Join window.</p>
 <p>Select the following options:</p>
 <pre><code>Join layer: population
 
@@ -238,28 +239,27 @@ Figure 7.3: The Add Vector Join window
 <div id="spatial-joins" class="section level3">
 <h3><span class="header-section-number">7.2.2</span> Spatial Joins</h3>
 <p>We will assign an LSOA ID number to each road collision by doing a spatial join.<br />
-In the “Vector” menu, select “Data Management Tools”, then “Join Attributes by Location”.</p>
+In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in <a href="processing-vector-data.html#fig:joins-menu">7.4</a>.</p>
 <div class="figure"><span id="fig:joins-menu"></span>
 <img src="figures/spatial_joins.jpg" alt="Join Attributes by Location" width="100%" />
 <p class="caption">
 Figure 7.4: Join Attributes by Location
 </p>
 </div>
-<p>In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in <a href="processing-vector-data.html#fig:joins-window">7.5</a>.</p>
+<p>For the Input Layer select “stats19” and for the output later select “leeds_lsoa”. For join type select “Create separate feature of each located feature”. Then click “Run in Background”, as shown in <a href="processing-vector-data.html#fig:joins-window">7.5</a>.</p>
 <div class="figure"><span id="fig:joins-window"></span>
 <img src="figures/spatial_joins_window.jpg" alt="Join Attributes by Location Window" width="100%" />
 <p class="caption">
 Figure 7.5: Join Attributes by Location Window
 </p>
 </div>
-<p>For the Input Layer select “stats19” and for the output later select “leeds_lsoa”. For join type select “Create separate feature of each located feature”. Then click run.</p>
+<p>Once the process has completed a new layer will have been added to the map called “joined Layer” you can use the “Identify Features” tool to see that each point in the stas19 data now has the new field lsoa11cd containing the LSOA id number for each point in the stats19 data. Manually check a few random points using the “Identify Features” tool to ensure the process has worked correctly.</p>
 <div class="figure"><span id="fig:joins-result"></span>
 <img src="figures/spatial_join_result.jpg" alt="Join Results" width="100%" />
 <p class="caption">
 Figure 7.6: Join Results
 </p>
 </div>
-<p>Once the process has completed a new layer will have been added to the map called “joined Layer” you can use the “Identify features” tool to see that each point in the stas19 data now has the</p>
 </div>
 </div>
 <div id="points-in-polygons" class="section level2">
@@ -273,7 +273,7 @@ Figure 7.7: Points in Polygons Tool
 </p>
 </div>
 <p>For the Polygons choose your LSOA areas and the points the stats19 data. USe the number of casualties as a weighting field, and give the “count field name” an appropriate name.</p>
-<p>A new layer will be created with the number of casualties for each LSOA. USe Symbology to visualise the most dangerous areas of Leeds.</p>
+<p>A new layer will be created with the number of casualties for each LSOA. Use symbology to visualise the most dangerous areas of Leeds.</p>
 <div class="figure"><span id="fig:final-plot"></span>
 <img src="figures/final_plot.jpg" alt="Number of road crash casualties in Leeds" width="100%" />
 <p class="caption">
@@ -287,7 +287,7 @@ Figure 7.8: Number of road crash casualties in Leeds
 </div>
 <div id="summary-4" class="section level2">
 <h2><span class="header-section-number">7.4</span> Summary</h2>
-<p>Before moving onto the next chapter make sure you have.</p>
+<p>Before moving onto the next chapter, make sure you have.</p>
 <ol style="list-style-type: decimal">
 <li>Reprojected the stats19 data to the British National Grid</li>
 <li>Done an attribute join of the population data to the LSOA areas</li>
@@ -297,7 +297,7 @@ Figure 7.8: Number of road crash casualties in Leeds
 <p>Bonus Exercises</p>
 <ol style="list-style-type: decimal">
 <li>Can you use symbology to show the population of each LSOA?</li>
-<li>Can you use symbology to show the number of casualties in each LSOA?</li>
+<li>Can you use symbology to indicate the number of casualties in each LSOA?</li>
 </ol>
 
 </div>

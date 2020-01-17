@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Style and select features | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
-  <meta name="generator" content="bookdown 0.17.1 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Style and select features | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
@@ -123,7 +123,7 @@
 </ul></li>
 <li class="part"><span><b>III Extensions</b></span></li>
 <li class="chapter" data-level="6" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>6</b> Next steps</a><ul>
-<li class="chapter" data-level="6.0.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.0.1</b> Learning Objectives:</a></li>
+<li class="chapter" data-level="6.1" data-path="next-steps.html"><a href="next-steps.html#learning-objectives-1"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives:</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="processing-vector-data.html"><a href="processing-vector-data.html"><i class="fa fa-check"></i><b>7</b> Processing vector data</a><ul>
 <li class="chapter" data-level="7.1" data-path="processing-vector-data.html"><a href="processing-vector-data.html#reprojecting-data"><i class="fa fa-check"></i><b>7.1</b> Reprojecting Data</a></li>
@@ -191,25 +191,29 @@
 <div id="identify-features" class="section level2">
 <h2><span class="header-section-number">4.1</span> Identify Features</h2>
 <p>You now have several layers on your map. You can turn layers on and off by clicking the tick box to the left of the layer in the layer tab. You can also change the order of layers by dragging layers up and down the layer panel.</p>
-<p>In the layers panel, Single left click where it says “Acess_deprivationLeeds”. This will allow us to identify features from that layer.</p>
-<p>Press the ‘Identify features button’/. It allows you to interrogate features on the map by clicking on them (see Figure <a href="style-and-select-features.html#fig:identify">4.1</a>).</p>
+<ol style="list-style-type: decimal">
+<li><p>In the layers panel, Single left click where it says “Acess_deprivationLeeds”. This will allow us to identify features from that layer.</p></li>
+<li><p>Press the ‘Identify features button’/. It allows you to interrogate features on the map by clicking on them (see Figure <a href="style-and-select-features.html#fig:identify">4.1</a>).</p></li>
+</ol>
 <div class="figure"><span id="fig:identify"></span>
 <img src="figures/identify.jpg" alt="Identify Features Button" width="10%" />
 <p class="caption">
 Figure 4.1: Identify Features Button
 </p>
 </div>
-<p>Clicking on a map feature brings up a panel with more information about that feature.
-(see Figure <a href="style-and-select-features.html#fig:identify-panel">4.2</a>).</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Clicking on a map feature brings up a panel with more information about that feature.
+(see Figure <a href="style-and-select-features.html#fig:identify-panel">4.2</a>).</li>
+</ol>
 <p>The names which appear in the panel might not make sense. It is good practice when creating GIS data to make a note of what each column name means, where the data comes from and provide ‘metadata’.</p>
 <p>This list of “basic metadata” tells you what each column of data is (data columns also get called data fields).</p>
 <ul>
 <li>Access_DeprivationLeeds</li>
 <li>LSOA11C LSOA code</li>
-<li>emp2013 = travel time to nearest employment centre</li>
-<li>gpp2013 = travel time to nearest doctor 2013</li>
-<li>hsp2013 = travel time to nearest hospital 2013</li>
-<li>twn2013 = travel time to nearest town centre 2013</li>
+<li>emp2013 = travel time (minutes) to nearest employment centre</li>
+<li>gpp2013 = travel time (minutes) to nearest doctor 2013</li>
+<li>hsp2013 = travel time (minutes) to nearest hospital 2013</li>
+<li>twn2013 = travel time (minutes) to nearest town centre 2013</li>
 <li>IMDDecl = Index of multiple Deprivation decile</li>
 <li>pop = population</li>
 <li>pop_dens = population density per hectare</li>
@@ -224,17 +228,17 @@ Figure 4.2: Identify Features Pannel
 <div id="the-attribute-table" class="section level2">
 <h2><span class="header-section-number">4.2</span> The Attribute Table</h2>
 <p>As well as mapping shapes, QGIS stores information about each feature called “attributes” in an attribute table.</p>
-<ul>
+<ol style="list-style-type: decimal">
 <li>To open the attribute table, Go to the layer panel and right click on the layer AccessvsDep_Leeds layer</li>
 <li>Click “open attribute table”.</li>
-</ul>
+</ol>
 <p>The attribute table looks rather like a spreadsheet, the columns (data fields) are labeled as per the metadata above.</p>
 </div>
 <div id="symbology" class="section level2">
 <h2><span class="header-section-number">4.3</span> Symbology</h2>
 <p>So far you have loaded layers to show the shapes and locations of features. You can also change the appearance of layers to communicate additional information about the attributes of particular features in particular places. This is called symbology.</p>
 <p><strong>Setting symbology, colour and transparency of a polygon layer</strong></p>
-<ul>
+<ol style="list-style-type: decimal">
 <li>Double click on the Access_DeprivationLeeds layer, the ‘Layer properties’ dialog box appears
 We are going to display deprivation deciles as categories.<br />
 </li>
@@ -246,7 +250,7 @@ We are going to display deprivation deciles as categories.<br />
 <li>Click the ‘Layer Rendering’ arrow and Set the opacity slider to 50%.<br />
 </li>
 <li>Click apply and then OK.</li>
-</ul>
+</ol>
 <div class="figure"><span id="fig:polygonSymbology"></span>
 <img src="figures/polygonSymbols2.jpg" alt="Setting the symbology of a polygon layer" width="100%" />
 <p class="caption">
@@ -256,22 +260,28 @@ Figure 4.3: Setting the symbology of a polygon layer
 <p><strong>Setting symbology of a line layer with a single symbol</strong></p>
 <p>Double click on the layer name, select symbology and experiment with the line colour and thickness to get something that shows up well.</p>
 <p><strong>Setting symbology of a point layer</strong></p>
-<p>Another way to open the layer properties dialog box is as follows:<br />
-In the layers panel right click on “stats19” and select “properties”, in the menu on the left select “Symbology”</p>
+<p>Another way to open the layer properties dialog box is as follows:</p>
+<ol style="list-style-type: decimal">
+<li>In the layers panel right click on “stats19” and select “properties”, in the menu on the left select “Symbology”</li>
+</ol>
 <div class="figure"><span id="fig:symbology-menu"></span>
 <img src="figures/symbology.png" alt="Symbology Menu used to categorise a point layer" width="100%" />
 <p class="caption">
 Figure 4.4: Symbology Menu used to categorise a point layer
 </p>
 </div>
-<p>For the type of Symbology select “Categorised”, the column “accident_severity”, then chose a colour ramp from the drop-down menu. Then click “Classify”. This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>For the type of Symbology select “Categorised”, the column “accident_severity”, then chose a colour ramp from the drop-down menu. Then click “Classify”. This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.</li>
+</ol>
 <div class="figure"><span id="fig:symbology-results"></span>
 <img src="figures/symbology_results.png" alt="Road collisons categoried by severity" width="100%" />
 <p class="caption">
 Figure 4.5: Road collisons categoried by severity
 </p>
 </div>
-<p>Finally Using the opacity slider (in the symbology dialog box) and re-ordering the layers (by dragging them in the layer panel), arrange the mulitple layers clearly. You may also want to zoom in or our a little to ensure you can see all the map features.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Finally Using the opacity slider (in the symbology dialog box) and re-ordering the layers (by dragging them in the layer panel), arrange the mulitple layers clearly. You may also want to zoom in or our a little to ensure you can see all the map features.</li>
+</ol>
 <p><strong>Be sure to save your work regularly</strong></p>
 </div>
 <div id="summary-2" class="section level2">
