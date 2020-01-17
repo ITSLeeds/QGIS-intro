@@ -60,26 +60,24 @@ Use the "Identify features" tool to see that each LSOA now has a population valu
 
 ### Spatial Joins
 We will assign an LSOA ID number to each road collision by doing a spatial join.  
-In the "Vector" menu, select "Data Management Tools", then "Join Attributes by Location".
+In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in \@ref(fig:joins-menu).
 
 ```{r joins-menu, out.width="100%", fig.cap="Join Attributes by Location", echo=FALSE}
 knitr::include_graphics("figures/spatial_joins.jpg")
 ```
 
-In the Vector Menu, select Data Management Tools, Select Attributes by location, as shown in \@ref(fig:joins-window).
+For the Input Layer select "stats19" and for the output later select "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click "Run in Background", as shown in \@ref(fig:joins-window).
 
 ```{r joins-window, out.width="100%", fig.cap="Join Attributes by Location Window", echo=FALSE}
 knitr::include_graphics("figures/spatial_joins_window.jpg")
 ```
 
-For the Input Layer select "stats19" and for the output later select "leeds_lsoa". For join type select "Create separate feature of each located feature". Then click run.
-
+Once the process has completed a new layer will have been added to the map called "joined Layer" you can use the "Identify Features" tool to see that each point in the stas19 data now has the new field lsoa11cd containing the LSOA id number for each point in the stats19 data. Manually check a few random points using the "Identify Features" tool to ensure the process has worked correctly.
 
 ```{r joins-result, out.width="100%", fig.cap="Join Results", echo=FALSE}
 knitr::include_graphics("figures/spatial_join_result.jpg")
 ```
 
-Once the process has completed a new layer will have been added to the map called "joined Layer" you can use the "Identify features" tool to see that each point in the stas19 data now has the  
 
 ## Points in Polygons
 
