@@ -4,16 +4,17 @@
 
 You now have several layers on your map.  You can turn layers on and off by clicking the tick box to the left of the layer in the layer tab.  You can also change the order of layers by dragging layers up and down the layer panel.  
 
-In the layers panel, Single left click where it says "Acess_deprivationLeeds". This will allow us to identify features from that layer.   
+1. In the layers panel, Single left click where it says "Acess_deprivationLeeds". This will allow us to identify features from that layer.   
 
-Press the  'Identify features button'/. It allows you to interrogate features on the map by clicking on them (see Figure \@ref(fig:identify)). 
+1. Press the  'Identify features button'/. It allows you to interrogate features on the map by clicking on them (see Figure \@ref(fig:identify)). 
 
 ```{r identify, out.width="10%", fig.cap="Identify Features Button", echo=FALSE}
 knitr::include_graphics("figures/identify.jpg")
 ```
 
-Clicking on a map feature brings up a panel with more information about that feature.
+3. Clicking on a map feature brings up a panel with more information about that feature.
 (see Figure \@ref(fig:identify-panel)).
+
 
 The names which appear in the panel might not make sense.  It is good practice when creating GIS data to make a note of what each column name means, where the data comes from and provide ‘metadata’.  
 
@@ -22,10 +23,10 @@ This list of "basic metadata" tells you what each column of data is (data column
 
 * Access_DeprivationLeeds 
 * LSOA11C LSOA code
-* emp2013 =  travel time to nearest employment centre
-* gpp2013 = travel time to nearest doctor 2013
-* hsp2013 = travel time to nearest hospital 2013
-* twn2013 = travel time to nearest town centre 2013
+* emp2013 =  travel time (minutes) to nearest employment centre
+* gpp2013 = travel time (minutes) to nearest doctor 2013
+* hsp2013 = travel time (minutes) to nearest hospital 2013
+* twn2013 = travel time (minutes) to nearest town centre 2013
 * IMDDecl = Index of multiple Deprivation decile 
 * pop = population 
 * pop_dens = population density per hectare
@@ -41,8 +42,8 @@ knitr::include_graphics("figures/identifyResults2.jpg")
 
 As well as mapping shapes, QGIS stores information about each feature called “attributes” in an attribute table. 
 
-*	To open the attribute table, Go to the layer panel and right click on the layer AccessvsDep_Leeds layer
-*	Click "open attribute table".  
+1.  To open the attribute table, Go to the layer panel and right click on the layer AccessvsDep_Leeds layer
+1.  Click "open attribute table".  
 
 The attribute table looks rather like a spreadsheet, the columns (data fields) are labeled as per the metadata above.  
 
@@ -54,15 +55,16 @@ So far you have loaded layers to show the shapes and locations of features.  You
 
 **Setting symbology, colour and transparency of a polygon layer**
 
-*	Double click on the Access_DeprivationLeeds  layer, the ‘Layer properties’ dialog box appears
+
+1.	Double click on the Access_DeprivationLeeds  layer, the ‘Layer properties’ dialog box appears
 We are going to display deprivation deciles as categories.  
-*	Click the dropdown menu where it says 'single symbol'.  Select 'categorised' from the classification drop down menu shown below because the deciles are Ordinal data.  (You would choose 'Graduated' if you were visualising a continuous variable such as population density)
-*	Select 'IMDDecl' from the column drop down list.
-*	Select 'Blues' from the Color Ramp drop down list
-*	Press the 'Classify' button
-* Press the Colour ramp dropdown list again.  This time select 'invert colour ramp' (1 is most deprived 10 is least deprived)
-*	Click the 'Layer Rendering' arrow and Set the opacity slider to 50%.  
-*	Click  apply and then OK.  
+1.	Click the dropdown menu where it says 'single symbol'.  Select 'categorised' from the classification drop down menu shown below because the deciles are Ordinal data.  (You would choose 'Graduated' if you were visualising a continuous variable such as population density)
+1. Select 'IMDDecl' from the column drop down list.
+1. Select 'Blues' from the Color Ramp drop down list
+1. Press the 'Classify' button
+1. Press the Colour ramp dropdown list again.  This time select 'invert colour ramp' (1 is most deprived 10 is least deprived)
+1. Click the 'Layer Rendering' arrow and Set the opacity slider to 50%.  
+1. Click  apply and then OK.  
 
 
 ```{r polygonSymbology, out.width="100%", fig.cap="Setting the symbology of a polygon layer", echo=FALSE}
@@ -79,7 +81,8 @@ Double click on the layer name, select symbology and experiment with the line co
 **Setting symbology of a point layer**
 
 Another way to open the layer properties dialog box is as follows:  
-In the layers panel right click on "stats19" and select "properties", in the menu on the left select "Symbology"
+
+1. In the layers panel right click on "stats19" and select "properties", in the menu on the left select "Symbology"
 
 
 
@@ -87,14 +90,16 @@ In the layers panel right click on "stats19" and select "properties", in the men
 knitr::include_graphics("figures/symbology.png")
 ```
 
-For the type of Symbology select "Categorised", the column "accident_severity", then chose a colour ramp from the drop-down menu. Then click "Classify". This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.
+
+2. For the type of Symbology select "Categorised", the column "accident_severity", then chose a colour ramp from the drop-down menu. Then click "Classify". This will add all the different possible values from the data and assign each a unique colour. Click OK to return to the map.
 
 ```{r symbology-results, out.width="100%", fig.cap="Road collisons categoried by severity", echo=FALSE}
 knitr::include_graphics("figures/symbology_results.png")
 ```
 
 
-Finally Using the opacity slider (in the symbology dialog box) and re-ordering the layers (by dragging them in the layer panel), arrange the mulitple layers clearly.  You may also want to zoom in or our a little to ensure you can see all the map features.  
+
+3. Finally Using the opacity slider (in the symbology dialog box) and re-ordering the layers (by dragging them in the layer panel), arrange the mulitple layers clearly.  You may also want to zoom in or our a little to ensure you can see all the map features.  
 
 **Be sure to save your work regularly**
 
