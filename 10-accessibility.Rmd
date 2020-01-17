@@ -162,7 +162,7 @@ Use the search bar to explore for plugins. What happens if you search for 'trans
 
 **Exercise: install the QuickMapServices plugin and use it to put a basemap showing Leeds in the Map View.**
 Hint: after you have installed the plugin navigate to the Web menu (or press `Alt+W`).
-After completing the exercise, your QGIS session should look something like that displayed in Figure \@ref(fig:webmap).
+<!-- After completing the exercise, your QGIS session should look something like that displayed in Figure \@ref(fig:webmap). -->
 
 
 
