@@ -1,12 +1,18 @@
 # Processing vector data
 
-We saw in Chapter 5 how to style and select features of interest from layers loaded into QGIS.
+We saw in Chapter \@ref(style-and-select-features) how to style and select features of interest from layers loaded into QGIS.
 In this section, we will learn how to process data.
 That means creating new data from existing data.
 
+```{block2, type="rmdnote"}
+You must have loaded data and have done the exercises in the previous chapters, particularly loading the data in Chapter \@ref(data), before proceeding.
+```
+
+
+
 ## Reprojecting Data
 
-Our two spatial datasets have different coordinate systems. This can make it challenging to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.
+Two of the three geographic datasets loaded in Chapter \@ref(data) have different coordinate systems. This can make it challenging to make connections between the datasets. So we will reproject the stats19 data to the British National Grid.
 
 In the vector, menu select Data management Tools, Reproject Layer.
 
