@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>11 Data sources for transport data | QGIS for Transport Research: an introduction</title>
+  <title>5 Create and edit (transport) data | QGIS for Transport Research: an introduction</title>
   <meta name="description" content="A book on using open source Geographic Information System for transport planning." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="11 Data sources for transport data | QGIS for Transport Research: an introduction" />
+  <meta property="og:title" content="5 Create and edit (transport) data | QGIS for Transport Research: an introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="ITSLeeds/QGIS-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="11 Data sources for transport data | QGIS for Transport Research: an introduction" />
+  <meta name="twitter:title" content="5 Create and edit (transport) data | QGIS for Transport Research: an introduction" />
   
   <meta name="twitter:description" content="A book on using open source Geographic Information System for transport planning." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="accessibility-analysis.html"/>
-<link rel="next" href="further-reading.html"/>
+<link rel="prev" href="style-and-select-features.html"/>
+<link rel="next" href="making-maps.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -187,64 +187,17 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-sources-for-transport-data" class="section level1">
-<h1><span class="header-section-number">11</span> Data sources for transport data</h1>
-<p>There are many good transport datasets out there, but they are not always easy to find.</p>
-<div id="useful-data-sources" class="section level2">
-<h2><span class="header-section-number">11.1</span> Useful data sources</h2>
-<p>The list below provides links to some key data sources that may be of use and interest, starting with the most universal and easy to use, and ending in rather specific datasets.</p>
-<ul>
-<li>UK geoportal, providing geographic data at many levels: <a href="https://geoportal.statistics.gov.uk" class="uri">https://geoportal.statistics.gov.uk</a></li>
-<li>Other national geoportals exist, such as this: <a href="http://www.geoportal.org/" class="uri">http://www.geoportal.org/</a></li>
-<li>A good source of cleaned origin destination data is the Region downloads tab in the Propensity to Cycle Tool <span class="citation">(Lovelace et al. 2017)</span> - see the Region data tab for West Yorkshire here, for example: <a href="http://www.pct.bike/m/?r=west-yorkshire" class="uri">http://www.pct.bike/m/?r=west-yorkshire</a></li>
-<li>OpenStreetMap is an excellent source of geographic data with global coverage. You can download data on specific queries (e.g. highway=cycleway) from the overpass-turbo service: <a href="https://overpass-turbo.eu/" class="uri">https://overpass-turbo.eu/</a></li>
-</ul>
-<div id="uk-specific-resources" class="section level3">
-<h3><span class="header-section-number">11.1.1</span> UK specific resources</h3>
-<p>Students can register with Edina Digimap. It is a service which will allow you to download UK topographic map data.<br />
-<a href="https://digimap.edina.ac.uk/webhelp/digimapsupport/about.htm#access/access_to_digimap.htm" class="uri">https://digimap.edina.ac.uk/webhelp/digimapsupport/about.htm#access/access_to_digimap.htm</a></p>
-<p>UK census data can be accessed from several places including:
-<a href="https://census.edina.ac.uk/bds.html" class="uri">https://census.edina.ac.uk/bds.html</a>
-<a href="https://www.nomisweb.co.uk/census/2011" class="uri">https://www.nomisweb.co.uk/census/2011</a></p>
-</div>
-<div id="international-resources" class="section level3">
-<h3><span class="header-section-number">11.1.2</span> International resources</h3>
-<p><a href="http://freegisdata.rtwilson.com/" class="uri">http://freegisdata.rtwilson.com/</a> Note this has a listing of several transport data sources
-<a href="http://www.gadm.org/" class="uri">http://www.gadm.org/</a> boundary datasets for administrative areas around the world.<br />
-<a href="https://www.gislounge.com/world-gis-data/" class="uri">https://www.gislounge.com/world-gis-data/</a> links to further resources
-<a href="http://wiki.openstreetmap.org/wiki/Downloading_data" class="uri">http://wiki.openstreetmap.org/wiki/Downloading_data</a> information about downloading Open streetmap (OSM) data.<br />
-<a href="https://library.stanford.edu/research/stanford-geospatial-center/data" class="uri">https://library.stanford.edu/research/stanford-geospatial-center/data</a> Stanford University directory of data sources
-<a href="http://www.diva-gis.org/gdata" class="uri">http://www.diva-gis.org/gdata</a> available datasets by country.</p>
-<p>(availability of these resources may change)</p>
-</div>
-</div>
-<div id="online-lists" class="section level2">
-<h2><span class="header-section-number">11.2</span> Online lists</h2>
-<p>For other datasets, search online! Good starting points in your research may be:</p>
-<ul>
-<li>The open data section in <span class="citation">Lovelace, Nowosad, and Muenchow (2019)</span> - <a href="https://geocompr.robinlovelace.net/read-write.html#retrieving-data" class="uri">https://geocompr.robinlovelace.net/read-write.html#retrieving-data</a></li>
-<li>Transport datasets mentioned here: <a href="https://data.world/datasets/transportation" class="uri">https://data.world/datasets/transportation</a></li>
-<li>UK government transport data: <a href="https://ckan.publishing.service.gov.uk/publisher/department-for-transport" class="uri">https://ckan.publishing.service.gov.uk/publisher/department-for-transport</a></li>
-</ul>
-</div>
-<div id="data-packages" class="section level2">
-<h2><span class="header-section-number">11.3</span> Data packages</h2>
-<ul>
-<li>The ors and OSMTools QGIS plugins provide a range of datasets</li>
-<li>The stats19 package can get road crash data for anywhere in Great Britain <span class="citation">(Lovelace et al. 2019)</span> see here for info: <a href="https://itsleeds.github.io/stats19/" class="uri">https://itsleeds.github.io/stats19/</a></li>
-<li>The pct package provides access to data in the PCT: <a href="https://github.com/ITSLeeds/pct" class="uri">https://github.com/ITSLeeds/pct</a></li>
-<li>There are many other QGIS and R packages and plugins to help access data</li>
-</ul>
+<div id="create-and-edit-transport-data" class="section level1">
+<h1><span class="header-section-number">5</span> Create and edit (transport) data</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="accessibility-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="further-reading.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="style-and-select-features.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="making-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -275,7 +228,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/11-data-sources.Rmd",
+"link": "https://github.com/ITSLeeds/QGIS-intro/edit/master/05-create-edit.Rmd",
 "text": "Edit"
 },
 "history": {
