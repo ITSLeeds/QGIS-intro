@@ -22,14 +22,11 @@ Download and unzip the files into an appropriate place on your computer, in the 
 piggyback::pb_download("qgisdata.zip")
 ```
 
-
-
 ```{block2, type='rmdnote'}
 If you're using Chrome on Windows, this is how to save it the file after you clicked on it and after it appears at the bottom of your browser. Right click on the folders and click "show in folder". Use cut and paste and select a location for the folder on your computer.  (e.g You can use your M drive if working on a university computer). 
 ```
 
-Once downloaded right click on the zipped folder that has been downloaded to your computer and select "extract all".  
-
+Once downloaded, right click on the zipped folder that has been downloaded to your computer and select "extract all".  
 
 ## Importing spatial data
 To load a spatial data file, click on the Data Source Manager button in the top left corner of QGIS (see Figure \@ref(fig:data-source-manager)).
@@ -37,7 +34,6 @@ To load a spatial data file, click on the Data Source Manager button in the top 
 ```{r data-source-manager, out.width="10%", fig.cap="The Data Source Manager icon", echo=FALSE}
 knitr::include_graphics("figures/open-data-source-manager.jpg")
 ```
-
 
 We will first load a polygon layer. 
 
@@ -66,8 +62,6 @@ Next add the cycle_routes layer (note this is a line layer).
 
 Follow the steps above, but note that you may need to 'navigate up the file tree' (which means go up a folder level to 'IntroQGISdata2019') then you will be able to click on the folder 'cycle_routes'.  
 
-
-
 ## Importing a CSV or text file
 
 ### CSV with spatial data
@@ -87,7 +81,11 @@ knitr::include_graphics("figures/import_csv.jpg")
 
 After importing the 'stats19' data, using menus shown in Figure \@ref(fig:data-source-manager-csv), you should see points on the map, representing where crashes in Leeds took place in 2017.
 If you do not see dots on the map, re-read this section and have another go.
-If you do, congratuations!
+If you do, like in Figure \@ref(fig:summary-screenshot-data-loaded), congratuations, you can now load data into QGIS!
+
+```{r summary-screenshot-data-loaded, fig.cap="Summary of the data loaded in this Chapter, note the name of the datasets in the Layers menu.", echo=FALSE}
+knitr::include_graphics("figures/summary-screenshot-data-loaded.png")
+```
 
 
 ## Loading basemaps
