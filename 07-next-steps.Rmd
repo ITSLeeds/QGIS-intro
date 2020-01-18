@@ -1,13 +1,14 @@
 # (PART) Extensions {-}
 
-# Next steps
+# Advanced features in QGIS
+
+QGIS is a powerful tool and it can be used to tackle a wide range of transport problems that have geographic components.
+In this second part of the booklet we will go beyond the foundations of read-in and visualising data covered in the previous chapter and move on to geographic analysis.
 
 ## Learning Objectives: 
 **Aim:** Introduce SSPA students to principal vector and raster GIS skills that will be used in the subsequent practicals and assessment
 
-**Learning objectives:**  
-
-
+**Learning objectives:**
 
 * Process key GIS data types; vector and raster.
 
