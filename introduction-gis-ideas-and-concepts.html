@@ -91,13 +91,15 @@
 <li class="chapter" data-level="1.3.3" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#network-data"><i class="fa fa-check"></i><b>1.3.3</b> Network data</a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#data-formats-how-is-data-stored-in-a-gis-and-on-your-computer."><i class="fa fa-check"></i><b>1.3.4</b> Data formats – how is data stored in a GIS and on your computer.</a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#projections-and-coordinate-systems"><i class="fa fa-check"></i><b>1.4</b> Projections and coordinate systems</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
 <li class="chapter" data-level="2.2" data-path="working-with-qgis.html"><a href="working-with-qgis.html#key-qgis-components"><i class="fa fa-check"></i><b>2.2</b> Key QGIS components</a></li>
-<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#set-up-the-project."><i class="fa fa-check"></i><b>2.3</b> Set up the project.</a></li>
-<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.4</b> Panning and Zooming</a></li>
-<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.5</b> Summary</a></li>
+<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#qgis-projects"><i class="fa fa-check"></i><b>2.3</b> QGIS projects</a></li>
+<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#setting-a-coordinate-reference-system-crs"><i class="fa fa-check"></i><b>2.4</b> Setting a coordinate reference system (CRS)</a></li>
+<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.5</b> Panning and Zooming</a></li>
+<li class="chapter" data-level="2.6" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
 </ul></li>
 <li class="part"><span><b>II Transport data in QGIS</b></span></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a><ul>
@@ -267,8 +269,12 @@ Figure 1.1: A shapefile is a group of files. It is a common file format
 <p>While shapefiles are still used, they have many limitations. Resulting in a <a href="http://switchfromshapefile.org/">campaign against shapefiles</a>.</p>
 <p>There are other types of GIS files, including GeoJSON and geo-package formats. Data is stored in GIS as database tables.<br />
 GIS data can be stored and shared in a very large number of ways. (For an introduction see <a href="https://en.wikipedia.org/wiki/GIS_file_formats" class="uri">https://en.wikipedia.org/wiki/GIS_file_formats</a> as well as the further reading in the appendix.</p>
-<p>##Projections and coordinate systems
-The world is not flat but computer screens are. Projections and coordinate systems allow GIS to represent the curved surface of the Earth on a flat screen or page.</p>
+</div>
+</div>
+<div id="projections-and-coordinate-systems" class="section level2">
+<h2><span class="header-section-number">1.4</span> Projections and coordinate systems</h2>
+<p>The world is not flat, but computer computer screens are.
+Coordinate systems, also known as coordinate reference systems (CRS), allow GIS to represent the curved surface of the Earth on a flat screen or page.</p>
 <div class="figure"><span id="fig:qgis-window-projection"></span>
 <img src="figures/Projection_mjfoster.png" alt="How do we fit a curving earth onto a flat piece of paper" width="100%" />
 <p class="caption">
@@ -289,7 +295,6 @@ Figure 1.2: How do we fit a curving earth onto a flat piece of paper
 <li>27700 - the British National Grid</li>
 </ul>
 
-</div>
 </div>
 </div>
             </section>

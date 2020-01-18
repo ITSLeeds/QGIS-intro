@@ -91,13 +91,15 @@
 <li class="chapter" data-level="1.3.3" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#network-data"><i class="fa fa-check"></i><b>1.3.3</b> Network data</a></li>
 <li class="chapter" data-level="1.3.4" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#data-formats-how-is-data-stored-in-a-gis-and-on-your-computer."><i class="fa fa-check"></i><b>1.3.4</b> Data formats – how is data stored in a GIS and on your computer.</a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-gis-ideas-and-concepts.html"><a href="introduction-gis-ideas-and-concepts.html#projections-and-coordinate-systems"><i class="fa fa-check"></i><b>1.4</b> Projections and coordinate systems</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="working-with-qgis.html"><a href="working-with-qgis.html"><i class="fa fa-check"></i><b>2</b> Working with QGIS</a><ul>
 <li class="chapter" data-level="2.1" data-path="working-with-qgis.html"><a href="working-with-qgis.html#opening-qgis"><i class="fa fa-check"></i><b>2.1</b> Opening QGIS</a></li>
 <li class="chapter" data-level="2.2" data-path="working-with-qgis.html"><a href="working-with-qgis.html#key-qgis-components"><i class="fa fa-check"></i><b>2.2</b> Key QGIS components</a></li>
-<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#set-up-the-project."><i class="fa fa-check"></i><b>2.3</b> Set up the project.</a></li>
-<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.4</b> Panning and Zooming</a></li>
-<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.5</b> Summary</a></li>
+<li class="chapter" data-level="2.3" data-path="working-with-qgis.html"><a href="working-with-qgis.html#qgis-projects"><i class="fa fa-check"></i><b>2.3</b> QGIS projects</a></li>
+<li class="chapter" data-level="2.4" data-path="working-with-qgis.html"><a href="working-with-qgis.html#setting-a-coordinate-reference-system-crs"><i class="fa fa-check"></i><b>2.4</b> Setting a coordinate reference system (CRS)</a></li>
+<li class="chapter" data-level="2.5" data-path="working-with-qgis.html"><a href="working-with-qgis.html#panning-and-zooming"><i class="fa fa-check"></i><b>2.5</b> Panning and Zooming</a></li>
+<li class="chapter" data-level="2.6" data-path="working-with-qgis.html"><a href="working-with-qgis.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
 </ul></li>
 <li class="part"><span><b>II Transport data in QGIS</b></span></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Downloading and loading data</a><ul>
@@ -194,10 +196,10 @@
 <p>A vital skill for doing using GIS skills to solve real-world problems is finding, downloading and importing data.</p>
 <p>Often, the first stage in the data downloading/loading process is to find the data online.</p>
 <p>You will need several data sets to add to your QGIS project. First you will need to download the data.</p>
-<p>Click on the link below.</p>
+<p>Click on the link below or type in the following URL into your internet browser:</p>
 <p><a href="https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01">github.com/ITSLeeds/QGIS-into/releases</a>.</p>
-<p>If you scroll down, you will see several data sets in a list. For the exercises in part 1 you will need this one. “IntroQGISdata2019Part1.zip” .
-Click it and it will save to your computer. It will appear at the bottom of your browser. Right click on the folders and click “show in folder”. Use cut and paste and select a location for the folder on your computer. (e.g You can use your M drive if working on a university computer).</p>
+<p>On that page you will see several links. For the exercises in part 1 you will need this one: <a href="https://github.com/ITSLeeds/QGIS-intro/releases/download/0.1.1/qgisdata.zip"><strong>qgisdata.zip</strong></a>.
+Download and unzip the files into an appropriate place on your computer, in the folder where your QGIS project lives.</p>
 <p>Once downloaded right click on the zipped folder that has been downloaded to your computer and select “extract all”.</p>
 </div>
 <div id="importing-spatial-data" class="section level2">
@@ -215,7 +217,7 @@ Figure 3.1: The Data Source Manager icon
 </li>
 <li>Next press the button with 3 dots, which is below and right of where it says <strong>source</strong>.<br />
 </li>
-<li>Next navigate to the file by finding the folder “QGISintro_CourseData”.</li>
+<li>Next navigate to the file by finding the folder “qgisdata”.</li>
 <li>Inside this is another folder “Access_DeprivationLeeds”</li>
 <li>Add the data: “Access_DeprivationLeeds.shp”</li>
 <li>Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.</li>
