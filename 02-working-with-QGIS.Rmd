@@ -38,26 +38,37 @@ These include the following main components, numbered from 1:5 in the figure and
 
 NB. GUI stands for Graphical User Interface. Any programme which wou interact with using menus and buttons has a GUI.  Examples are Excel and QGIS.  
 
-```{r qgis-window, fig.cap="QGIS main user interface features"}
+```{r qgis-window, fig.cap="QGIS main user interface features", out.width="100%"}
 knitr::include_graphics("figures/QGISGUI.jpg")
 ```
 
 
-## Set up the project.  
+## QGIS projects
+
+Projects are the way that QGIS saves your work.
+Make sure you save your QGIS work in projects.
+To do this, click on the Project menu and select Save (or Save As), as shown in Figure \@ref(fig:project-open-menu) and select a folder that will contain your project.
+Give your project a sensible name, like 'learning-qgis'.
+
+```{r project-open-menu, echo=FALSE, fig.cap="The project menu", out.width="50%"}
+knitr::include_graphics("figures/project-open-menu.png")
+```
+
 
 Projects don't contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date.  They also allow you to set the co-ordinate reference system.  
 
-**Set up the project as follows.** 
+## Setting a coordinate reference system (CRS)
 
-From the Project menu select project properties
+To set a coordinate system click on Project > Properties (or use the shortcut Ctrl + Shift + P)
 
-The following dialog box appears
+The box shown in Figure \@ref(fig:projectsetup) should appear.
+This allows you to **set up the CRS to 27700**.
 
-```{r projectsetup, fig.cap="Project menu, project properties, set Coordinate ReferenceSystsm 27700", out.width="50%"}
-knitr::include_graphics("figures/setProjection.JPG")
+```{r projectsetup, fig.cap="Project menu, project properties, set Coordinate ReferenceSystsm 27700", out.width="80%"}
+knitr::include_graphics("figures/set-projection.png")
 ```
 
-Type 27700 into the Filter box. 27700 refers to the "OSGB 1936 British National Grid". This is a projected coordinate system for the UK.  (there is a brief explanation of co-ordinate systems in chapter 2)
+Type 27700 into the Filter box. 27700 refers to the "OSGB 1936 British National Grid". This is a projected coordinate system for the UK.  (there is a brief explanation of co-ordinate systems in Chapter 1).
 
 **Click apply ** before clicking OK. 
 If it has worked the bottom right of your screen will say "EPSG:27700"
@@ -69,7 +80,7 @@ Save the project and give it a suitable name such as "QGIS_Intro"
 You can create, load, save and 'save as' projects using the buttons shown in Figure \@ref(fig:projectbuttons) or using the options in the Project menu. QGIS project files have the extension.qgz
 
 
-```{r projectbuttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="50%"}
+```{r projectbuttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="30%"}
 knitr::include_graphics("figures/project_buttons.JPG")
 ```
 
@@ -81,7 +92,7 @@ If you want to send someone a QGIS project to work on or look at, then you need 
 
 You can naviagate around the map using the mouse or the buttons in the toolbar.
 
-```{r navigation, fig.cap="Navigation buttons: Pan Map, Pan to Selection, Zoom In, Zoom Out, Zoom to Native Resolution, Zoom Full, Zoom to Selection"}
+```{r navigation, fig.cap="Navigation buttons: Pan Map, Pan to Selection, Zoom In, Zoom Out, Zoom to Native Resolution, Zoom Full, Zoom to Selection", out.width="50%"}
 knitr::include_graphics("figures/navigation.jpg")
 ```
 

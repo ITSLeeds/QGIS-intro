@@ -10,14 +10,25 @@ Often, the first stage in the data downloading/loading process is to find the da
 
 You will need several data sets to add to your QGIS project.  First you will need to download the data.  
 
-Click on the link below. 
+Click on the link below or type in the following URL into your internet browser: 
 
 [github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
 
-If you scroll down, you will see several data sets in a list.  For the exercises in part 1 you will need this one. "IntroQGISdata2019Part1.zip" . 
-Click it and it will save to your computer. It will appear at the bottom of your browser. Right click on the folders and click “show in folder”. Use cut and paste and select a location for the folder on your computer.  (e.g You can use your M drive if working on a university computer). 
+On that page you will see several links.  For the exercises in part 1 you will need this one: [**qgisdata.zip**](https://github.com/ITSLeeds/QGIS-intro/releases/download/0.1.1/qgisdata.zip).
+Download and unzip the files into an appropriate place on your computer, in the folder where your QGIS project lives.
 
-Once downloaded right click on the zipped folder that has been downloaded to your computer and select “extract all”.  
+```{r, eval=FALSE, echo=FALSE}
+# download data with R (see readme of piggyback pkg for into)
+piggyback::pb_download("qgisdata.zip")
+```
+
+
+
+```{block2, type='rmdnote'}
+If you're using Chrome on Windows, this is how to save it the file after you clicked on it and after it appears at the bottom of your browser. Right click on the folders and click "show in folder". Use cut and paste and select a location for the folder on your computer.  (e.g You can use your M drive if working on a university computer). 
+```
+
+Once downloaded right click on the zipped folder that has been downloaded to your computer and select "extract all".  
 
 
 ## Importing spatial data
@@ -32,13 +43,17 @@ We will first load a polygon layer.
 
 1. Open the Data Source Manager and select “Vector”.  
 1. Next press the button with 3 dots, which is below and right of where it says **source**.  
-1. Next navigate to the file by finding the folder "QGISintro_CourseData". 
+1. Next navigate to the file by finding the folder "qgisdata". 
 1. Inside this is another folder "Access_DeprivationLeeds"
 1. Add the data: "Access_DeprivationLeeds.shp"
 1. Click “Add” then “Close”. Note the data manager does not close automatically after adding a file to your project, this is to allow you to add multiple files at once.
 
 ```{r data-source-manager-shp, out.width="100%", fig.cap="The Data Source Manager - Vector", echo=FALSE, fig.show='hold'}
 knitr::include_graphics("figures/AddVectorLayer.jpg")
+```
+
+```{block2, type='rmdwarning'}
+If the map appears to be 'squashed', distorted and compressed in the vertical (North-South) dimension, this is probably because the coordinate system needs to be set, to 27700. See Section \@ref(projections-and-coordinate systems) for details.
 ```
 
 The result should look something like the map displayed in Figure \@ref(fig:imported) (but the colour might be different).
