@@ -53,7 +53,7 @@ knitr::include_graphics("figures/AddVectorLayer.jpg")
 ```
 
 ```{block2, type='rmdwarning'}
-If the map appears to be 'squashed', distorted and compressed in the vertical (North-South) dimension, this is probably because the coordinate system needs to be set, to 27700. See Section \@ref(projections-and-coordinate systems) for details.
+If the map appears to be 'squashed', distorted and compressed in the vertical (North-South) dimension, this is probably because the coordinate reference system needs to be set, to 27700. See Chapter \@ref(working-with-qgis) for details on how to set-up a project and set the CRS.
 ```
 
 The result should look something like the map displayed in Figure \@ref(fig:imported) (but the colour might be different).
