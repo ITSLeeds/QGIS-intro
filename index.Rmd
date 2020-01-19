@@ -42,43 +42,56 @@ knitr::opts_chunk$set(
 
 # Preface {-}
 
+<!-- ## What is this resource? {-} -->
 
+This resource was developed to support the workshops to teaching geographic methods in transport, and accessibility analysis with QGIS in particular. 
+The booklet accompanies teaching delivered on [MSc degrees in  transport](https://environment.leeds.ac.uk/transport-masters) to students at the Institute for Transport Studies (ITS) at the University of Leeds. 
+It is a practical workshop so, before getting started, it is recommended that you ensure you have QGIS installed on your computer.
+Check it is installed on a Windows computer by pressing the Windows 'start' button and searching for QGIS, for example.
+You are encouraged to install QGIS on your own computer to have more control over it.
 
-## What is this resource? {-}
+## Installing QGIS {-}
 
-This resource is in two parts and accompanies teaching delivered on [MSc degrees in  transport](https://environment.leeds.ac.uk/transport-masters) to students at the Institute for Transport Studies (ITS) at the University of Leeds. 
+We recommend installing the latest Long Term Release (LTR) version of QGIS, QGIS 3.4 from https://qgis.org/en/site/forusers/download.html .
+If you're installing QGIS on Windows, we recommend installing the **OSGeo4W Network Installer (64 bit)**.
+Choosing Advanced Install and selecting qgis-ltr-full should give you the latest stable version on Windows.
+For other operating systems (Mac or Linux), follow LTR installation instructions at [qgis.org](https://qgis.org/en/site/forusers/download.html).
 
-## Part 1: an introduction to GIS {-}
+## Part 1 pre-requisites {-}
 
-This workbook contains information about getting started using Geographical Information Systems (GIS) using the QGIS application.  It assumes no prior knowledge of either GIS concepts or experience of using GIS applications.  
-
-### Part 1 Pre-requisites {-}
+Part 1 is a basic introduction to GIS.
+It contains information about getting started using Geographical Information Systems (GIS) using the QGIS application.
+It assumes no prior knowledge of either GIS concepts or experience of using GIS applications, but you need QGIS installed on a computer you own or have access to (e.g. on a university computer).  
 
 **If you are an ITS student** 
 This part has no pre-requisites:  It is aimed at students little or no experience of using any GIS software and those who are new to the open source software called QGIS.  
 The materials accompany a semester 1 face-to-face workshop for ITS Students, but, they are designed for students to work through at their own pace.  This means that if you do not attend the workshop, you can still make use of the resources.  
 
 **If you are not an ITS student or you are not at the face to face workshop**
-Unless you are using a Univerist of leeds cluster computer, this course assumes that you have access to a working installation of QGIS 3 and an internet connection.
+Unless you are using a University of Leeds cluster computer, this course assumes that you have access to a working installation of QGIS 3 and an internet connection, as outlined above.
 We will explain how to download the data needed for the practicals in Chapter \@ref(data).
 
-## Part 2: QGIS for transport {-}
+## Part 2 pre-requisites {-}
 
-Part 2 is about key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.
+In Part 2 we will load some transport data into QGIS.
+The second part is about key QGIS skills for transport students studying Sustainable Spatial Planning and Analysis.
 [Sustainable Spatial Planning and Analysis](http://webprod3.leeds.ac.uk/catalogue/dynmodules.asp?Y=201920&M=TRAN-5115M) is a second semester MSc module taught at ITS.  
 Part 2 covers key skills required by students on this course.  These materials accompany a face to face workshop delivered as part of the module.  
 
-
-### Part 2 Pre-requisites {-}
-
 The pre-requisite for this part is to have worked through part 1.  
 
-## Why learn GIS? {-}
+## Why learn geographic methods? {-}
 
-We are teaching transport GIS because transport is an inherently geographic phenomena. All transport involves movement from one place on Earth to another, whether its by walking, flying or telecommunications.  Those movements and flows impact and are impacted upon by the people and places along the routes.  Geographic Information Systems (GIS) therefore have great potential to assist transport researchers and practitioners.  We are teaching QGIS.  Which is free and open source.
+Geographic methods, implemented in Geographic Information Systems (GIS) such as QGIS, can support many areas of transport planning.
+Transport is an inherently geographic phenomena: all transport involves movement from one place on Earth to another, whether its by walking, flying or telecommunications.
+Those movements are influenced by people and places along the routes, and the movements also have geographic impacts.
+Geographic methods can provide the basis for useful transport planning tools, as illustrated by the Propensity to Cycle Tool (which you can use at [www.pct.bike](https://www.pct.bike/)), a map-based transport planning tool for designing strategic cycle networks [@lovelace_propensity_2017].
 
+Many other applications of geographic methods are possible, that can help transport researchers and practitioners in many ways. 
+We teach geographic methods using QGIS because it is free, fast and popular GIS software.
+Because it is open source it is extendible and free to use, whichever organisation you work for: you should be able to use skills developed with support form this booklet wherever you go.
 
-
+<!-- We are teaching QGIS.  Which is free and open source. -->
 
 <!-- ## Structure of the book {-} -->
 

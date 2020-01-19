@@ -10,8 +10,8 @@ knitr::opts_chunk$set(out.width = "100%")
 # Introduction: GIS ideas and concepts
 
 
+## Learning Objectives
 
-### Learning Objectives: 
 *    Gain a basic understanding of what a GIS is and its relevance to transport studies
 *    Know what some of the key data types and file formats
 *    Import pre-cleaned vector data into QGIS and navigate basic QGIS features
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(out.width = "100%")
 *    Make a map showing point, line and polygon features and export it.  
 *    Understand the key cartographic elements that must be present to allow interpretation of a map
 
-### What is included in Part 1?
+In this part you will learn about the following key concepts:
 
 *    GIS ideas and concepts - we very briefly introduce some key GIS concepts and ideas.  
 *    Opening QGIS and essential features - We then explain what the main components of QGIS are, explain how to set up a project and save work and what some of the most useful buttons do
@@ -32,8 +32,6 @@ knitr::opts_chunk$set(out.width = "100%")
 
 ## What is GIS? 
 
-
-## Key ideas: 
 GIS is an abbreviation.  Sometimes it is used to mean **Geographic Information System** and sometimes it is used to mean **Geographic Information Science**.  A more formal definition of a Geographical Information System is: 
 
 >A powerful set of tools for collecting, storing, retrieving at will, transforming and >displaying spatial data from the real world 
@@ -41,8 +39,7 @@ GIS is an abbreviation.  Sometimes it is used to mean **Geographic Information S
 
 The emphasis here is on pieces of software like QGIS.  In practical terms, a Geographic Information System is a database to store data, a calculator which can manipulate and analyse data, a visualisation window to show results. GIS software like QGIS also has a Graphical User Interface (GUI) with menus and buttons which lets the user 'do stuff'.  
 
-In Part 1, we are concentrating on learning how to use the basic features of the Geographic Information System application called QGIS.
-
+Part 1 focusses the basic features of the Geographic Information System application called QGIS.
 
 A more formal definition of Geographical Information Science is given by  
 Goodchild, (1992) who argues that Geographical Information Science involves research that investigates spatial data acquisition, spatial statistics, modelling and theories of spatial data, development of analytical tools and consideration of the management and ethics of working with spatial data.  
@@ -50,19 +47,17 @@ Goodchild, (1992) who argues that Geographical Information Science involves rese
 As an introduction, the Wikipedia entry contains a lot of information.  In the further reading section, there are references to crucial GIS textbooks for a more formal treatment of key GIS concepts.    
 https://en.wikipedia.org/wiki/Geographic_information_science 
 
-
-
 GIS in both of the systems and science contexts described above is vital for anyone studying transport because it is an inherently spatial topic of study.  Data used in the study of transport can be visualised and analysed using GIS.  Learning how to use GIS software like QGIS is a handy skill in its own right.  It is also an advantageous start point for people wanting to learn and apply GIScience.
 
 There are other terms you may come across, including "spatial data analytics". The emphasis here is on a branch of science at the nexus of statistics, computer science and quantitative geography.  You may also come across the term "geo-computation".  Geocomputation is associated with computational methods that have been customised to address the unique characteristics of spatial data ( https://dx.doi.org/10.4135/9780857024442.d64).  There are technical academic differences between these terms, but in practice, they get used interchangeably. This range of terms might sound confusing, but they are all related.  
 
+## Free and Open Source Software
 
-## Free and Open Source Software.  
-We are using QGIS software which is free to download and use.  The university has a licence for commercial GIS software (e.g. ArcGIS), but we are aware that not all students will have access to commercial software after completing the course.  QGIS is becoming popular with many organisations.    For more information about FOSS see: https://en.wikipedia.org/wiki/Free_and_open-source_software 
+QGIS is free to download and use.  The university has a licence for commercial GIS software (e.g. ArcGIS), but we are aware that not all students will have access to commercial software after completing the course.  QGIS is becoming popular with many organisations.    For more information about FOSS see: https://en.wikipedia.org/wiki/Free_and_open-source_software 
 
 
 
-### Vector data
+## Vector data
 Vector data represents the features of the world as either 'points' 'lines' or 'areas' (also called polygons).
  
 Each type of feature is displayed in the GIS as a distinct layer.  A layer will only contain either points, or lines, or polygons.  It is also good practice to have different layers for different types of line features.  For example, it is good to have a layer for roads and another for rivers.  
@@ -73,17 +68,19 @@ https://upload.wikimedia.org/wikipedia/commons/3/3b/USGS_The_National_Map.jpg
 
  
 
-###  Raster data:  
+##  Raster data:  
 'In its simplest form, a raster consists of a matrix of cells (or pixels) organised into rows and columns (or a grid) where each cell contains a value representing information, such as temperature. Rasters are digital aerial photographs, imagery from satellites, digital pictures, or even scanned maps'. (
 webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=What_is_raster_data%3F)
  
 (source:  http://support.esri.com/other-resources/gis-dictionary/term/raster) 
 
-### Network data
+## Network data
 A network dataset takes a line dataset and defines its topology explicitly.  Defining topology means having data tables that explicitly lists which lines are connected and at which nodes.  
 In its simplest form, this means recording the connections between the ends of different lines.  Data in this form is often called a graph as the branch of mathematics that deals with networks is called [graph theory](https://en.wikipedia.org/wiki/Graph_theory).
 
-### Data formats – how is data stored in a GIS and on your computer.  
+## Data formats
+
+Data formats refer to how data stored in a GIS and on your computer.  
 QGIS can handle a vast number of different data formats.  
 In today's exercises, we will start by using use a file format called "Shapefile" as it is a prevalent type of vector GIS data format.  The Shapefile format was developed by ESRI who make the commercial GIS software ArcGIS (ArcGIS is also available on university machine).
   
