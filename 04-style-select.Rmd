@@ -58,6 +58,7 @@ So far you have loaded layers to show the shapes and locations of features.  You
 
 1.	Double click on the Access_DeprivationLeeds  layer, the ‘Layer properties’ dialog box appears
 We are going to display deprivation deciles as categories.  
+1. Click on 'Symbology' on the left hand side of the layer properties box
 1.	Click the dropdown menu where it says 'single symbol'.  Select 'categorised' from the classification drop down menu shown below because the deciles are Ordinal data.  (You would choose 'Graduated' if you were visualising a continuous variable such as population density)
 1. Select 'IMDDecl' from the column drop down list.
 1. Select 'Blues' from the Color Ramp drop down list
