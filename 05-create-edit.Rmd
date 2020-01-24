@@ -11,7 +11,7 @@ You should see buttons like those shown in Figure \@ref(fig:new-geopackage).
 knitr::include_graphics("figures/new-geopackage.png")
 ```
 
-Click on "New GeoPackage Layer" and you should see another box.
+Click on "New ShapeFile Layer" and you should see another box.
 Fill the fields in the box according to the text shown in Figure \@ref(fig:new-geopackage-box) (note we're creating a layer with geometry type Point) and click OK to create the layer.
 
 ```{r new-geopackage-box, echo=FALSE, fig.cap="Popup box to add new GeoPackage layer, with text added for Leeds Rail Station."}
