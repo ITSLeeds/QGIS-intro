@@ -12,7 +12,7 @@ You will need several data sets to add to your QGIS project.  First you will nee
 
 Click on the link below or type in the following URL into your internet browser: 
 
-[github.com/ITSLeeds/QGIS-into/releases](https://github.com/ITSLeeds/QGIS-intro/releases/tag/0.01).
+https://github.com/ITSLeeds/QGIS-intro/releases/
 
 On that page you will see several links.  For the exercises in part 1 you will need this one: [**qgisdata.zip**](https://github.com/ITSLeeds/QGIS-intro/releases/download/0.1.1/qgisdata.zip).
 Download and unzip the files into an appropriate place on your computer, in the folder where your QGIS project lives.
