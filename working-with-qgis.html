@@ -24,7 +24,7 @@
 <meta name="author" content="Robin Lovelace Malcolm Morgan Ian Philips" />
 
 
-<meta name="date" content="2020-01-24" />
+<meta name="date" content="2020-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,31 +234,31 @@ Figure 2.3: The project menu
 </p>
 </div>
 <p>Projects don’t contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date. They also allow you to set the co-ordinate reference system.</p>
+<p>You can create, load, save and ‘save as’ projects using the buttons shown in Figure <a href="working-with-qgis.html#fig:projectbuttons">2.4</a> or using the options in the Project menu. QGIS project files have the extension.qgz</p>
+<div class="figure"><span id="fig:projectbuttons"></span>
+<img src="figures/project_buttons.JPG" alt="New Project, Open Project, Save Project, Save Project As buttons" width="30%" />
+<p class="caption">
+Figure 2.4: New Project, Open Project, Save Project, Save Project As buttons
+</p>
+</div>
+<p>A common GIS mistake is to send someone a project file and expect that they can look at your maps and data. But, this does not work, because project files do not contain data.<br />
+If you want to send someone a QGIS project to work on or look at, then you need to send them the project file and any data which you have loaded into the project. (We will show how to load data in the next chapter).</p>
 </div>
 <div id="setting-a-coordinate-reference-system-crs" class="section level2">
 <h2><span class="header-section-number">2.4</span> Setting a coordinate reference system (CRS)</h2>
 <p>To set a coordinate system click on Project &gt; Properties (or use the shortcut Ctrl + Shift + P)</p>
-<p>The box shown in Figure <a href="working-with-qgis.html#fig:projectsetup">2.4</a> should appear.
+<p>The box shown in Figure <a href="working-with-qgis.html#fig:projectsetup">2.5</a> should appear.
 This allows you to <strong>set up the CRS to 27700</strong>.</p>
 <div class="figure"><span id="fig:projectsetup"></span>
 <img src="figures/set-projection.png" alt="Project menu, project properties, set Coordinate ReferenceSystsm 27700" width="80%" />
 <p class="caption">
-Figure 2.4: Project menu, project properties, set Coordinate ReferenceSystsm 27700
+Figure 2.5: Project menu, project properties, set Coordinate ReferenceSystsm 27700
 </p>
 </div>
 <p>Type 27700 into the Filter box. 27700 refers to the “OSGB 1936 British National Grid”. This is a projected coordinate system for the UK. (there is a brief explanation of co-ordinate systems in Chapter 1).</p>
 <p><strong>Click apply </strong> before clicking OK.
 If it has worked the bottom right of your screen will say “EPSG:27700”</p>
-<p>Save the project and give it a suitable name such as “QGIS_Intro”</p>
-<p>You can create, load, save and ‘save as’ projects using the buttons shown in Figure <a href="working-with-qgis.html#fig:projectbuttons">2.5</a> or using the options in the Project menu. QGIS project files have the extension.qgz</p>
-<div class="figure"><span id="fig:projectbuttons"></span>
-<img src="figures/project_buttons.JPG" alt="New Project, Open Project, Save Project, Save Project As buttons" width="30%" />
-<p class="caption">
-Figure 2.5: New Project, Open Project, Save Project, Save Project As buttons
-</p>
-</div>
-<p>A common GIS mistake is to send someone a project file and expect that they can look at your maps and data. But, this does not work, because project files do not contain data.<br />
-If you want to send someone a QGIS project to work on or look at, then you need to send them the project file and any data which you have loaded into the project. (We will show how to load data in the next chapter).</p>
+<p>Save the project.</p>
 </div>
 <div id="panning-and-zooming" class="section level2">
 <h2><span class="header-section-number">2.5</span> Panning and Zooming</h2>
