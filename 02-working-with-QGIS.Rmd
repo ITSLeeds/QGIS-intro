@@ -57,6 +57,18 @@ knitr::include_graphics("figures/project-open-menu.png")
 
 Projects don't contain any data themselves but do contain information such as the current map view, links to data, and instructions on how data should be presented. Projects are an easy way to keep your work organised and allows you to stop and come back to work at a later date.  They also allow you to set the co-ordinate reference system.  
 
+
+You can create, load, save and 'save as' projects using the buttons shown in Figure \@ref(fig:projectbuttons) or using the options in the Project menu. QGIS project files have the extension.qgz
+
+
+```{r projectbuttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="30%"}
+knitr::include_graphics("figures/project_buttons.JPG")
+```
+
+A common GIS mistake is to send someone a project file and expect that they can look at your maps and data. But, this does not work, because project files do not contain data.  
+If you want to send someone a QGIS project to work on or look at, then you need to send them the project file and any data which you have loaded into the project.  (We will show how to load data in the next chapter).  
+
+
 ## Setting a coordinate reference system (CRS)
 
 To set a coordinate system click on Project > Properties (or use the shortcut Ctrl + Shift + P)
@@ -74,18 +86,9 @@ Type 27700 into the Filter box. 27700 refers to the "OSGB 1936 British National 
 If it has worked the bottom right of your screen will say "EPSG:27700"
 
 
-Save the project and give it a suitable name such as "QGIS_Intro"
+Save the project.  
 
 
-You can create, load, save and 'save as' projects using the buttons shown in Figure \@ref(fig:projectbuttons) or using the options in the Project menu. QGIS project files have the extension.qgz
-
-
-```{r projectbuttons, fig.cap="New Project, Open Project, Save Project, Save Project As buttons", out.width="30%"}
-knitr::include_graphics("figures/project_buttons.JPG")
-```
-
-A common GIS mistake is to send someone a project file and expect that they can look at your maps and data. But, this does not work, because project files do not contain data.  
-If you want to send someone a QGIS project to work on or look at, then you need to send them the project file and any data which you have loaded into the project.  (We will show how to load data in the next chapter).  
 
 
 ## Panning and Zooming
