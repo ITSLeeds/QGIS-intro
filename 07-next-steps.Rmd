@@ -6,7 +6,9 @@ QGIS is a powerful tool and it can be used to tackle a wide range of transport p
 In this second part of the booklet we will go beyond the foundations of read-in and visualising data covered in the previous chapter and move on to geographic analysis.
 
 ## Learning Objectives: 
-**Aim:** Introduce SSPA students to principal vector and raster GIS skills that will be used in the subsequent practicals and assessment
+
+The **aim** of this second part of the booklet is to introduce vector and raster GIS skills (in the next two chapters) that will be used in the subsequent practicals in subsequent chapters.
+If you are reading this book as part of modules, the content will give you vital skills that will help with the assessed practical.
 
 **Learning objectives:**
 
@@ -22,6 +24,30 @@ In this second part of the booklet we will go beyond the foundations of read-in 
 
 * Be aware of a range openly available spatial data available to and useful to sustainable transport planning.  
 
+## Getting help on QGIS
+
+Before continuing with the practicals, it is worth being aware of places to get help when using QGIS (further resources are provided in the final [chapter](https://itsleeds.github.io/QGIS-intro/further-reading.html)).
+Simply searching online for a particular functionality or issue can yield rewards.
+However, it can help to be specific when searching, and to be aware of high quality resources.
+
+Probably the most reliable documentation on how to use QGIS is the [QGIS Training Manual](https://docs.qgis.org/3.4/en/docs/training_manual/), an open resource developed by the core QGIS team.
+The advantages of that official document over online searches is that it is reliable and up-to-date.
+There is also an official [QGIS User Guide](https://docs.qgis.org/3.4/en/docs/user_manual/index.html).
+**We recommend searching for a topic in these resources before searching the whole of the internet to ensure high quality and up-to-date results.**
+
+Another good source of information is the forum [gis.stackexchange.com](https://gis.stackexchange.com/), where you can search for specific issues not covered in the main documents and, after you have set-up an account, ask questions to the community.
+
+Finally, for the most technical questions you can ask the QGIS and Plugin developers directly on development platforms such as GitHub.
+A wealth of information on upcoming changes and issues can be found online at https://github.com/qgis/QGIS/.
+Be warned though: this developer conversation may be of little use to you and only be relevant for the development version of QGIS.
+
+In summary, there are a range of ways to get help online, and starting with QGIS's official documentation is recommended.
+
+## Exercises
+
+- Search for "Routing QGIS" and "Map matching QGIS". Which results do you think are most useful?
+- Create an account on https://gis.stackexchange.com/, take a look at some questions and think about the features of a good question
+- Set-up a GitHub account and take a look at the QGIS source code at https://github.com/qgis/QGIS/
 
 <!-- ### What is included in Part 2? -->
 

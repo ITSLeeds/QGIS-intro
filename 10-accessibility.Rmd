@@ -136,7 +136,6 @@ knitr::include_graphics("figures/buffered-lines.png")
 knitr::include_graphics("figures/pct-west-yorkshire-fast.jpg")
 ```
 
-
 ## Plugins
 
 An important aspect of open source software is the wider community, which often supports a diverse range of extensions which add features to the original program.
