@@ -43,13 +43,16 @@ http://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch59.pdf
 
 
 ## How to install QGIS on your own computer
-The simplest way to install QGIS is from [download.qgis.org/](https://download.qgis.org/).  
+
+If you cannot access QGIS at work or at an educational establishment, you will need to install it on your computer.
+
+For instructions on installing QGIS, see [download.qgis.org/](https://download.qgis.org/).  
 
 
-Here you can download for windows Mac and other operating systems.  Initially, we recommend the option headed "Long term release repository (most stable):".  
+Here you can download QGIS for Windows, Mac and other operating systems.
+For most people running Windows, clicking on the [OSGeo4W](http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe) download link and installing this version is recommended.
+The OSGeo4W version includes additional features beyond those included in the initial install.  
 
-
-There are other ways to download QGIS for windows for example from  [OSGeo4W](http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe) package, which includes additional features which you might not need straight away but which may become useful later.  
-
+If you use other operating systems, or want a smaller installation, we recommend the options headed "Long term release repository (most stable)"  
 
 
