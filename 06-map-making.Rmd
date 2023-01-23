@@ -3,22 +3,26 @@
 ## Creating a print layout
 
 While it is useful to view maps within QGIS it is usually necessary to export the maps for printing or to be included in a report.
+Here are the steps you need to take to begin making a report quality map: 
 
-From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will then see a blank page.
+
+1. From the project menu select "New Print Layout", you will be asked to give your new layout a name. You will then see a blank page.
+
+2. (optional step if you want to set the page as 'portrait') Right click on the blank page.  A dialog box will appear.  Select page properties.  on the right of the screen you will be able to use the 'Orientation' drop down list to change from 'landscape' to 'portrait'.
 
 ```{r print-layout, fig.cap="The print layout window, highlighting the add new map button", echo=FALSE, out.width="100%"}
 knitr::include_graphics("figures/print-layout.png")
 ```
 
-Use the "Add new map button" to draw a box where you wish your map to be on the page. Your map will appear within the box automatically.
+3. Use the "Add new map button" to draw a box where you wish your map to be on the page. Your map will appear within the box automatically.
 
-You can pan and zoom within the map using the "Move Item Content" button
+4. You can pan and zoom within the map using the "Move Item Content" button
 
 ```{r move-item-conten, fig.cap="Move Item content button", echo=FALSE, out.width="30%"}
 knitr::include_graphics("figures/move-item-content.JPG")
 ```
 
-To the right of the print layout you will see a panel.  In this you can set the properties of the different elements on your map.  For example you can change the scale of your map.  
+5. To the right of the print layout you will see a panel.  In this you can set the properties of the different elements on your map.  For example you can change the scale of your map.  
 
 ```{r printLayoutProperties, echo=FALSE, fig.cap="Setting the scale of the map in the print layout", out.width="100%"}
 knitr::include_graphics("figures/printLayoutProperties.jpg")
@@ -40,18 +44,18 @@ knitr::include_graphics("figures/MapTitle.jpg")
 
 
 
-* Add a title. Press the 'add new label' button on the left of the print layout. If you run the mouse ofer the buttons their names will be displayed on the screen.  
+1. Add a title. Press the 'add new label' button on the left of the print layout. If you run the mouse ofer the buttons their names will be displayed on the screen.  
 
-*	Click on the page, above the map, and a label will appear at the top of the map.
+2.	Click on the page, above the map, and a label will appear at the top of the map.
 
-*	Resize it and place it in the top centre of the page. It can be resized and moved in the same way that you resized and moved the map. As you move the title, you’ll notice that guidelines appear to help you position the title in the centre of the page.
+3.	Resize it and place it in the top centre of the page. It can be resized and moved in the same way that you resized and moved the map. As you move the title, you’ll notice that guidelines appear to help you position the title in the centre of the page.
 
 
 However, there is also a tool to help position the title relative to the map (not the page):
 
-*	Click the map to select it.
-*	Hold down 'shift' on your keyboard and click on the label so that both the map and the label are selected.
-*	Look for the Align button on the tool bar near the top of the print layout.  
+1.	Click the map to select it.
+2.	Hold down 'shift' on your keyboard and click on the label so that both the map and the label are selected.
+3.	Look for the Align button on the tool bar near the top of the print layout.  
 
 
 ```{r titleAlign, echo=FALSE, fig.cap="The Align button", out.width="10%"}
@@ -60,8 +64,8 @@ knitr::include_graphics("figures/alignButton.png")
 
 **Add a scale bar**
 
-*Press the scale bar button on the left of the print layout.  
-*Insert a scale bar using the scale bar button shown below and changing the settings using the settings in the scale item properties.  
+1. Press the scale bar button on the left of the print layout.  
+2. Insert a scale bar using the scale bar button shown below and changing the settings using the settings in the scale item properties.  
 
 
 ```{r scale_bar_button, echo=FALSE, fig.cap="The scale bar button", out.width="20%"}
@@ -69,8 +73,7 @@ knitr::include_graphics("figures/scaleButton.jpg")
 ```
 
  
-*	On the right of the screen click the item properties tab.  
-You can change the map units to metres or miles if you with by pressing the dropdown menu in the Units area.  You can change the look of the scale bar by changing the number of segments.  You can also click the triangle next to fonts and colours to further change the appearance of the scale bar.  
+3.	On the right of the screen click the item properties tab.  You can change the map units to metres or miles if you with by pressing the dropdown menu in the Units area.  You can change the look of the scale bar by changing the number of segments.  You can also click the triangle next to fonts and colours to further change the appearance of the scale bar.  
 
 
 ```{r scaleitemprop, echo=FALSE, fig.cap="The Align button", out.width="100%"}
@@ -82,10 +85,10 @@ knitr::include_graphics("figures/ScaleItemProperties.jpg")
 The map reader also needs to be able to see what various things on the map actually mean. In some cases, like the place names, this is quite obvious. In other cases, it’s more difficult to guess.  Let’s add a new legend.
 
 
-* Click on the legend button
-* Click on the page to place the legend, and move it to where you want it:
-* It may initially have more entries than you want.  Go to the legend box on the right of the screen, un-check the auto update box.  
-* Click on 'OpenStreetMap' if you have a basemap, and then press the red minus button below the list.  Repeat this for any other layers that you don’t want in the legend.  
+1. Click on the legend button
+1. Click on the page to place the legend, and move it to where you want it:
+1. It may initially have more entries than you want.  Go to the legend box on the right of the screen, un-check the auto update box.  
+1. Click on 'OpenStreetMap' if you have a basemap, and then press the red minus button below the list.  Repeat this for any other layers that you don’t want in the legend.  
 
 
 
